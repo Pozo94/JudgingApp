@@ -6,7 +6,7 @@ var Current_Edition=require('../models/I_Edition');
 // var IV_Edition=require('../models/IV_Edition');
 
 router.get('/',ensureAuthenticated, function(req, res) {
-    res.render('clas');
+    res.render('class');
 });
 router.get('/mlodziezowa',ensureAuthenticated, function(req, res){
 
