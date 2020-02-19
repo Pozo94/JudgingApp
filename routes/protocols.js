@@ -34,7 +34,7 @@ router.get('/mlodziezowa/II',ensureAuthenticated, function(req, res){
             console.log(err);
         } else {
 
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodzieżowa II',
                 competitors: competitors,
 
@@ -50,7 +50,7 @@ router.get('/mlodziezowa/III',ensureAuthenticated, function(req, res){
             console.log(err);
         } else {
 
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodzieżowa III',
                 competitors: competitors,
 
@@ -66,7 +66,7 @@ router.get('/mlodziezowa/IV',ensureAuthenticated, function(req, res){
             console.log(err);
         } else {
 
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodzieżowa IV',
                 competitors: competitors,
 
@@ -82,7 +82,7 @@ router.get('/mlodziezowa/V',ensureAuthenticated, function(req, res){
             console.log(err);
         } else {
 
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodzieżowa V',
                 competitors: competitors,
 
@@ -98,7 +98,7 @@ router.get('/mlodziezowa/VI',ensureAuthenticated, function(req, res){
             console.log(err);
         } else {
 
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodzieżowa VI',
                 competitors: competitors,
 
@@ -114,7 +114,7 @@ router.get('/mlodziezowa/VII',ensureAuthenticated, function(req, res){
             console.log(err);
         } else {
 
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodzieżowa VII',
                 competitors: competitors,
 
@@ -129,7 +129,7 @@ router.get('/mlodziezowa/VIII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodzieżowa VIII',
                 competitors: competitors,
 
@@ -145,7 +145,7 @@ router.get('/III/I',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa III I',
                 competitors: competitors,
 
@@ -160,7 +160,7 @@ router.get('/III/II',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa III II',
                 competitors: competitors,
 
@@ -175,7 +175,7 @@ router.get('/III/III',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa III III',
                 competitors: competitors,
 
@@ -190,7 +190,7 @@ router.get('/III/IV',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'klasa III IV',
                 competitors: competitors,
 
@@ -205,7 +205,7 @@ router.get('/III/V',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa III V',
                 competitors: competitors,
 
@@ -220,7 +220,7 @@ router.get('/III/VI',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa III VI',
                 competitors: competitors,
 
@@ -235,7 +235,7 @@ router.get('/III/VII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa III VII',
                 competitors: competitors,
 
@@ -250,7 +250,7 @@ router.get('/III/VIII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa III VIII',
                 competitors: competitors,
 
@@ -270,7 +270,7 @@ router.get('/II/I',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa II I',
                 competitors: competitors,
 
@@ -285,7 +285,7 @@ router.get('/II/II',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa II II',
                 competitors: competitors,
 
@@ -300,7 +300,7 @@ router.get('/II/III',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa II III',
                 competitors: competitors,
 
@@ -315,7 +315,7 @@ router.get('/II/IV',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa II IV',
                 competitors: competitors,
 
@@ -330,7 +330,7 @@ router.get('/II/V',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa II V',
                 competitors: competitors,
 
@@ -345,7 +345,7 @@ router.get('/II/VI',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa II VI',
                 competitors: competitors,
 
@@ -360,7 +360,7 @@ router.get('/II/VII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa II VII',
                 competitors: competitors,
 
@@ -375,7 +375,7 @@ router.get('/II/VIII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa II VIII',
                 competitors: competitors,
 
@@ -393,7 +393,7 @@ router.get('/I/I',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa I I',
                 competitors: competitors,
 
@@ -408,7 +408,7 @@ router.get('/I/II',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa I II',
                 competitors: competitors,
 
@@ -423,7 +423,7 @@ router.get('/I/III',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa I III',
                 competitors: competitors,
 
@@ -438,7 +438,7 @@ router.get('/I/IV',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa I IV',
                 competitors: competitors,
 
@@ -453,7 +453,7 @@ router.get('/I/V',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa I V',
                 competitors: competitors,
 
@@ -468,7 +468,7 @@ router.get('/I/VI',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa I VI',
                 competitors: competitors,
 
@@ -483,7 +483,7 @@ router.get('/I/VII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa I VII',
                 competitors: competitors,
 
@@ -498,7 +498,7 @@ router.get('/I/VIII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Klasa I VIII',
                 competitors: competitors,
 
@@ -516,7 +516,7 @@ router.get('/mlodziezowiec/I',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodieżowiec I',
                 competitors: competitors,
 
@@ -531,7 +531,7 @@ router.get('/mlodziezowiec/II',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodieżowiec II',
                 competitors: competitors,
 
@@ -546,7 +546,7 @@ router.get('/mlodziezowiec/III',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodieżowiec III',
                 competitors: competitors,
 
@@ -561,7 +561,7 @@ router.get('/mlodziezowiec/IV',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodieżowiec IV',
                 competitors: competitors,
 
@@ -576,7 +576,7 @@ router.get('/mlodziezowiec/V',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodieżowiec V',
                 competitors: competitors,
 
@@ -591,7 +591,7 @@ router.get('/mlodziezowiec/VI',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodieżowiec VI',
                 competitors: competitors,
 
@@ -606,7 +606,7 @@ router.get('/mlodziezowiec/VII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodieżowiec VII',
                 competitors: competitors,
 
@@ -621,7 +621,7 @@ router.get('/mlodziezowiec/VIII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Młodieżowiec VIII',
                 competitors: competitors,
 
@@ -639,7 +639,7 @@ router.get('/mistrzowska/I',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Mistrzowska I',
                 competitors: competitors,
 
@@ -654,7 +654,7 @@ router.get('/mistrzowska/II',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Mistrzowska II',
                 competitors: competitors,
 
@@ -669,7 +669,7 @@ router.get('/mistrzowska/III',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Mistrzowska III',
                 competitors: competitors,
 
@@ -684,7 +684,7 @@ router.get('/mistrzowska/IV',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Mistrzowska IV',
                 competitors: competitors,
 
@@ -699,7 +699,7 @@ router.get('/mistrzowska/V',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Mistrzowska V',
                 competitors: competitors,
 
@@ -714,7 +714,7 @@ router.get('/mistrzowska/VI',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Mistrzowska VI',
                 competitors: competitors,
 
@@ -729,7 +729,7 @@ router.get('/mistrzowska/VII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Mistrzowska VII',
                 competitors: competitors,
 
@@ -744,7 +744,7 @@ router.get('/mistrzowska/VIII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render('competitors', {
+            res.render('protocol', {
                 title:'Mistrzowska VIII',
                 competitors: competitors,
 
