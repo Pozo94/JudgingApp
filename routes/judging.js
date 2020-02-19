@@ -38,7 +38,7 @@ router.get('/:subdivision/:id',ensureAuthenticated, function(req, res){
             if (req.user.apparatus === 'VT') {
                 if (competitor.VT1.Final>=0 && competitor.VT2.Final>=0) {
                     req.flash('danger', 'Competitor alredy judged!');
-                    res.redirect('/judging');
+                    res.redirect('/judging/');
                 }
                 else
                     res.render('judge',{competitor:competitor});
@@ -46,35 +46,35 @@ router.get('/:subdivision/:id',ensureAuthenticated, function(req, res){
             if(req.user.apparatus==='FX')
                 if(competitor.FX.Final>=0) {
                     req.flash('danger', 'Competitor alredy judged!');
-                    res.redirect('/judging');
+                    res.redirect('/judging/');
                 }
                 else
                     res.render('judge',{competitor:competitor});
             if(req.user.apparatus==='PH')
                 if(competitor.PH.Final>=0) {
                     req.flash('danger', 'Competitor alredy judged!');
-                    res.redirect('/judging');
+                    res.redirect('/judging/');
                 }
                 else
                     res.render('judge',{competitor:competitor});
             if(req.user.apparatus==='SR')
                 if(competitor.SR.Final>=0) {
                     req.flash('danger', 'Competitor alredy judged!');
-                    res.redirect('/judging');
+                    res.redirect('/judging/');
                 }
                 else
                     res.render('judge',{competitor:competitor});
             if(req.user.apparatus==='PB')
                 if(competitor.PB.Final>=0) {
                     req.flash('danger', 'Competitor alredy judged!');
-                    res.redirect('/judging');
+                    res.redirect('/judging/');
                 }
                 else
                     res.render('judge',{competitor:competitor});
             if(req.user.apparatus==='HB')
                 if(competitor.HB.Final>=0) {
                     req.flash('danger', 'Competitor alredy judged!');
-                    res.redirect('/judging');
+                    res.redirect('/judging/');
                 }
                 else
                     res.render('judge',{competitor:competitor});

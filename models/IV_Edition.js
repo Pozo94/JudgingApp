@@ -217,6 +217,9 @@ var ParticipantSchema = mongoose.Schema({
     },
     lastname:{
         type:String
+    },
+    clas:{
+        type: String
     }
 
 });

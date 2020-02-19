@@ -1760,7 +1760,7 @@ Expr = Sizzle.selectors = {
 			return pattern ||
 				(pattern = new RegExp( "(^|" + whitespace + ")" + className + "(" + whitespace + "|$)" )) &&
 				classCache( className, function( elem ) {
-					return pattern.test( typeof elem.className === "string" && elem.className || typeof elem.getAttribute !== "undefined" && elem.getAttribute("class") || "" );
+					return pattern.test( typeof elem.className === "string" && elem.className || typeof elem.getAttribute !== "undefined" && elem.getAttribute("clas") || "" );
 				});
 		},
 
@@ -1918,7 +1918,7 @@ Expr = Sizzle.selectors = {
 		},
 
 		"PSEUDO": function( pseudo, argument ) {
-			// pseudo-class names are case-insensitive
+			// pseudo-clas names are case-insensitive
 			// http://www.w3.org/TR/selectors/#pseudo-classes
 			// Prioritize by case sensitivity in case custom pseudos are added with uppercase letters
 			// Remember that setFilters inherits from pseudos
@@ -6898,7 +6898,7 @@ jQuery.extend( {
 
 	propFix: {
 		"for": "htmlFor",
-		"class": "className"
+		"clas": "className"
 	}
 } );
 
@@ -6965,7 +6965,7 @@ jQuery.each( [
 
 
 function getClass( elem ) {
-	return elem.getAttribute && elem.getAttribute( "class" ) || "";
+	return elem.getAttribute && elem.getAttribute( "clas" ) || "";
 }
 
 jQuery.fn.extend( {
@@ -6997,7 +6997,7 @@ jQuery.fn.extend( {
 					// Only assign if different to avoid unneeded rendering.
 					finalValue = stripAndCollapse( cur );
 					if ( curValue !== finalValue ) {
-						elem.setAttribute( "class", finalValue );
+						elem.setAttribute( "clas", finalValue );
 					}
 				}
 			}
@@ -7017,7 +7017,7 @@ jQuery.fn.extend( {
 		}
 
 		if ( !arguments.length ) {
-			return this.attr( "class", "" );
+			return this.attr( "clas", "" );
 		}
 
 		if ( typeof value === "string" && value ) {
@@ -7042,7 +7042,7 @@ jQuery.fn.extend( {
 					// Only assign if different to avoid unneeded rendering.
 					finalValue = stripAndCollapse( cur );
 					if ( curValue !== finalValue ) {
-						elem.setAttribute( "class", finalValue );
+						elem.setAttribute( "clas", finalValue );
 					}
 				}
 			}
@@ -7072,7 +7072,7 @@ jQuery.fn.extend( {
 
 			if ( type === "string" ) {
 
-				// Toggle individual class names
+				// Toggle individual clas names
 				i = 0;
 				self = jQuery( this );
 				classNames = value.match( rnothtmlwhite ) || [];
@@ -7087,7 +7087,7 @@ jQuery.fn.extend( {
 					}
 				}
 
-			// Toggle whole class name
+			// Toggle whole clas name
 			} else if ( value === undefined || type === "boolean" ) {
 				className = getClass( this );
 				if ( className ) {
@@ -7096,12 +7096,12 @@ jQuery.fn.extend( {
 					dataPriv.set( this, "__className__", className );
 				}
 
-				// If the element has a class name or if we're passed `false`,
+				// If the element has a clas name or if we're passed `false`,
 				// then remove the whole classname (if there was one, the above saved it).
 				// Otherwise bring back whatever was previously saved (if anything),
 				// falling back to the empty string if nothing was stored.
 				if ( this.setAttribute ) {
-					this.setAttribute( "class",
+					this.setAttribute( "clas",
 						className || value === false ?
 						"" :
 						dataPriv.get( this, "__className__" ) || ""

@@ -222,7 +222,7 @@ var ParticipantSchema = mongoose.Schema({
     lastname:{
         type:String
     },
-    class:{
+    clas:{
         type: String
     }
 

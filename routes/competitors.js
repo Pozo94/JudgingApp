@@ -103,7 +103,7 @@ router.post('/addParticipant', function (req, res) {
                         subdivision:req.body.subdivision,
                         firstname:firstname,
                         lastname:lastname,
-                        class:competitor.clas,
+                        clas:competitor.clas,
                         year:competitor.year
                     })
                     I_Edition.addParticipant(Participant,function(err, participant){
@@ -121,7 +121,7 @@ router.post('/addParticipant', function (req, res) {
                         competitor:competitor.id,
                         firstname:firstname,
                         lastname:lastname,
-                        class:competitor.clas,
+                        clas:competitor.clas,
                         year:competitor.year
 
                     })
@@ -150,7 +150,7 @@ router.post('/addParticipant', function (req, res) {
                         subdivision:req.body.subdivision,
                         firstname:firstname,
                         lastname:lastname,
-                        class:competitor.clas,
+                        clas:competitor.clas,
                         year:competitor.year
 
 
@@ -170,7 +170,7 @@ router.post('/addParticipant', function (req, res) {
                         competitor:competitor.id,
                         firstname:firstname,
                         lastname:lastname,
-                        class:competitor.clas,
+                        clas:competitor.clas,
                         year:competitor.year
 
                     })
@@ -198,7 +198,7 @@ router.post('/addParticipant', function (req, res) {
                         subdivision:req.body.subdivision,
                         firstname:firstname,
                         lastname:lastname,
-                        class:competitor.clas,
+                        clas:competitor.clas,
                         year:competitor.year
 
 
@@ -218,7 +218,7 @@ router.post('/addParticipant', function (req, res) {
                         competitor:competitor.id,
                         firstname:firstname,
                         lastname:lastname,
-                        class:competitor.clas,
+                        clas:competitor.clas,
                         year:competitor.year
 
 
@@ -248,7 +248,7 @@ router.post('/addParticipant', function (req, res) {
                         subdivision:req.body.subdivision,
                         firstname:firstname,
                         lastname:lastname,
-                        class:competitor.clas,
+                        clas:competitor.clas,
                         year:competitor.year
 
 
@@ -268,7 +268,7 @@ router.post('/addParticipant', function (req, res) {
                         competitor:competitor.id,
                         firstname:firstname,
                         lastname:lastname,
-                        class:competitor.clas,
+                        clas:competitor.clas,
                         year:competitor.year
 
 

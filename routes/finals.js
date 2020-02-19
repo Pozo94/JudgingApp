@@ -9,7 +9,7 @@ var PB={PB:-1};
 var HB={HB:-1};
 
 router.get('/', function (req, res) {
-    res.render('class');
+    res.render('clas');
 
 });
 

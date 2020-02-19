@@ -2,12 +2,20 @@ var express = require('express');
 var router = express.Router();
 var Competitor =require('../models/competitor');
 var Current_Edition = require('../models/I_Edition');
+var I_Edition = require('../models/I_Edition');
+var II_Edition = require('../models/I_Edition');
+var III_Edition = require('../models/I_Edition');
+var IV_Edition = require('../models/I_Edition');
+var League=require('../models/league')
 var method={suma:-1};
 router.get('/', function (req, res) {
     res.render('results');
 
 });
+router.get('/sum',function (req,res) {
 
+
+})
 router.get('/mistrzowska', function (req, res) {
 
     Current_Edition.db.collection('i_editions').find().sort(method).toArray( function (err,competitors) {

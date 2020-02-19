@@ -6,14 +6,14 @@ var Current_Edition=require('../models/I_Edition');
 // var IV_Edition=require('../models/IV_Edition');
 
 router.get('/',ensureAuthenticated, function(req, res) {
-    res.render('class');
+    res.render('clas');
 });
 router.get('/mlodziezowa',ensureAuthenticated, function(req, res){
 
     res.render('judging');
 });
 router.get('/mlodziezowa/I',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'Młodzieżowa',subdivision:'I'},function (err,competitors) {
+    Current_Edition.find({clas:'Młodzieżowa',subdivision:'I'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -29,7 +29,7 @@ router.get('/mlodziezowa/I',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/II',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'Mlodziezowa',subdivision:'II'},function (err,competitors) {
+    Current_Edition.find({clas:'Mlodziezowa',subdivision:'II'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -45,7 +45,7 @@ router.get('/mlodziezowa/II',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/III',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'Mlodziezowa',subdivision:'III'},function (err,competitors) {
+    Current_Edition.find({clas:'Mlodziezowa',subdivision:'III'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -61,7 +61,7 @@ router.get('/mlodziezowa/III',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/IV',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'Mlodziezowa',subdivision:'IV'},function (err,competitors) {
+    Current_Edition.find({clas:'Mlodziezowa',subdivision:'IV'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -77,7 +77,7 @@ router.get('/mlodziezowa/IV',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/V',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'Mlodziezowa',subdivision:'V'},function (err,competitors) {
+    Current_Edition.find({clas:'Mlodziezowa',subdivision:'V'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -93,7 +93,7 @@ router.get('/mlodziezowa/V',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/VI',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'Mlodziezowa',subdivision:'VI'},function (err,competitors) {
+    Current_Edition.find({clas:'Mlodziezowa',subdivision:'VI'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -109,7 +109,7 @@ router.get('/mlodziezowa/VI',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/VII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'Mlodziezowa',subdivision:'VII'},function (err,competitors) {
+    Current_Edition.find({clas:'Mlodziezowa',subdivision:'VII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -125,7 +125,7 @@ router.get('/mlodziezowa/VII',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/VIII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'Mlodziezowa',subdivision:'VIII'},function (err,competitors) {
+    Current_Edition.find({clas:'Mlodziezowa',subdivision:'VIII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -142,7 +142,7 @@ router.get('/mlodziezowa/VIII',ensureAuthenticated, function(req, res){
 });
 
 router.get('/III/I',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'III',subdivision:'I'},function (err,competitors) {
+    Current_Edition.find({clas:'III',subdivision:'I'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -158,7 +158,7 @@ router.get('/III/I',ensureAuthenticated, function(req, res){
 
 });
 router.get('/III/II',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'III',subdivision:'II'},function (err,competitors) {
+    Current_Edition.find({clas:'III',subdivision:'II'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -174,7 +174,7 @@ router.get('/III/II',ensureAuthenticated, function(req, res){
 
 });
 router.get('/III/III',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'III',subdivision:'III'},function (err,competitors) {
+    Current_Edition.find({clas:'III',subdivision:'III'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -190,7 +190,7 @@ router.get('/III/III',ensureAuthenticated, function(req, res){
 
 });
 router.get('/III/IV',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'III',subdivision:'IV'},function (err,competitors) {
+    Current_Edition.find({clas:'III',subdivision:'IV'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -206,7 +206,7 @@ router.get('/III/IV',ensureAuthenticated, function(req, res){
 
 });
 router.get('/III/V',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'III',subdivision:'V'},function (err,competitors) {
+    Current_Edition.find({clas:'III',subdivision:'V'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -222,7 +222,7 @@ router.get('/III/V',ensureAuthenticated, function(req, res){
 
 });
 router.get('/III/VI',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'III',subdivision:'VI'},function (err,competitors) {
+    Current_Edition.find({clas:'III',subdivision:'VI'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -238,7 +238,7 @@ router.get('/III/VI',ensureAuthenticated, function(req, res){
 
 });
 router.get('/III/VII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'III',subdivision:'VII'},function (err,competitors) {
+    Current_Edition.find({clas:'III',subdivision:'VII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -254,7 +254,7 @@ router.get('/III/VII',ensureAuthenticated, function(req, res){
 
 });
 router.get('/III/VIII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'III',subdivision:'VIII'},function (err,competitors) {
+    Current_Edition.find({clas:'III',subdivision:'VIII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -275,7 +275,7 @@ router.get('/III',ensureAuthenticated, function(req, res){
 });
 
 router.get('/II/I',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'II',subdivision:'I'},function (err,competitors) {
+    Current_Edition.find({clas:'II',subdivision:'I'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -291,7 +291,7 @@ router.get('/II/I',ensureAuthenticated, function(req, res){
 
 });
 router.get('/II/II',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'II',subdivision:'II'},function (err,competitors) {
+    Current_Edition.find({clas:'II',subdivision:'II'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -307,7 +307,7 @@ router.get('/II/II',ensureAuthenticated, function(req, res){
 
 });
 router.get('/II/III',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'II',subdivision:'III'},function (err,competitors) {
+    Current_Edition.find({clas:'II',subdivision:'III'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -323,7 +323,7 @@ router.get('/II/III',ensureAuthenticated, function(req, res){
 
 });
 router.get('/II/IV',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'II',subdivision:'IV'},function (err,competitors) {
+    Current_Edition.find({clas:'II',subdivision:'IV'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -339,7 +339,7 @@ router.get('/II/IV',ensureAuthenticated, function(req, res){
 
 });
 router.get('/II/V',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'II',subdivision:'V'},function (err,competitors) {
+    Current_Edition.find({clas:'II',subdivision:'V'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -355,7 +355,7 @@ router.get('/II/V',ensureAuthenticated, function(req, res){
 
 });
 router.get('/II/VI',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'II',subdivision:'VI'},function (err,competitors) {
+    Current_Edition.find({clas:'II',subdivision:'VI'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -371,7 +371,7 @@ router.get('/II/VI',ensureAuthenticated, function(req, res){
 
 });
 router.get('/II/VII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'II',subdivision:'VII'},function (err,competitors) {
+    Current_Edition.find({clas:'II',subdivision:'VII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -387,7 +387,7 @@ router.get('/II/VII',ensureAuthenticated, function(req, res){
 
 });
 router.get('/II/VIII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'II',subdivision:'VIII'},function (err,competitors) {
+    Current_Edition.find({clas:'II',subdivision:'VIII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -406,7 +406,7 @@ router.get('/II',ensureAuthenticated, function(req, res){
     res.render('judging');
 });
 router.get('/I/I',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'I',subdivision:'I'},function (err,competitors) {
+    Current_Edition.find({clas:'I',subdivision:'I'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -422,7 +422,7 @@ router.get('/I/I',ensureAuthenticated, function(req, res){
 
 });
 router.get('/I/II',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'I',subdivision:'II'},function (err,competitors) {
+    Current_Edition.find({clas:'I',subdivision:'II'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -438,7 +438,7 @@ router.get('/I/II',ensureAuthenticated, function(req, res){
 
 });
 router.get('/I/III',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'I',subdivision:'III'},function (err,competitors) {
+    Current_Edition.find({clas:'I',subdivision:'III'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -454,7 +454,7 @@ router.get('/I/III',ensureAuthenticated, function(req, res){
 
 });
 router.get('/I/IV',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'I',subdivision:'IV'},function (err,competitors) {
+    Current_Edition.find({clas:'I',subdivision:'IV'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -470,7 +470,7 @@ router.get('/I/IV',ensureAuthenticated, function(req, res){
 
 });
 router.get('/I/V',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'I',subdivision:'V'},function (err,competitors) {
+    Current_Edition.find({clas:'I',subdivision:'V'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -486,7 +486,7 @@ router.get('/I/V',ensureAuthenticated, function(req, res){
 
 });
 router.get('/I/VI',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'I',subdivision:'VI'},function (err,competitors) {
+    Current_Edition.find({clas:'I',subdivision:'VI'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -502,7 +502,7 @@ router.get('/I/VI',ensureAuthenticated, function(req, res){
 
 });
 router.get('/I/VII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'I',subdivision:'VII'},function (err,competitors) {
+    Current_Edition.find({clas:'I',subdivision:'VII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -518,7 +518,7 @@ router.get('/I/VII',ensureAuthenticated, function(req, res){
 
 });
 router.get('/I/VIII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'I',subdivision:'VIII'},function (err,competitors) {
+    Current_Edition.find({clas:'I',subdivision:'VIII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -537,7 +537,7 @@ router.get('/I',ensureAuthenticated, function(req, res){
     res.render('judging');
 });
 router.get('/mlodziezowiec/I',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mlodziezowiec',subdivision:'I'},function (err,competitors) {
+    Current_Edition.find({clas:'mlodziezowiec',subdivision:'I'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -553,7 +553,7 @@ router.get('/mlodziezowiec/I',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/II',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mlodziezowiec',subdivision:'II'},function (err,competitors) {
+    Current_Edition.find({clas:'mlodziezowiec',subdivision:'II'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -569,7 +569,7 @@ router.get('/mlodziezowiec/II',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/III',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mlodziezowiec',subdivision:'III'},function (err,competitors) {
+    Current_Edition.find({clas:'mlodziezowiec',subdivision:'III'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -585,7 +585,7 @@ router.get('/mlodziezowiec/III',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/IV',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mlodziezowiec',subdivision:'IV'},function (err,competitors) {
+    Current_Edition.find({clas:'mlodziezowiec',subdivision:'IV'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -601,7 +601,7 @@ router.get('/mlodziezowiec/IV',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/V',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mlodziezowiec',subdivision:'V'},function (err,competitors) {
+    Current_Edition.find({clas:'mlodziezowiec',subdivision:'V'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -617,7 +617,7 @@ router.get('/mlodziezowiec/V',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/VI',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mlodziezowiec',subdivision:'VI'},function (err,competitors) {
+    Current_Edition.find({clas:'mlodziezowiec',subdivision:'VI'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -633,7 +633,7 @@ router.get('/mlodziezowiec/VI',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/VII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mlodziezowiec',subdivision:'VII'},function (err,competitors) {
+    Current_Edition.find({clas:'mlodziezowiec',subdivision:'VII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -649,7 +649,7 @@ router.get('/mlodziezowiec/VII',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/VIII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mlodziezowiec',subdivision:'VIII'},function (err,competitors) {
+    Current_Edition.find({clas:'mlodziezowiec',subdivision:'VIII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -668,7 +668,7 @@ router.get('/mlodziezowiec',ensureAuthenticated, function(req, res){
     res.render('judging');
 });
 router.get('/mistrzowska/I',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mistrzowska',subdivision:'I'},function (err,competitors) {
+    Current_Edition.find({clas:'mistrzowska',subdivision:'I'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -684,7 +684,7 @@ router.get('/mistrzowska/I',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/II',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mistrzowska',subdivision:'II'},function (err,competitors) {
+    Current_Edition.find({clas:'mistrzowska',subdivision:'II'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -700,7 +700,7 @@ router.get('/mistrzowska/II',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/III',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mistrzowska',subdivision:'III'},function (err,competitors) {
+    Current_Edition.find({clas:'mistrzowska',subdivision:'III'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -716,7 +716,7 @@ router.get('/mistrzowska/III',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/IV',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mistrzowska',subdivision:'IV'},function (err,competitors) {
+    Current_Edition.find({clas:'mistrzowska',subdivision:'IV'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -732,7 +732,7 @@ router.get('/mistrzowska/IV',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/V',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mistrzowska',subdivision:'V'},function (err,competitors) {
+    Current_Edition.find({clas:'mistrzowska',subdivision:'V'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -748,7 +748,7 @@ router.get('/mistrzowska/V',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/VI',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mistrzowska',subdivision:'VI'},function (err,competitors) {
+    Current_Edition.find({clas:'mistrzowska',subdivision:'VI'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -764,7 +764,7 @@ router.get('/mistrzowska/VI',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/VII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mistrzowska',subdivision:'VII'},function (err,competitors) {
+    Current_Edition.find({clas:'mistrzowska',subdivision:'VII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -780,7 +780,7 @@ router.get('/mistrzowska/VII',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/VIII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({class:'mistrzowska',subdivision:'VIII'},function (err,competitors) {
+    Current_Edition.find({clas:'mistrzowska',subdivision:'VIII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
