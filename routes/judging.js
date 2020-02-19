@@ -144,7 +144,15 @@ router.post('/:subdivision/:id', function(req, res){
                     competitorr.VT1.E4=E4;
                     competitorr.VT1.E=E;
                     competitorr.VT1.Final= +Final;
-                    competitorr.suma = +competitorr.suma+ +Final;
+                    if (competitorr.suma===undefined)
+                    {
+                        competitorr.suma= +Final;
+                    }
+                    else
+                    {
+                        competitorr.suma = +competitorr.suma+ +Final;
+                    }
+
                     console.log(competitorr);
                     Competitor.createCompetitor(competitorr, function () {
 
@@ -173,7 +181,14 @@ router.post('/:subdivision/:id', function(req, res){
                 competitorr.FX.E4=E4;
                 competitorr.FX.E=E;
                 competitorr.FX.Final= +Final;
-                competitorr.suma= +competitorr.suma+ +Final;
+                if (competitorr.suma===undefined)
+                {
+                    competitorr.suma= +Final;
+                }
+                else
+                {
+                    competitorr.suma = +competitorr.suma+ +Final;
+                }
                 Competitor.createCompetitor(competitorr,function () {
 
                 });
@@ -198,7 +213,14 @@ router.post('/:subdivision/:id', function(req, res){
                 competitorr.PH.E4=E4;
                 competitorr.PH.E=E;
                 competitorr.PH.Final= +Final;
-                competitorr.suma= +competitorr.suma+ +Final;
+                if (competitorr.suma===undefined)
+                {
+                    competitorr.suma= +Final;
+                }
+                else
+                {
+                    competitorr.suma = +competitorr.suma+ +Final;
+                }
                 Competitor.createCompetitor(competitorr,function () {
 
                 });
@@ -223,7 +245,14 @@ router.post('/:subdivision/:id', function(req, res){
                 competitorr.SR.E4=E4;
                 competitorr.SR.E=E;
                 competitorr.SR.Final= +Final;
-                competitorr.suma= +competitorr.suma+ +Final;
+                if (competitorr.suma===undefined)
+                {
+                    competitorr.suma= +Final;
+                }
+                else
+                {
+                    competitorr.suma = +competitorr.suma+ +Final;
+                }
                 Competitor.createCompetitor(competitorr,function () {
 
                 });
@@ -249,7 +278,14 @@ router.post('/:subdivision/:id', function(req, res){
                 competitorr.PB.E4=E4;
                 competitorr.PB.E=E;
                 competitorr.PB.Final= +Final;
-                competitorr.suma= +competitorr.suma+ +Final;
+                if (competitorr.suma===undefined)
+                {
+                    competitorr.suma= +Final;
+                }
+                else
+                {
+                    competitorr.suma = +competitorr.suma+ +Final;
+                }
                 Competitor.createCompetitor(competitorr,function () {
 
                 });
@@ -274,7 +310,14 @@ router.post('/:subdivision/:id', function(req, res){
                 competitorr.HB.E4=E4;
                 competitorr.HB.E=E;
                 competitorr.HB.Final= +Final;
-                competitorr.suma= +competitorr.suma+ +Final;
+                if (competitorr.suma===undefined)
+                {
+                    competitorr.suma= +Final;
+                }
+                else
+                {
+                    competitorr.suma = +competitorr.suma+ +Final;
+                }
                 Competitor.createCompetitor(competitorr,function () {
 
                 });
