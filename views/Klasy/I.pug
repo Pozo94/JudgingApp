@@ -147,7 +147,10 @@ html
                                         td=' E:' + competitor.HB.E.toFixed(2)
                         else
                             td
-                        td=competitor.suma.toFixed(2)
+                        if competitor.suma
+                            td=competitor.suma.toFixed(2)
+                        else
+                            td
 
 
     script.
