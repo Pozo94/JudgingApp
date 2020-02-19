@@ -14,7 +14,11 @@ var user= require('./models/user');
 var judge= require('./models/judge');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://Pozo:Meliana1@cluster0-zrsck.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser: true});
+mongoose.connect('mongodb+srv://Pozo:Meliana1@cluster0-zrsck.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 5000
+}).catch(err => console.log(err.reason));
+//mongoose.connect('mongodb://localhost:27017',{useNewUrlParser: true});
 var db = mongoose.connection;
 require('./config/prod')(app);
 
