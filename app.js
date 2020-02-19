@@ -3,8 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mongo = require('mongodb');
-var mongoose = require('mongoose');
+
 var passport = require('passport');
 var session = require('express-session');
 var bodyParser = require('body-parser');
@@ -13,7 +12,9 @@ var flash=require('connect-flash');
 var app = express();
 var user= require('./models/user');
 var judge= require('./models/judge');
-mongoose.connect('mongodb+svr://Pozo:Meliana1@cluster0-zrsck.mongodb.net/test?retryWrites=true&w=majority/Zawody',{useNewUrlParser: true});
+var mongo = require('mongodb');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://Pozo:Meliana1@cluster0-zrsck.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser: true});
 var db = mongoose.connection;
 require('./config/prod')(app);
 
