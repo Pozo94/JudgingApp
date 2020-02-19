@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/Sedziowanie2',{useNewUrlParser: true});
 var db = mongoose.connection;
 
 var CompetitorSchema=mongoose.Schema({

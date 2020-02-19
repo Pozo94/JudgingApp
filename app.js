@@ -13,7 +13,7 @@ var flash=require('connect-flash');
 var app = express();
 var user= require('./models/user');
 var judge= require('./models/judge');
-mongoose.connect('mongodb://localhost/Sedziowanie2',{useNewUrlParser: true});
+mongoose.connect('mongodb+srv://Pozo:Meliana1@cluster0-zrsck.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser: true});
 var db = mongoose.connection;
 require('./config/prod')(app);
 
