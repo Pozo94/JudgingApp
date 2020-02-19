@@ -29,7 +29,7 @@ router.get('/mlodziezowa/I',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/II',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'Mlodziezowa',subdivision:'II'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowa',subdivision:'II'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -45,7 +45,7 @@ router.get('/mlodziezowa/II',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/III',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'Mlodziezowa',subdivision:'III'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowa',subdivision:'III'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -61,7 +61,7 @@ router.get('/mlodziezowa/III',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/IV',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'Mlodziezowa',subdivision:'IV'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowa',subdivision:'IV'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -77,7 +77,7 @@ router.get('/mlodziezowa/IV',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/V',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'Mlodziezowa',subdivision:'V'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowa',subdivision:'V'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -93,7 +93,7 @@ router.get('/mlodziezowa/V',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/VI',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'Mlodziezowa',subdivision:'VI'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowa',subdivision:'VI'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -109,11 +109,11 @@ router.get('/mlodziezowa/VI',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/VII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'Mlodziezowa',subdivision:'VII'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowa',subdivision:'VII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
+
             res.render('competitors', {
                 title:'Młodzieżowa VII',
                 competitors: competitors,
@@ -125,11 +125,10 @@ router.get('/mlodziezowa/VII',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowa/VIII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'Mlodziezowa',subdivision:'VIII'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowa',subdivision:'VIII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Młodzieżowa VIII',
                 competitors: competitors,
@@ -146,7 +145,6 @@ router.get('/III/I',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa III I',
                 competitors: competitors,
@@ -162,7 +160,6 @@ router.get('/III/II',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa III II',
                 competitors: competitors,
@@ -178,7 +175,6 @@ router.get('/III/III',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa III III',
                 competitors: competitors,
@@ -194,7 +190,6 @@ router.get('/III/IV',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'klasa III IV',
                 competitors: competitors,
@@ -210,7 +205,6 @@ router.get('/III/V',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa III V',
                 competitors: competitors,
@@ -226,7 +220,6 @@ router.get('/III/VI',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa III VI',
                 competitors: competitors,
@@ -242,7 +235,6 @@ router.get('/III/VII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa III VII',
                 competitors: competitors,
@@ -258,7 +250,6 @@ router.get('/III/VIII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa III VIII',
                 competitors: competitors,
@@ -279,7 +270,6 @@ router.get('/II/I',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa II I',
                 competitors: competitors,
@@ -295,7 +285,6 @@ router.get('/II/II',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa II II',
                 competitors: competitors,
@@ -311,7 +300,6 @@ router.get('/II/III',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa II III',
                 competitors: competitors,
@@ -327,7 +315,6 @@ router.get('/II/IV',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa II IV',
                 competitors: competitors,
@@ -343,7 +330,6 @@ router.get('/II/V',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa II V',
                 competitors: competitors,
@@ -359,7 +345,6 @@ router.get('/II/VI',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa II VI',
                 competitors: competitors,
@@ -375,7 +360,6 @@ router.get('/II/VII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa II VII',
                 competitors: competitors,
@@ -391,7 +375,6 @@ router.get('/II/VIII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa II VIII',
                 competitors: competitors,
@@ -410,7 +393,6 @@ router.get('/I/I',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa I I',
                 competitors: competitors,
@@ -426,7 +408,6 @@ router.get('/I/II',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa I II',
                 competitors: competitors,
@@ -442,7 +423,6 @@ router.get('/I/III',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa I III',
                 competitors: competitors,
@@ -458,7 +438,6 @@ router.get('/I/IV',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa I IV',
                 competitors: competitors,
@@ -474,7 +453,6 @@ router.get('/I/V',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa I V',
                 competitors: competitors,
@@ -490,7 +468,6 @@ router.get('/I/VI',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa I VI',
                 competitors: competitors,
@@ -506,7 +483,6 @@ router.get('/I/VII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa I VII',
                 competitors: competitors,
@@ -522,7 +498,6 @@ router.get('/I/VIII',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Klasa I VIII',
                 competitors: competitors,
@@ -537,11 +512,10 @@ router.get('/I',ensureAuthenticated, function(req, res){
     res.render('judging');
 });
 router.get('/mlodziezowiec/I',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mlodziezowiec',subdivision:'I'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowiec',subdivision:'I'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Młodieżowiec I',
                 competitors: competitors,
@@ -553,11 +527,10 @@ router.get('/mlodziezowiec/I',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/II',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mlodziezowiec',subdivision:'II'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowiec',subdivision:'II'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Młodieżowiec II',
                 competitors: competitors,
@@ -569,11 +542,10 @@ router.get('/mlodziezowiec/II',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/III',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mlodziezowiec',subdivision:'III'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowiec',subdivision:'III'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Młodieżowiec III',
                 competitors: competitors,
@@ -585,11 +557,10 @@ router.get('/mlodziezowiec/III',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/IV',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mlodziezowiec',subdivision:'IV'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowiec',subdivision:'IV'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Młodieżowiec IV',
                 competitors: competitors,
@@ -601,11 +572,10 @@ router.get('/mlodziezowiec/IV',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/V',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mlodziezowiec',subdivision:'V'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowiec',subdivision:'V'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Młodieżowiec V',
                 competitors: competitors,
@@ -617,11 +587,10 @@ router.get('/mlodziezowiec/V',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/VI',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mlodziezowiec',subdivision:'VI'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowiec',subdivision:'VI'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Młodieżowiec VI',
                 competitors: competitors,
@@ -633,11 +602,10 @@ router.get('/mlodziezowiec/VI',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/VII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mlodziezowiec',subdivision:'VII'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowiec',subdivision:'VII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Młodieżowiec VII',
                 competitors: competitors,
@@ -649,11 +617,10 @@ router.get('/mlodziezowiec/VII',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mlodziezowiec/VIII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mlodziezowiec',subdivision:'VIII'},function (err, competitors) {
+    Current_Edition.find({clas:'Młodzieżowiec',subdivision:'VIII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Młodieżowiec VIII',
                 competitors: competitors,
@@ -668,11 +635,10 @@ router.get('/mlodziezowiec',ensureAuthenticated, function(req, res){
     res.render('judging');
 });
 router.get('/mistrzowska/I',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mistrzowska',subdivision:'I'},function (err, competitors) {
+    Current_Edition.find({clas:'Mistrzowska',subdivision:'I'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Mistrzowska I',
                 competitors: competitors,
@@ -684,11 +650,10 @@ router.get('/mistrzowska/I',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/II',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mistrzowska',subdivision:'II'},function (err, competitors) {
+    Current_Edition.find({clas:'Mistrzowska',subdivision:'II'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Mistrzowska II',
                 competitors: competitors,
@@ -700,11 +665,10 @@ router.get('/mistrzowska/II',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/III',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mistrzowska',subdivision:'III'},function (err, competitors) {
+    Current_Edition.find({clas:'Mistrzowska',subdivision:'III'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Mistrzowska III',
                 competitors: competitors,
@@ -716,11 +680,10 @@ router.get('/mistrzowska/III',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/IV',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mistrzowska',subdivision:'IV'},function (err, competitors) {
+    Current_Edition.find({clas:'Mistrzowska',subdivision:'IV'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Mistrzowska IV',
                 competitors: competitors,
@@ -732,11 +695,10 @@ router.get('/mistrzowska/IV',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/V',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mistrzowska',subdivision:'V'},function (err, competitors) {
+    Current_Edition.find({clas:'Mistrzowska',subdivision:'V'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Mistrzowska V',
                 competitors: competitors,
@@ -748,11 +710,10 @@ router.get('/mistrzowska/V',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/VI',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mistrzowska',subdivision:'VI'},function (err, competitors) {
+    Current_Edition.find({clas:'Mistrzowska',subdivision:'VI'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Mistrzowska VI',
                 competitors: competitors,
@@ -764,11 +725,10 @@ router.get('/mistrzowska/VI',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/VII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mistrzowska',subdivision:'VII'},function (err, competitors) {
+    Current_Edition.find({clas:'Mistrzowska',subdivision:'VII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Mistrzowska VII',
                 competitors: competitors,
@@ -780,11 +740,10 @@ router.get('/mistrzowska/VII',ensureAuthenticated, function(req, res){
 
 });
 router.get('/mistrzowska/VIII',ensureAuthenticated, function(req, res){
-    Current_Edition.find({clas:'mistrzowska',subdivision:'VIII'},function (err, competitors) {
+    Current_Edition.find({clas:'Mistrzowska',subdivision:'VIII'},function (err, competitors) {
         if(err){
             console.log(err);
         } else {
-            competitors.sort(compare);
             res.render('competitors', {
                 title:'Mistrzowska VIII',
                 competitors: competitors,
