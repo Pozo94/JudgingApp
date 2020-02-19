@@ -220,6 +220,9 @@ var ParticipantSchema = mongoose.Schema({
     },
     clas:{
         type: String
+    },
+    suma:{
+        type: Number
     }
 
 });
