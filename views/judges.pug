@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+    style.
+        p{
+            color: #0f0f0f;
+        }
+    each judge, i in judges
+        ul.list-group
+            li.list-group-item
+                p=judge.firstname + ' ' +judge.lastname
+
+
+
+                a.btn.btn-success.pull-right(href="/competitors/edit/"+competitor._id) Dodaj

@@ -1,0 +1,75 @@
+extends layout
+block content
+    style.
+
+    script(defer, src="/js/socket.io.js")
+    -var role = user.role;
+    -var name=competitor.firstname+' ' + competitor.lastname
+    h2.text-center=name
+    input.form-control(type='hidden', id='Role',  required='', value=role)
+    input.form-control(type='hidden', id='Apparatus', required='', value=user.apparatus)
+    if role === 'Arbiter'
+        form.form-signin(method='POST' id='postForm')
+            #form-group
+
+                input.form-control(type='number', step='0.1',id='D' , name='D', placeholder='Ocena D', required='')
+                input.form-control(type='number', step='0.1',id='E1' , name='E1', placeholder='Ocena E1', required='')
+                input.form-control(type='number', step='0.1',name='E2' , id='E2', placeholder='Ocena E2'  )
+                input.form-control(type='number', step='0.1',name='E3' , id='E3', placeholder='Ocena E3' )
+                input.form-control(type='number', step='0.1',name='E4' , id='E4', placeholder='Ocena E4' )
+                button.btn.btn-lg.btn-success.btn-block(type='submit', formmethod='post') Zapisz
+
+    else
+        form.form-signin(id='noteForm')
+
+            input.form-control(type='number', id='E', step='0.1', min='0', max='10', name='Ocena '+role, placeholder='Ocena E', value='',  required='')
+            input.btn.btn-lg.btn-primary.btn-block( id='przycisk', value='Wyślij')
+
+    script.
+
+        $(function(){
+
+            var element = function (id) {
+                return document.getElementById(id);
+
+            }
+            var socket = io.connect();
+            if (element('Role').value!=='Arbiter')
+            {
+
+                var E = element('E');
+                var role = element('Role');
+                var apparatus = element('Apparatus');
+                var btn = element('przycisk');
+                btn.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    console.log(E.value);
+                    console.log(role.value);
+                    console.log(apparatus.value);
+                    socket.emit('send note', {
+                        apparatus: apparatus.value,
+                        role: role.value,
+                        note: E.value
+
+
+                    });
+                    E.value = '';
+
+
+
+
+
+            });}
+            socket.on('note',function(data){
+                //var i=0;
+                // console.log(data[0].apparatus);
+                // console.log(element('Apparatus').value);
+                if(data[0].apparatus===element('Apparatus').value){
+                    if(element('Role').value==='Arbiter')
+                        element(data[0].role).value=data[0].note;
+
+                }
+
+
+            })
+        });

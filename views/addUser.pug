@@ -1,0 +1,46 @@
+extends layout
+
+block content
+
+    form.form-signin(method='POST', action='/users/addUser')
+        #form-group
+            h1.h2.mb-5.font-weight-normal Dane S&eogon;dziego
+
+            .row
+                .col-md-8.mb-3
+                    label(for='name') Sędzia
+                    br
+                    select#name.custom-select.d-block.w-100(name='name', required='')
+                        option(value='') Choose...
+                        each judge, i in judges
+                            option=judge.firstname+" "+judge.lastname
+                    .invalid-feedback
+
+            .row
+                .col-md-8.mb-3
+                    label(for='role') Rola
+                    br
+                    select#role.custom-select.d-block.w-100(name='role', required='')
+                        option(value='') Choose...
+                        option Arbiter
+                        option E2
+                        option E3
+                        option E4
+                    .invalid-feedback
+
+            .row
+                .col-md-8.mb-3
+                    label(for='apparatus') Przyrz&aogon;d
+                    br
+                    select#apparatus.custom-select.d-block.w-100(name='apparatus', required='')
+                        option(value='') Choose...
+                        option FX
+                        option PH
+                        option SR
+                        option VT
+                        option PB
+                        option HB
+                    .invalid-feedback
+
+        button.btn.btn-lg.btn-primary.btn-block(type='submit', formmethod='post') Dodaj
+

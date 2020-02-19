@@ -1,0 +1,46 @@
+extends layout
+
+block content
+    form.form-signin(method='POST', action='/competitors/addParticipant')
+        h1.h2.mb-5.font-weight-normal Przydziel do zawodów
+        #form-group
+            .row
+                .col-md-8.mb-3
+                    label(for='name') Zawodnik
+                    br
+                    select#name.custom-select.d-block.w-100(name='name', required='')
+                        option(value='') Choose...
+                        each competitor, i in competitors
+                            option=competitor.firstname + " " + competitor.lastname
+                    .invalid-feedback
+
+        #form-group
+            .row
+                .col-md-5.mb-3
+                    label(for='subdivision') Zastęp
+                    br
+                    select.custom-select.d-block.w-100(id='subdivision',name='subdivision', required='')
+                        option(value='') Choose...
+                        option I
+                        option II
+                        option III
+                        option IV
+                        option V
+                        option VI
+                        option VII
+                        option VIII
+                    .invalid-feedback
+        #form-group
+            .row
+                .col-md-5.mb-3
+                    label(for='competition') Zawody
+                    br
+                    select.custom-select.d-block.w-100(id='competition',name='competition', required='')
+                        option(value='') Choose...
+                        option I_Edition
+                        option II_Edition
+                        option III_Edition
+                        option IV_Edition
+
+                    .invalid-feedback
+        button.btn.btn-lg.btn-primary.btn-block(type='submit', formmethod='post') Dodaj

@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+    -var miejsce = 1;
+    style.
+        h7 {
+            color: #0f0f0f;
+        }
+    table.table.table-condensed(id='wyniki')
+        thead
+            tr
+                th(scope='col' style="text-align: center")
+                th(scope='col' style="text-align: center") #
+                th(scope='col' style="text-align: center") Imie
+                th(scope='col' style="text-align: center") Nazwisko
+                th(scope='col' style="text-align: center") Klub
+                th(scope='col' style="text-align: center") Ocena D
+                th(scope='col' style="text-align: center") Ocena E
+                th(scope='col' style="text-align: center") Ocena Końcowa
+
+        each competitor, i in competitors
+            if competitor.PB
+                tr
+                    if i <= 8
+                        td Q
+                    if i === 9 || i === 10
+                        td="R" + (i - 8)
+                    if i > 10
+                        td
+                    td= miejsce++ + '. '
+                    td=competitor.firstname
+                    td=competitor.lastname
+                    td=competitor.club
+                    td=competitor.PB.D
+                    td=competitor.PB.E
+                    td=competitor.PB.Final
+
+
+

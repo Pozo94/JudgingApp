@@ -1,0 +1,186 @@
+doctype html
+html
+    head
+        title= JudgingApp
+        link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet', href='/css/style.css')
+        script(defer, src="http://localhost:3000/socket.io/socket.io.js")
+        script(defer, src="/js/socket.io.js")
+        script(src='/bower_components/jquery/dist/jquery.js')
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+        script(src='/js/main.js')
+        meta(charset="utf-8")
+    body
+
+        nav.navbar.navbar-inverse.navbar-fixed-top
+            a.navbar-brand(href='https://www.pzg.pl') PZG
+            .container
+
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target="#navbar")
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+
+                #navbar.collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li
+                        li
+                            a(href="/") Home
+
+                        li
+                            a(href="/results") Results
+
+                        if user
+                            li
+                                a(href="/judging/") Judge
+                            if user.role === 'Admin'
+                                li
+                                    a(href="/competitors/addCompetitor") Add Competitor
+                                li
+                                    a(href="/users/addJudge") Add Judge
+
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            a(onclick="tableToExcel('wyniki','Klasa I','Klasa I')" download='Klasa I') Pobierz
+                        if !user
+                            li
+                                a(href="/users/login") Login
+                        else
+                            li
+                                a(href="/users/logout") Logout
+
+
+
+        -var miejsce = 1;
+        style.
+            h7{
+                color: #0f0f0f;
+            }
+        table.table.table-condensed(id='wyniki')
+            thead
+                tr
+                    th(scope='col') #
+                    th(scope='col') Imie
+                    th(scope='col') Nazwisko
+                    th(scope='col') Klub
+                    th(scope='col') D
+                    th(scope='col') E1
+                    th(scope='col') E2
+                    th(scope='col') E3
+                    th(scope='col') E4
+                    th(scope='col') E
+                    th(scope='col') Ocena Końcowa
+            each competitor, i in competitors
+                    tr
+                        td= miejsce++ + '. '
+                        td=competitor.firstname
+                        td=competitor.lastname
+                        td=competitor.club
+                        if user.apparatus==='FX'
+                            td=competitor.FX.D.toFixed(2)
+                            td=competitor.FX.E1.toFixed(2)
+                            td=competitor.FX.E2.toFixed(2)
+                            td=competitor.FX.E3.toFixed(2)
+                            td=competitor.FX.E4.toFixed(2)
+                            td=competitor.FX.E.toFixed(2)
+                            td=competitor.FX.Final.toFixed(2)
+                            td
+                                a.btn.btn-success.pull-right(href="/competitors/remove/"+competitor._id) Edytuj
+
+
+
+                        if user.apparatus==='PH'
+                            td=competitor.FX.D.toFixed(2)
+                            td=competitor.FX.E1.toFixed(2)
+                            td=competitor.FX.E2.toFixed(2)
+                            td=competitor.FX.E3.toFixed(2)
+                            td=competitor.FX.E4.toFixed(2)
+                            td=competitor.FX.E.toFixed(2)
+                            td=competitor.FX.Final.toFixed(2)
+                            td
+                                a.btn.btn-success.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                        if user.apparatus==='SR'
+                            td=competitor.FX.D.toFixed(2)
+                            td=competitor.FX.E1.toFixed(2)
+                            td=competitor.FX.E2.toFixed(2)
+                            td=competitor.FX.E3.toFixed(2)
+                            td=competitor.FX.E4.toFixed(2)
+                            td=competitor.FX.E.toFixed(2)
+                            td=competitor.FX.Final.toFixed(2)
+                            td
+                                a.btn.btn-success.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                        if user.apparatus==='VT'
+                            td=competitor.VT1.D.toFixed(2)
+                            td=competitor.VT1.E1.toFixed(2)
+                            td=competitor.VT1.E2.toFixed(2)
+                            td=competitor.VT1.E3.toFixed(2)
+                            td=competitor.VT1.E4.toFixed(2)
+                            td=competitor.VT1.E.toFixed(2)
+                            td=competitor.VT1.Final.toFixed(2)
+                            td
+                                a.btn.btn-success.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                            if competitor.VT2.Final
+                                tr
+                                    td
+                                    td=competitor.firstname
+                                    td=competitor.lastname
+                                    td=competitor.club
+                                    td=competitor.VT2.D.toFixed(2)
+                                    td=competitor.VT2.E1.toFixed(2)
+                                    td=competitor.VT2.E2.toFixed(2)
+                                    td=competitor.VT2.E3.toFixed(2)
+                                    td=competitor.VT2.E4.toFixed(2)
+                                    td=competitor.VT2.E.toFixed(2)
+                                    td=competitor.VT2.Final.toFixed(2)
+                                    td
+                                        a.btn.btn-success.pull-right(href="/competitors/removeVT2/" + competitor._id) Edytuj
+
+                        if user.apparatus==='PB'
+                            td=competitor.PB.D.toFixed(2)
+                            td=competitor.PB.E1.toFixed(2)
+                            td=competitor.PB.E2.toFixed(2)
+                            td=competitor.PB.E3.toFixed(2)
+                            td=competitor.PB.E4.toFixed(2)
+                            td=competitor.PB.E.toFixed(2)
+                            td=competitor.PB.Final.toFixed(2)
+                            td
+                                a.btn.btn-success.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                        if user.apparatus==='HB'
+                            td=competitor.HB.D.toFixed(2)
+                            td=competitor.HB.E1.toFixed(2)
+                            td=competitor.HB.E2.toFixed(2)
+                            td=competitor.HB.E3.toFixed(2)
+                            td=competitor.HB.E4.toFixed(2)
+                            td=competitor.HB.E.toFixed(2)
+                            td=competitor.HB.Final.toFixed(2)
+                            td
+                                a.btn.btn-success.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+
+
+
+    script.
+        var tableToExcel = (function () {
+            var uri = 'data:application/vnd.ms-excel;base64,'
+                ,
+                template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><meta charset="utf-8"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+                , base64 = function (s) {
+                    return window.btoa(unescape(encodeURIComponent(s)))
+                }
+                , format = function (s, c) {
+                    return s.replace(/{(\w+)}/g, function (m, p) {
+                        return c[p];
+                    })
+                }
+            return function (table, name,filename) {
+                if (!table.nodeType) table = document.getElementById(table)
+                var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+                var link = document.createElement('a');
+                link.download = filename;
+                link.href = uri + base64(format(template, ctx));
+                link.click();
+            }
+        })()
+
+

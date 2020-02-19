@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+    style.
+        p{
+            color: #0f0f0f;
+        }
+    each competitor, i in competitors
+        ul.list-group
+            li.list-group-item
+                p=competitor.firstname + ' ' +competitor.lastname + ' Klasa: ' +competitor.clas
+
+                        a.btn.btn-danger.pull-right.delete-competitor(data-id=competitor._id) Usuń
+
+                        a.btn.btn-success.pull-right(href="/competitors/edit/"+competitor._id) Edytuj
