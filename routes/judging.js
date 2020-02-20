@@ -110,8 +110,7 @@ router.post('/:subdivision/:id', function(req, res){
     }*/
 
     var Final=(+E + +D)
-    //Final=Round( +Final,3);
-
+    Final=Round( +Final,3);
     var competitor={};
     if (req.user.apparatus==='VT') {
 

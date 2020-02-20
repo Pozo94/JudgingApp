@@ -11,7 +11,8 @@ block content
                     select#name.custom-select.d-block.w-100(name='name', required='')
                         option(value='') Choose...
                         each competitor, i in competitors
-                            option=competitor.firstname + " " + competitor.lastname
+                            if competitor.status === false
+                                option=competitor.firstname + " " + competitor.lastname
                     .invalid-feedback
 
         #form-group

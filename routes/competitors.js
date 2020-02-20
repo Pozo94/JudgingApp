@@ -8,10 +8,7 @@ var III_Edition=require('../models/III_Edition');
 var IV_Edition=require('../models/IV_Edition');
 
 /* GET competitors listing. */
-function function1(req,res) {
 
-
-}
 function compare(a, b) {
     // Use toUpperCase() to ignore character casing
     const clasA = a.clas.toUpperCase();
@@ -54,7 +51,25 @@ router.get('/',ensureAdmin, function(req, res){
         }
     });
 });
+router.get('/newcompetition',ensureAdmin,function(req,res){
+    Competitor.find({},function (err,competitors) {
+        competitors.forEach(function (element) {
+             console.log(element);
+             var query={_id:element.id};
+             element.status=false;
+             console.log(element);
+             Competitor.update(query,element,function (err) {
+                 if(err){
+                     console.log(err);
+                     return
+                 }
 
+             })
+        })
+
+    })
+    res.redirect('/');
+});
 /* Add competitor */
 router.get('/addCompetitor',ensureAdmin,function (req,res) {
     res.render('addCompetitor');
@@ -83,10 +98,20 @@ router.post('/addParticipant', function (req, res) {
 
     var firstname = array[0];
     var lastname = array[1];
-    console.log(firstname);
-    console.log(lastname);
+
     var Participant;
     Competitor.getUserByName(firstname,lastname,function (err,competitor) {
+        var query={firstname:firstname,lastname:lastname};
+        competitor.status=true;
+        console.log(competitor);
+        Competitor.update(query,competitor,function(err){
+            if(err){
+                console.log(err);
+                return
+            }
+
+
+        });
         if (competition==='I_Edition'){
 
             I_Edition.findOne({competitor:competitor.id}).then(participant=>{
@@ -279,6 +304,7 @@ router.post('/addParticipant', function (req, res) {
 
                     })
                 }
+
                 res.redirect('addParticipant');
             });
 
