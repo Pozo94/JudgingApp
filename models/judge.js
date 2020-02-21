@@ -15,6 +15,10 @@ var JudgeSchema = mongoose.Schema({
     },
     lastname:{
         type:String
+    },
+    status:{
+        type:Boolean,
+        default:false
     }
 
 });

@@ -51,25 +51,7 @@ router.get('/',ensureAdmin, function(req, res){
         }
     });
 });
-router.get('/newcompetition',ensureAdmin,function(req,res){
-    Competitor.find({},function (err,competitors) {
-        competitors.forEach(function (element) {
-             console.log(element);
-             var query={_id:element.id};
-             element.status=false;
-             console.log(element);
-             Competitor.update(query,element,function (err) {
-                 if(err){
-                     console.log(err);
-                     return
-                 }
 
-             })
-        })
-
-    })
-    res.redirect('/');
-});
 /* Add competitor */
 router.get('/addCompetitor',ensureAdmin,function (req,res) {
     res.render('addCompetitor');

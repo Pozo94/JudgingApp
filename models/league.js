@@ -7,12 +7,16 @@ var ParticipantSchema = mongoose.Schema({
         type: String
     },
     score:{
-        type:Number
+        type:Number,
+        default:0
     },
     firstname:{
         type:String
     },
     lastname:{
+        type:String
+    },
+    clas:{
         type:String
     }
 

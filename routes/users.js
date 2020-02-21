@@ -21,8 +21,8 @@ function compare(a, b) {
 //Admin
 router.get('/createAdmin', function (req, res) {
     var newJudge = new Judge({
-        username: 'Pozo',
-        password: 'Meliana1',
+        username: 'Admin',
+        password: 'Admin1',
         firstname: 'Admin',
         lastname: 'Admin',
 
@@ -84,6 +84,16 @@ router.post('/addUser', function (req, res) {
             role:req.body.role,
             apparatus:req.body.apparatus,
 
+
+        })
+        var query= {_id:judge.id};
+        judge.status=true;
+        Judge.update(query,judge,function (err) {
+            if (err)
+            {
+                console.log(err)
+                return
+            }
 
         })
         User.createUser(newUser, function (err, user){
