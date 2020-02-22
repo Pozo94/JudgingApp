@@ -96,11 +96,21 @@ router.post('/addUser', function (req, res) {
             }
 
         })
-        User.createUser(newUser, function (err, user){
-            if (err) throw err;
-            console.log(user);
-            res.redirect('/');
-        });
+
+        User.find({role:newUser.role,apparatus:newUser.apparatus},function (err,user) {
+            if(user)
+            {
+                req.flash('danger', 'Judge has been already asigned for this role!');
+            }
+            else {
+                User.createUser(newUser, function (err, user){
+                    if (err) throw err;
+                    console.log(user);
+                    req.flash('success', 'Judge set!');
+                    res.redirect('/users/addUser/');
+                });
+            }
+        })
 
     })
 
