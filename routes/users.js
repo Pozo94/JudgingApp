@@ -88,14 +88,9 @@ router.post('/addUser', function (req, res) {
         })
         var query= {_id:judge.id};
         judge.status=true;
-        Judge.update(query,judge,function (err) {
-            if (err)
-            {
-                console.log(err)
-                return
-            }
 
-        })
+
+        )
 
         User.find({role:newUser.role,apparatus:newUser.apparatus},function (err,user) {
             if(user)
@@ -104,6 +99,12 @@ router.post('/addUser', function (req, res) {
                 res.redirect('/users/addUser/');
             }
             else {
+                Judge.update(query,judge,function (err) {
+                    if (err) {
+                        console.log(err);
+                        return
+                    }
+                }
                 User.createUser(newUser, function (err, user){
                     if (err) throw err;
                     console.log(user);
