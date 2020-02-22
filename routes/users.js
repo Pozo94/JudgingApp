@@ -79,18 +79,18 @@ router.post('/addUser', function (req, res) {
     console.log(firstname);
     console.log(lastname);
     Judge.getUserByName(firstname,lastname,function (err,judge) {
-        var newUser=new User({
-            user:judge.id,
-            role:req.body.role,
-            apparatus:req.body.apparatus,
+        var newUser = new User({
+            user: judge.id,
+            role: req.body.role,
+            apparatus: req.body.apparatus,
 
 
         })
-        var query= {_id:judge.id};
-        judge.status=true;
+        var query = {_id: judge.id};
+        judge.status = true;
 
 
-        )
+    })
 
         User.find({role:newUser.role,apparatus:newUser.apparatus},function (err,user) {
             if(user)
@@ -104,7 +104,7 @@ router.post('/addUser', function (req, res) {
                         console.log(err);
                         return
                     }
-                }
+                });
                 User.createUser(newUser, function (err, user){
                     if (err) throw err;
                     console.log(user);
@@ -114,7 +114,7 @@ router.post('/addUser', function (req, res) {
             }
         })
 
-    })
+
 
 
 
