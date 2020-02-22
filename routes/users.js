@@ -90,7 +90,7 @@ router.post('/addUser', function (req, res) {
         judge.status = true;
 
 
-    })
+
 
         User.find({role:newUser.role,apparatus:newUser.apparatus},function (err,user) {
             if(user)
@@ -113,6 +113,7 @@ router.post('/addUser', function (req, res) {
                 });
             }
         })
+    })
 
 
 
