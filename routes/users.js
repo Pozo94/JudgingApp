@@ -101,6 +101,7 @@ router.post('/addUser', function (req, res) {
             if(user)
             {
                 req.flash('danger', 'Judge has been already asigned for this role!');
+                res.redirect('/users/addUser/');
             }
             else {
                 User.createUser(newUser, function (err, user){
