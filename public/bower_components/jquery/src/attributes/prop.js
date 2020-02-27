@@ -85,7 +85,7 @@ jQuery.extend( {
 
 	propFix: {
 		"for": "htmlFor",
-		"clas": "className"
+		"class": "className"
 	}
 } );
 

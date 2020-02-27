@@ -5,7 +5,6 @@ html
     title= JudgingApp
     link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet', href='/css/style.css')
-    link(rel='shortcut icon',type='image/png',href='/css/logo.png')
     script(defer, src="/js/socket.io.js")
     script(src='/bower_components/jquery/dist/jquery.js')
     script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
@@ -30,20 +29,16 @@ html
               a(href="/") Home
 
             li
-              a(href="/results/") Results
+              a(href="/results") Results
             if user
               if user.role!=="Admin"
                 li
                   a(href="/judging/") Judge
               if user.role === 'Admin'
                 li
-                  a(href="/competitors/addCompetitor/") Add Competitor
+                  a(href="/competitors/addCompetitor") Add Competitor
                 li
-                  a(href="/judges/addJudge/") Add Judge
-                li
-                  a(href="/users/addUser/") Set Judges
-                li
-                  a(href="/competitors/addParticipant/") Set Competitors
+                  a(href="/users/addJudge") Add Judge
           ul.nav.navbar-nav.navbar-right
             if !user
               li
