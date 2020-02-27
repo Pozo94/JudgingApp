@@ -111,6 +111,7 @@ router.post('/addParticipant', function (req, res) {
                         firstname:firstname,
                         lastname:lastname,
                         clas:competitor.clas,
+                        club:competitor.club,
                         year:competitor.year
                     })
                     I_Edition.addParticipant(Participant,function(err, participant){

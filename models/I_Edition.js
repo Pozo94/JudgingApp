@@ -225,6 +225,9 @@ var ParticipantSchema = mongoose.Schema({
     clas:{
         type: String
     },
+    club:{
+        type: String
+    },
     suma:{
         type: Number,
         required:false
