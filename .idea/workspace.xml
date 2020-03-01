@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="&quot;1st update&quot;">
-      <change afterPath="$PROJECT_DIR$/views/editions.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/league.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/league.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/league.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/competitors.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/competitors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/results.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/results.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Klasy/I.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/Klasy/I.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Klasy/II.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/Klasy/II.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Klasy/III.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/Klasy/III.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Klasy/mistrzowska.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/Klasy/mistrzowska.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Klasy/mlodziezowa.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/Klasy/mlodziezowa.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Klasy/mlodziezowiec.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/Klasy/mlodziezowiec.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/league.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/league.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,47 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="competitors.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/competitors.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3213">
-              <caret line="114" column="44" lean-forward="true" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="league.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/league.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="results.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/results.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editions.pug" pinned="false" current-in-tab="true">
+      <file leaf-file-name="editions.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/editions.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="323">
+              <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -72,26 +38,71 @@
       <file leaf-file-name="I.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/Klasy/I.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+            <state relative-caret-position="197">
+              <caret line="51" column="79" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="competitors.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/competitors.pug">
+      <file leaf-file-name="layout.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/layout.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="101" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="101" />
+            <state relative-caret-position="177">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="league.pug" pinned="false" current-in-tab="false">
+      <file leaf-file-name="league.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/league.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="340">
+              <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="II.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/Klasy/II.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="51" column="93" selection-start-line="51" selection-start-column="93" selection-end-line="51" selection-end-column="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="III.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/Klasy/III.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="51" column="83" selection-start-line="51" selection-start-column="83" selection-end-line="51" selection-end-column="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mistrzowska.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/Klasy/mistrzowska.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10">
+              <caret line="37" column="52" lean-forward="true" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mlodziezowa.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/Klasy/mlodziezowa.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="51" column="99" selection-start-line="51" selection-start-column="99" selection-end-line="51" selection-end-column="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mlodziezowiec.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/Klasy/mlodziezowiec.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="51" column="115" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="51" selection-end-column="115" />
             </state>
           </provider>
         </entry>
@@ -101,15 +112,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="19" column="38" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="19" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addParticipant.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/addParticipant.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -193,12 +195,6 @@
         <option value="$PROJECT_DIR$/models/IV_Edition.js" />
         <option value="$PROJECT_DIR$/models/II_Edition.js" />
         <option value="$PROJECT_DIR$/models/III_Edition.js" />
-        <option value="$PROJECT_DIR$/views/Klasy/I.pug" />
-        <option value="$PROJECT_DIR$/views/Klasy/II.pug" />
-        <option value="$PROJECT_DIR$/views/Klasy/III.pug" />
-        <option value="$PROJECT_DIR$/views/Klasy/mistrzowska.pug" />
-        <option value="$PROJECT_DIR$/views/Klasy/mlodziezowa.pug" />
-        <option value="$PROJECT_DIR$/views/Klasy/mlodziezowiec.pug" />
         <option value="$PROJECT_DIR$/routes/judging.js" />
         <option value="$PROJECT_DIR$/models/competitor.js" />
         <option value="$PROJECT_DIR$/views/addParticipant.pug" />
@@ -206,15 +202,21 @@
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/index.pug" />
         <option value="$PROJECT_DIR$/routes/users.js" />
-        <option value="$PROJECT_DIR$/views/layout.pug" />
         <option value="$PROJECT_DIR$/views/addJudge.pug" />
         <option value="$PROJECT_DIR$/views/addUser.pug" />
         <option value="$PROJECT_DIR$/models/I_Edition.js" />
         <option value="$PROJECT_DIR$/models/league.js" />
         <option value="$PROJECT_DIR$/routes/competitors.js" />
-        <option value="$PROJECT_DIR$/views/league.pug" />
         <option value="$PROJECT_DIR$/routes/results.js" />
         <option value="$PROJECT_DIR$/views/editions.pug" />
+        <option value="$PROJECT_DIR$/views/Klasy/II.pug" />
+        <option value="$PROJECT_DIR$/views/layout.pug" />
+        <option value="$PROJECT_DIR$/views/Klasy/I.pug" />
+        <option value="$PROJECT_DIR$/views/Klasy/III.pug" />
+        <option value="$PROJECT_DIR$/views/Klasy/mistrzowska.pug" />
+        <option value="$PROJECT_DIR$/views/Klasy/mlodziezowa.pug" />
+        <option value="$PROJECT_DIR$/views/Klasy/mlodziezowiec.pug" />
+        <option value="$PROJECT_DIR$/views/league.pug" />
       </list>
     </option>
   </component>
@@ -236,7 +238,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
+    <option name="x" value="950" />
     <option name="width" value="979" />
     <option name="height" value="1040" />
   </component>
@@ -268,12 +270,6 @@
               <item name="ApkaZawody" type="b2602c69:ProjectViewProjectNode" />
               <item name="ApkaZawody" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApkaZawody" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApkaZawody" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Klasy" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -446,12 +442,12 @@
       <workItem from="1582360561129" duration="6159000" />
       <workItem from="1582803577777" duration="882000" />
       <workItem from="1582804732343" duration="2713000" />
-      <workItem from="1583066885282" duration="9379000" />
+      <workItem from="1583066885282" duration="12766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="491312000" />
+    <option name="totallyTimeSpent" value="494699000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -638,34 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/Klasy/III.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2601">
-          <caret line="153" column="30" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/Klasy/mlodziezowiec.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="152" column="30" selection-start-line="152" selection-start-column="30" selection-end-line="152" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/Klasy/mlodziezowa.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="135" column="30" selection-start-line="135" selection-start-column="30" selection-end-line="135" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/Klasy/II.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="153" column="30" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/Apparatus/FX.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -725,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/addUser.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -743,13 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/Klasy/mistrzowska.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -795,24 +749,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/Klasy/I.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/league.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -839,8 +779,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/editions.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        <state relative-caret-position="323">
+          <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/Klasy/I.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="51" column="79" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/Klasy/II.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="51" column="93" selection-start-line="51" selection-start-column="93" selection-end-line="51" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/Klasy/III.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="51" column="83" selection-start-line="51" selection-start-column="83" selection-end-line="51" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/Klasy/mistrzowska.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="37" column="52" lean-forward="true" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/Klasy/mlodziezowa.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="51" column="99" selection-start-line="51" selection-start-column="99" selection-end-line="51" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/Klasy/mlodziezowiec.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="51" column="115" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="51" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/league.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
         </state>
       </provider>
     </entry>

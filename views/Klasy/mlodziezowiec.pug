@@ -46,6 +46,10 @@ html
                                 li
                                     a(href="/competitors/addParticipant/") Set Competitors
                     ul.nav.navbar-nav.navbar-right
+                        li
+                            a(href="/results/league/") Archive
+                        li
+                            a(onclick="tableToExcel('wyniki','Klasa Młodzieżowiec','Klasa Młodzieżowiec')") Pobierz
                         if !user
                             li
                                 a(href="/users/login") Login
