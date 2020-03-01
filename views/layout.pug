@@ -1,5 +1,6 @@
 doctype html
 html
+
   head
     meta(charset="utf-8")
     title= JudgingApp
@@ -10,9 +11,16 @@ html
     script(src='/bower_components/jquery/dist/jquery.js')
     script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
     script(src='/js/main.js')
+    style.
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1000px;
+        }
+      }
+
   body
 
-    nav.navbar.navbar-inverse.navbar-fixed-top
+    nav.navbar.navbar-inverse.navbar-fixed-top.navbar-static-top
       a.navbar-brand(href='https://www.pzg.pl') PZG
       .container
 
