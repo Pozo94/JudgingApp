@@ -3,9 +3,9 @@ var router = express.Router();
 var Competitor =require('../models/competitor');
 var Current_Edition = require('../models/I_Edition');
 var I_Edition = require('../models/I_Edition');
-var II_Edition = require('../models/I_Edition');
-var III_Edition = require('../models/I_Edition');
-var IV_Edition = require('../models/I_Edition');
+var II_Edition = require('../models/II_Edition');
+var III_Edition = require('../models/III_Edition');
+var IV_Edition = require('../models/IV_Edition');
 var League=require('../models/league')
 var method={suma:-1};
 
@@ -13,20 +13,462 @@ router.get('/', function (req, res) {
     res.render('results');
 
 });
-router.get('/league/I',function (req,res) {
-
+router.get('/league', function (req, res) {
+    res.render('editions');
 
 });
-router.get('/league/II',function (req,res) {
-
+router.get('/league/I_Edition',function (req,res) {
+    res.render('class');
 
 });
 router.get('/league/III',function (req,res) {
+    League.db.collection('leagues').find({clas:'III'}).sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('league', {
+                title:'Liga Klasa III',
+                competitors: competitors
+            });
+        }
 
+    });
+
+});
+
+router.get('/league/II',function (req,res) {
+    League.db.collection('leagues').find({clas:'II'}).sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('league', {
+                title:'Liga Klasa II',
+                competitors: competitors
+            });
+        }
+
+    });
+
+});
+router.get('/league/I',function (req,res) {
+    League.db.collection('leagues').find({clas:'I'}).sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('league', {
+                title:'Liga Klasa I',
+                competitors: competitors
+            });
+        }
+
+    });
+
+});
+router.get('/league/mistrzowska',function (req,res) {
+    League.db.collection('leagues').find({clas:'Mistrzowska'}).sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('league', {
+                title:'Liga Klasa Mistrzowska',
+                competitors: competitors
+            });
+        }
+
+    });
+
+});
+router.get('/league/mlodziezowiec',function (req,res) {
+    League.db.collection('leagues').find({clas:'Młodzieżowiec'}).sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('league', {
+                title:'Liga Klasa Młodzieżowiec',
+                competitors: competitors
+            });
+        }
+
+    });
 
 });
 router.get('/league/mlodziezowa',function (req,res) {
+    League.db.collection('leagues').find({clas:'Młodzieżowa'}).sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('league', {
+                title:'Liga Klasa Młodzieżowa',
+                competitors: competitors
+            });
+        }
 
+    });
+
+});
+router.get('/league/II_Edition/mistrzowska', function (req, res) {
+
+    II_Edition.db.collection('ii_editions').find({clas:"Mistrzowska"}).sort(method).toArray( function (err,competitors) {
+
+
+
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('Klasy/mistrzowska', {
+                title:'Klasa mistrzowska',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/II_Edition/mlodziezowiec', function (req, res) {
+   II_Edition.db.collection('ii_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/mlodziezowiec', {
+                title:'Klasa mlodziezowiec',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/II_Edition/I', function (req, res) {
+    II_Edition.db.collection('ii_editions').find().sort(method).toArray(function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/I', {
+                title:'Klasa I',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/II_Edition/II', function (req, res) {
+    II_Edition.db.collection('ii_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/II', {
+                title:'Klasa II',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/II_Edition/III', function (req, res) {
+    II_Edition.db.collection('ii_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/III', {
+                title:'Klasa III',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/league/II_Edition/mlodziezowa', function (req, res) {
+    II_Edition.db.collection('ii_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('Klasy/mlodziezowa', {
+                title:'Klasa mlodziezowa',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/I_Edition/mistrzowska', function (req, res) {
+
+    I_Edition.db.collection('i_editions').find({clas:"Mistrzowska"}).sort(method).toArray( function (err,competitors) {
+
+
+
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('Klasy/mistrzowska', {
+                title:'Klasa mistrzowska',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/I_Edition/mlodziezowiec', function (req, res) {
+    I_Edition.db.collection('i_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/mlodziezowiec', {
+                title:'Klasa mlodziezowiec',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/I_Edition/I', function (req, res) {
+    I_Edition.db.collection('i_editions').find().sort(method).toArray(function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/I', {
+                title:'Klasa I',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/I_Edition/II', function (req, res) {
+    I_Edition.db.collection('i_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/II', {
+                title:'Klasa II',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/I_Edition/III', function (req, res) {
+    I_Edition.db.collection('i_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/III', {
+                title:'Klasa III',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/league/I_Edition/mlodziezowa', function (req, res) {
+    I_Edition.db.collection('i_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('Klasy/mlodziezowa', {
+                title:'Klasa mlodziezowa',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/league/III_Edition/mistrzowska', function (req, res) {
+
+    III_Edition.db.collection('iii_editions').find({clas:"Mistrzowska"}).sort(method).toArray( function (err,competitors) {
+
+
+
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('Klasy/mistrzowska', {
+                title:'Klasa mistrzowska',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/III_Edition/mlodziezowiec', function (req, res) {
+    III_Edition.db.collection('iii_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/mlodziezowiec', {
+                title:'Klasa mlodziezowiec',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/III_Edition/I', function (req, res) {
+    III_Edition.db.collection('iii_editions').find().sort(method).toArray(function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/I', {
+                title:'Klasa I',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/III_Edition/II', function (req, res) {
+    III_Edition.db.collection('iii_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/II', {
+                title:'Klasa II',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/III_Edition/III', function (req, res) {
+    III_Edition.db.collection('iii_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/III', {
+                title:'Klasa III',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/league/III_Edition/mlodziezowa', function (req, res) {
+    III_Edition.db.collection('iii_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('Klasy/mlodziezowa', {
+                title:'Klasa mlodziezowa',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/league/IV_Edition/mistrzowska', function (req, res) {
+
+    IV_Edition.db.collection('iv_editions').find({clas:"Mistrzowska"}).sort(method).toArray( function (err,competitors) {
+
+
+
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('Klasy/mistrzowska', {
+                title:'Klasa mistrzowska',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/IV_Edition/mlodziezowiec', function (req, res) {
+    IV_Edition.db.collection('iv_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/mlodziezowiec', {
+                title:'Klasa mlodziezowiec',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/IV_Edition/I', function (req, res) {
+    IV_Edition.db.collection('iv_editions').find().sort(method).toArray(function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/I', {
+                title:'Klasa I',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/IV_Edition/II', function (req, res) {
+    IV_Edition.db.collection('iv_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/II', {
+                title:'Klasa II',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+
+router.get('/league/IV_Edition/III', function (req, res) {
+    IV_Edition.db.collection('iv_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('Klasy/III', {
+                title:'Klasa III',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/league/IV_Edition/mlodziezowa', function (req, res) {
+    IV_Edition.db.collection('iv_editions').find().sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('Klasy/mlodziezowa', {
+                title:'Klasa mlodziezowa',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/league/II_Edition',function (req,res) {
+    res.render('class');
+
+});
+router.get('/league/III_Edition',function (req,res) {
+    res.render('class');
+
+});
+router.get('/league/IV_Edition',function (req,res) {
+    res.render('class');
 
 });
 router.get('/league/sum',function (req,res) {

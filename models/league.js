@@ -18,6 +18,9 @@ var ParticipantSchema = mongoose.Schema({
     },
     clas:{
         type:String
+    },
+    club:{
+        type:String
     }
 
 });

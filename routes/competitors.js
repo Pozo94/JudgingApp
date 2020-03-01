@@ -130,7 +130,8 @@ router.post('/addParticipant', function (req, res) {
                         firstname:firstname,
                         lastname:lastname,
                         clas:competitor.clas,
-                        year:competitor.year
+                        year:competitor.year,
+                        club:competitor.club
 
                     })
                     League.addParticipant(Participant,function(err, participant){
@@ -159,7 +160,8 @@ router.post('/addParticipant', function (req, res) {
                         firstname:firstname,
                         lastname:lastname,
                         clas:competitor.clas,
-                        year:competitor.year
+                        year:competitor.year,
+                        club:competitor.club
 
 
                     })
@@ -179,7 +181,8 @@ router.post('/addParticipant', function (req, res) {
                         firstname:firstname,
                         lastname:lastname,
                         clas:competitor.clas,
-                        year:competitor.year
+                        year:competitor.year,
+                        club:competitor.club
 
                     })
                     League.addParticipant(Participant,function(err, participant){
@@ -207,7 +210,8 @@ router.post('/addParticipant', function (req, res) {
                         firstname:firstname,
                         lastname:lastname,
                         clas:competitor.clas,
-                        year:competitor.year
+                        year:competitor.year,
+                        club:competitor.club
 
 
                     })
@@ -227,7 +231,8 @@ router.post('/addParticipant', function (req, res) {
                         firstname:firstname,
                         lastname:lastname,
                         clas:competitor.clas,
-                        year:competitor.year
+                        year:competitor.year,
+                        club:competitor.club
 
 
                     })
@@ -257,7 +262,8 @@ router.post('/addParticipant', function (req, res) {
                         firstname:firstname,
                         lastname:lastname,
                         clas:competitor.clas,
-                        year:competitor.year
+                        year:competitor.year,
+                        club:competitor.club
 
 
                     })
@@ -277,7 +283,8 @@ router.post('/addParticipant', function (req, res) {
                         firstname:firstname,
                         lastname:lastname,
                         clas:competitor.clas,
-                        year:competitor.year
+                        year:competitor.year,
+                        club:competitor.club
 
 
                     })
