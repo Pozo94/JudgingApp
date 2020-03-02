@@ -53,6 +53,9 @@ html
                 li
                   a(href="/users/addUser") Set Judge
           ul.nav.navbar-nav.navbar-right
+            if competitors
+                li
+                  a(onclick="tableToExcel('wyniki','Klasa Młodzieżowiec','Klasa Młodzieżowiec')") Pobierz
             li
               a(href="/results/league/") Archive
 
