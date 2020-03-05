@@ -2,55 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="&quot;1st update&quot;">
-      <change afterPath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/jlist.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/resulttables.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/subdivisions.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/competitors.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/competitors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/judges.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/judges.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/judging.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/judging.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/results.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/results.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Klasy/I.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Klasy/II.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Klasy/III.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Klasy/mistrzowska.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Klasy/mlodziezowa.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Klasy/mlodziezowiec.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Zastepy/I.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/Zastepy/I.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/addParticipant.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/addParticipant.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/addUser.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/addUser.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/class.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/class.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/competitors.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/competitors.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/editCompetitor.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/editCompetitor.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/judge.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/judge.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/judging.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/judging.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/league.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/league.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/protocol.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/protocol.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/results.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/results.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/resulttables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/resulttables.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -70,35 +25,49 @@
       <file leaf-file-name="layout.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/layout.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+            <state relative-caret-position="199">
+              <caret line="102" column="53" lean-forward="true" selection-end-line="102" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="competitors.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/competitors.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="70" lean-forward="true" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="competitor.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/competitor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="competitors.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="competitors.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/competitors.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="445" column="12" selection-start-line="445" selection-start-column="12" selection-end-line="445" selection-end-column="12" />
+            <state relative-caret-position="341">
+              <caret line="511" column="25" lean-forward="true" selection-start-line="511" selection-start-column="25" selection-end-line="511" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="152" column="17" lean-forward="true" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="II_Edition.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/II_Edition.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="resulttables.pug" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/resulttables.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="104" column="71" selection-start-line="104" selection-start-column="71" selection-end-line="104" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -106,8 +75,8 @@
       <file leaf-file-name="league.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/league.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="16" />
+            <state relative-caret-position="204">
+              <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -115,7 +84,7 @@
       <file leaf-file-name="response.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="12427">
               <caret line="736" column="37" lean-forward="true" selection-start-line="736" selection-start-column="37" selection-end-line="736" selection-end-column="37" />
             </state>
           </provider>
@@ -124,7 +93,7 @@
       <file leaf-file-name="editCompetitor.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/editCompetitor.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
+            <state relative-caret-position="415">
               <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="53" />
             </state>
           </provider>
@@ -133,7 +102,7 @@
       <file leaf-file-name="I_Edition.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/I_Edition.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
+            <state relative-caret-position="290">
               <caret line="229" column="6" selection-start-line="229" selection-start-column="6" selection-end-line="229" selection-end-column="6" />
             </state>
           </provider>
@@ -151,7 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add</find>
       <find>subdivision</find>
       <find>local</find>
       <find>Lo</find>
@@ -179,8 +147,9 @@
       <find>competitors</find>
       <find>remo</find>
       <find>post</find>
-      <find>edit</find>
       <find>I_</find>
+      <find>edit</find>
+      <find>h7</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -220,11 +189,9 @@
         <option value="$PROJECT_DIR$/views/results.pug" />
         <option value="$PROJECT_DIR$/views/league.pug" />
         <option value="$PROJECT_DIR$/views/class.pug" />
-        <option value="$PROJECT_DIR$/views/resulttables.pug" />
         <option value="$PROJECT_DIR$/routes/protocols.js" />
         <option value="$PROJECT_DIR$/views/judging.pug" />
         <option value="$PROJECT_DIR$/public/bower_components/bootstrap/dist/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/models/user.js" />
         <option value="$PROJECT_DIR$/views/addUser.pug" />
         <option value="$PROJECT_DIR$/views/addParticipant.pug" />
@@ -240,6 +207,8 @@
         <option value="$PROJECT_DIR$/models/competitor.js" />
         <option value="$PROJECT_DIR$/views/editCompetitor.pug" />
         <option value="$PROJECT_DIR$/routes/competitors.js" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
+        <option value="$PROJECT_DIR$/views/resulttables.pug" />
       </list>
     </option>
   </component>
@@ -260,9 +229,9 @@
       <path value="$PROJECT_DIR$/public/bower_components/bootstrap/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="950" />
-    <option name="width" value="979" />
+    <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -472,12 +441,14 @@
       <workItem from="1583275061352" duration="13383000" />
       <workItem from="1583329615844" duration="4472000" />
       <workItem from="1583354645914" duration="14590000" />
-      <workItem from="1583394207949" duration="9082000" />
+      <workItem from="1583394207949" duration="9979000" />
+      <workItem from="1583408931900" duration="7000" />
+      <workItem from="1583424218723" duration="1650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="548363000" />
+    <option name="totallyTimeSpent" value="550917000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -489,15 +460,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.12425645" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.12425645" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299712" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5076008" side_tool="true" weight="0.32051283" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32905984" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49239922" visible="true" weight="0.31766382" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49239922" visible="true" weight="0.31766382" />
       <window_info id="npm" order="2" sideWeight="0.50432277" side_tool="true" weight="0.3252688" />
       <window_info id="Structure" order="1" sideWeight="0.5014245" side_tool="true" weight="0.070059486" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49596775" weight="0.32478634" />
@@ -517,11 +488,11 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" sideWeight="0.50432277" side_tool="true" weight="0.3252688" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.12425645" />
       <window_info id="Structure" order="1" sideWeight="0.5014245" side_tool="true" weight="0.070059486" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299712" />
-      <window_info id="Favorites" order="3" sideWeight="0.5014245" side_tool="true" weight="0.070059486" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32905984" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49239922" visible="true" weight="0.31766382" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -531,7 +502,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.12425645" />
+      <window_info id="Favorites" order="3" sideWeight="0.5014245" side_tool="true" weight="0.070059486" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,13 +521,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/Apparatus/FX.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/query.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -662,13 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/resulttables.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/results.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
@@ -683,13 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/addUser.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -701,13 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="765" column="32" selection-start-line="765" selection-start-column="32" selection-end-line="765" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="63" column="15" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="63" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -791,59 +734,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.pug">
+    <entry file="file://$PROJECT_DIR$/views/competitors.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+        <state relative-caret-position="187">
+          <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/competitor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12427">
+          <caret line="736" column="37" lean-forward="true" selection-start-line="736" selection-start-column="37" selection-end-line="736" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/II_Edition.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/I_Edition.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
+        <state relative-caret-position="290">
           <caret line="229" column="6" selection-start-line="229" selection-start-column="6" selection-end-line="229" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/editCompetitor.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
+        <state relative-caret-position="415">
           <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/competitors.pug">
+    <entry file="file://$PROJECT_DIR$/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="70" lean-forward="true" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
+        <state relative-caret-position="51">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/competitor.js">
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="736" column="37" lean-forward="true" selection-start-line="736" selection-start-column="37" selection-end-line="736" selection-end-column="37" />
+        <state relative-caret-position="340">
+          <caret line="152" column="17" lean-forward="true" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/league.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="16" />
+        <state relative-caret-position="204">
+          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="102" column="53" lean-forward="true" selection-end-line="102" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/competitors.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="445" column="12" selection-start-line="445" selection-start-column="12" selection-end-line="445" selection-end-column="12" />
+        <state relative-caret-position="341">
+          <caret line="511" column="25" lean-forward="true" selection-start-line="511" selection-start-column="25" selection-end-line="511" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/resulttables.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="104" column="71" selection-start-line="104" selection-start-column="71" selection-end-line="104" selection-end-column="71" />
         </state>
       </provider>
     </entry>

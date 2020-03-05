@@ -496,21 +496,27 @@ router.get('/remove/:id',function (req,res) {
     I_Edition.findById(req.params.id, function (err, participant) {
 
         if (app === 'VT') {
+            participant.suma=+participant.suma - +participant.VT1.Final;
             participant.VT1.Final = undefined;
         }
         if (app === 'FX') {
+            participant.suma=+participant.suma - +participant.FX.Final;
             participant.FX.Final = undefined;
         }
         if (app === 'PH') {
+            participant.suma=+participant.suma - +participant.PH.Final;
             participant.PH.Final = undefined;
         }
         if (app === 'SR') {
+            participant.suma=+participant.suma - +participant.SR.Final;
             participant.SR.Final = undefined
         }
         if (app === 'PB') {
+            participant.suma=+participant.suma - +participant.PB.Final;
             participant.PB.Final = undefined;
         }
         if (app === 'HB') {
+            participant.suma=+participant.suma - +participant.HB.Final;
             participant.HB.Final = undefined;
         }
 

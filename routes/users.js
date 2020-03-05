@@ -138,6 +138,7 @@ passport.use(new LocalStrategy(
                 if (isMatch) {
                     User.getUserById2(user.id,function (err, user) {
                       if(err) throw err;
+
                       if(user){
                           return done(null, user);
                       }
