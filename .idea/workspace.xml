@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="&quot;1st update&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/resulttables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/resulttables.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -65,8 +63,8 @@
       <file leaf-file-name="resulttables.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/resulttables.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+            <state relative-caret-position="221">
+              <caret line="106" column="41" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -442,12 +440,12 @@
       <workItem from="1583354645914" duration="14590000" />
       <workItem from="1583394207949" duration="9979000" />
       <workItem from="1583408931900" duration="7000" />
-      <workItem from="1583424218723" duration="3963000" />
+      <workItem from="1583424218723" duration="4353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="553230000" />
+    <option name="totallyTimeSpent" value="553620000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -808,8 +806,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/resulttables.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="221">
+          <caret line="106" column="41" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
         </state>
       </provider>
     </entry>
