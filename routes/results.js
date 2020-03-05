@@ -126,7 +126,7 @@ router.get('/league/II_Edition/mistrzowska', function (req, res) {
 });
 
 router.get('/league/II_Edition/mlodziezowiec', function (req, res) {
-   II_Edition.db.collection('ii_editions').find().sort(method).toArray( function(err, competitors){
+   II_Edition.db.collection('ii_editions').find({clas:"Młodzieżowiec"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -140,7 +140,7 @@ router.get('/league/II_Edition/mlodziezowiec', function (req, res) {
 });
 
 router.get('/league/II_Edition/I', function (req, res) {
-    II_Edition.db.collection('ii_editions').find().sort(method).toArray(function(err, competitors){
+    II_Edition.db.collection('ii_editions').find({clas:"I"}).sort(method).toArray(function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -154,7 +154,7 @@ router.get('/league/II_Edition/I', function (req, res) {
 });
 
 router.get('/league/II_Edition/II', function (req, res) {
-    II_Edition.db.collection('ii_editions').find().sort(method).toArray( function(err, competitors){
+    II_Edition.db.collection('ii_editions').find({clas:"II"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -168,7 +168,7 @@ router.get('/league/II_Edition/II', function (req, res) {
 });
 
 router.get('/league/II_Edition/III', function (req, res) {
-    II_Edition.db.collection('ii_editions').find().sort(method).toArray( function(err, competitors){
+    II_Edition.db.collection('ii_editions').find({clas:"III"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -181,7 +181,7 @@ router.get('/league/II_Edition/III', function (req, res) {
 
 });
 router.get('/league/II_Edition/mlodziezowa', function (req, res) {
-    II_Edition.db.collection('ii_editions').find().sort(method).toArray( function(err, competitors){
+    II_Edition.db.collection('ii_editions').find({clas:"Młodzieżowa"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -215,7 +215,7 @@ router.get('/league/I_Edition/mistrzowska', function (req, res) {
 });
 
 router.get('/league/I_Edition/mlodziezowiec', function (req, res) {
-    I_Edition.db.collection('i_editions').find().sort(method).toArray( function(err, competitors){
+    I_Edition.db.collection('i_editions').find({clas:"Młodzieżowiec"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -229,7 +229,7 @@ router.get('/league/I_Edition/mlodziezowiec', function (req, res) {
 });
 
 router.get('/league/I_Edition/I', function (req, res) {
-    I_Edition.db.collection('i_editions').find().sort(method).toArray(function(err, competitors){
+    I_Edition.db.collection('i_editions').find({clas:"I"}).sort(method).toArray(function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -243,7 +243,7 @@ router.get('/league/I_Edition/I', function (req, res) {
 });
 
 router.get('/league/I_Edition/II', function (req, res) {
-    I_Edition.db.collection('i_editions').find().sort(method).toArray( function(err, competitors){
+    I_Edition.db.collection('i_editions').find({clas:"II"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -257,7 +257,7 @@ router.get('/league/I_Edition/II', function (req, res) {
 });
 
 router.get('/league/I_Edition/III', function (req, res) {
-    I_Edition.db.collection('i_editions').find().sort(method).toArray( function(err, competitors){
+    I_Edition.db.collection('i_editions').find({clas:"III"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -270,7 +270,7 @@ router.get('/league/I_Edition/III', function (req, res) {
 
 });
 router.get('/league/I_Edition/mlodziezowa', function (req, res) {
-    I_Edition.db.collection('i_editions').find().sort(method).toArray( function(err, competitors){
+    I_Edition.db.collection('i_editions').find({clas:"Młodzieżowa"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -303,7 +303,7 @@ router.get('/league/III_Edition/mistrzowska', function (req, res) {
 });
 
 router.get('/league/III_Edition/mlodziezowiec', function (req, res) {
-    III_Edition.db.collection('iii_editions').find().sort(method).toArray( function(err, competitors){
+    III_Edition.db.collection('iii_editions').find({clas:"Młodzieżowiec"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -317,7 +317,7 @@ router.get('/league/III_Edition/mlodziezowiec', function (req, res) {
 });
 
 router.get('/league/III_Edition/I', function (req, res) {
-    III_Edition.db.collection('iii_editions').find().sort(method).toArray(function(err, competitors){
+    III_Edition.db.collection('iii_editions').find({clas:"I"}).sort(method).toArray(function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -331,7 +331,7 @@ router.get('/league/III_Edition/I', function (req, res) {
 });
 
 router.get('/league/III_Edition/II', function (req, res) {
-    III_Edition.db.collection('iii_editions').find().sort(method).toArray( function(err, competitors){
+    III_Edition.db.collection('iii_editions').find({clas:"II"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -345,7 +345,7 @@ router.get('/league/III_Edition/II', function (req, res) {
 });
 
 router.get('/league/III_Edition/III', function (req, res) {
-    III_Edition.db.collection('iii_editions').find().sort(method).toArray( function(err, competitors){
+    III_Edition.db.collection('iii_editions').find({clas:"III"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -358,7 +358,7 @@ router.get('/league/III_Edition/III', function (req, res) {
 
 });
 router.get('/league/III_Edition/mlodziezowa', function (req, res) {
-    III_Edition.db.collection('iii_editions').find().sort(method).toArray( function(err, competitors){
+    III_Edition.db.collection('iii_editions').find({clas:"Młodzieżowa"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -391,7 +391,7 @@ router.get('/league/IV_Edition/mistrzowska', function (req, res) {
 });
 
 router.get('/league/IV_Edition/mlodziezowiec', function (req, res) {
-    IV_Edition.db.collection('iv_editions').find().sort(method).toArray( function(err, competitors){
+    IV_Edition.db.collection('iv_editions').find({clas:"Młodzieżowiec"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -405,7 +405,7 @@ router.get('/league/IV_Edition/mlodziezowiec', function (req, res) {
 });
 
 router.get('/league/IV_Edition/I', function (req, res) {
-    IV_Edition.db.collection('iv_editions').find().sort(method).toArray(function(err, competitors){
+    IV_Edition.db.collection('iv_editions').find({clas:"I"}).sort(method).toArray(function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -419,7 +419,7 @@ router.get('/league/IV_Edition/I', function (req, res) {
 });
 
 router.get('/league/IV_Edition/II', function (req, res) {
-    IV_Edition.db.collection('iv_editions').find().sort(method).toArray( function(err, competitors){
+    IV_Edition.db.collection('iv_editions').find({clas:"II"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -433,7 +433,7 @@ router.get('/league/IV_Edition/II', function (req, res) {
 });
 
 router.get('/league/IV_Edition/III', function (req, res) {
-    IV_Edition.db.collection('iv_editions').find().sort(method).toArray( function(err, competitors){
+    IV_Edition.db.collection('iv_editions').find({clas:"III"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -446,7 +446,7 @@ router.get('/league/IV_Edition/III', function (req, res) {
 
 });
 router.get('/league/IV_Edition/mlodziezowa', function (req, res) {
-    IV_Edition.db.collection('iv_editions').find().sort(method).toArray( function(err, competitors){
+    IV_Edition.db.collection('iv_editions').find({clas:"Młodzieżowa"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
