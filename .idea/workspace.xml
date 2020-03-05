@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="&quot;1st update&quot;">
-      <change beforePath="$PROJECT_DIR$/routes/judging.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/judging.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/results.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/results.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/resulttables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/resulttables.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="judging.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="judging.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/judging.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="326" column="40" lean-forward="true" selection-start-line="326" selection-start-column="40" selection-end-line="326" selection-end-column="40" />
+            <state relative-caret-position="901">
+              <caret line="336" column="20" lean-forward="true" selection-start-line="336" selection-start-column="20" selection-end-line="336" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -33,17 +32,17 @@
       <file leaf-file-name="resulttables.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/resulttables.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="105" column="19" lean-forward="true" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
+            <state relative-caret-position="-221">
+              <caret line="92" column="40" lean-forward="true" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="results.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="results.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/results.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="146" column="36" selection-start-line="146" selection-start-column="36" selection-end-line="146" selection-end-column="36" />
+            <state relative-caret-position="-8653">
+              <caret line="118" column="36" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -60,7 +59,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>subdivision</find>
       <find>local</find>
       <find>Lo</find>
       <find>find</find>
@@ -90,6 +88,7 @@
       <find>I_</find>
       <find>edit</find>
       <find>h7</find>
+      <find>league/I_Edition/</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,8 +146,8 @@
         <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/views/layout.pug" />
         <option value="$PROJECT_DIR$/routes/judging.js" />
-        <option value="$PROJECT_DIR$/views/resulttables.pug" />
         <option value="$PROJECT_DIR$/routes/results.js" />
+        <option value="$PROJECT_DIR$/views/resulttables.pug" />
       </list>
     </option>
   </component>
@@ -383,12 +382,13 @@
       <workItem from="1583354645914" duration="14590000" />
       <workItem from="1583394207949" duration="9979000" />
       <workItem from="1583408931900" duration="7000" />
-      <workItem from="1583424218723" duration="6475000" />
+      <workItem from="1583424218723" duration="7231000" />
+      <workItem from="1583440763425" duration="1288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="555742000" />
+    <option name="totallyTimeSpent" value="557786000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -403,12 +403,12 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.12425645" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.12425645" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299712" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5076008" side_tool="true" weight="0.32051283" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32905984" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49239922" visible="true" weight="0.31766382" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49239922" visible="true" weight="0.31766382" />
       <window_info id="npm" order="2" sideWeight="0.50432277" side_tool="true" weight="0.3252688" />
       <window_info id="Structure" order="1" sideWeight="0.5014245" side_tool="true" weight="0.070059486" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49596775" weight="0.32478634" />
@@ -428,19 +428,19 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" sideWeight="0.50432277" side_tool="true" weight="0.3252688" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.12425645" />
       <window_info id="Structure" order="1" sideWeight="0.5014245" side_tool="true" weight="0.070059486" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299712" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32905984" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49239922" visible="true" weight="0.31766382" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3988604" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49596775" weight="0.32478634" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5076008" side_tool="true" weight="0.32051283" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32905984" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
       <window_info id="Favorites" order="3" sideWeight="0.5014245" side_tool="true" weight="0.070059486" />
     </layout-to-restore>
@@ -733,24 +733,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/judging.js">
+    <entry file="file://$PROJECT_DIR$/routes/results.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="326" column="40" lean-forward="true" selection-start-line="326" selection-start-column="40" selection-end-line="326" selection-end-column="40" />
+        <state relative-caret-position="-8653">
+          <caret line="118" column="36" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/resulttables.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="105" column="19" lean-forward="true" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
+        <state relative-caret-position="-221">
+          <caret line="92" column="40" lean-forward="true" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/results.js">
+    <entry file="file://$PROJECT_DIR$/routes/judging.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="146" column="36" selection-start-line="146" selection-start-column="36" selection-end-line="146" selection-end-column="36" />
+        <state relative-caret-position="901">
+          <caret line="336" column="20" lean-forward="true" selection-start-line="336" selection-start-column="20" selection-end-line="336" selection-end-column="20" />
         </state>
       </provider>
     </entry>

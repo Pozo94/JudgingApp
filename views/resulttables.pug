@@ -93,10 +93,10 @@ html
                     li.nav-item.dropdown
                         a.nav-link.dropdown-toggle(id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Archiwum
                             .dropdown-menu(aria-labelledby="navbarDropdown1")
-                                a.dropdown-item(href="/results/league/I_Edition") I Edycja
-                                a.dropdown-item(href="/results/league/II_Edition") II Edycja
-                                a.dropdown-item(href="/results/league/III_Edition") III Edycja
-                                a.dropdown-item(href="/results/league/IV_Edition") IV Edycja
+                                a.dropdown-item(href="/results/league/I_Edition/") I Edycja
+                                a.dropdown-item(href="/results/league/II_Edition/") II Edycja
+                                a.dropdown-item(href="/results/league/III_Edition/") III Edycja
+                                a.dropdown-item(href="/results/league/IV_Edition/") IV Edycja
                     if !user
                         li.nav-item
                             a.nav-link(href="/users/login") Login
@@ -129,7 +129,7 @@ html
                 td=competitor.club
                 td=competitor.year
                 td
-                if competitor.FX
+                if competitor.FX.Final
                     td
                         table
                             tr
@@ -141,7 +141,7 @@ html
 
                 else
                     td
-                if competitor.PH
+                if competitor.PH.Final
                     td
                         table
                             tr
@@ -151,7 +151,7 @@ html
                                 td=' E:' + competitor.PH.E.toFixed(2)
                 else
                     td
-                if competitor.SR
+                if competitor.SR.Final
                     td
                         table
                             tr
@@ -161,7 +161,7 @@ html
                                 td=' E:' + competitor.SR.E.toFixed(2)
                 else
                     td
-                if competitor.VT1
+                if competitor.VT1.Final
                     td
                         table
                             tr
@@ -171,7 +171,7 @@ html
                                 td=' E:' + competitor.VT1.E.toFixed(2)
                 else
                     td
-                if competitor.PB
+                if competitor.PB.Final
                     td
                         table
                             tr
@@ -181,7 +181,7 @@ html
                                 td=' E:' + competitor.PB.E.toFixed(2)
                 else
                     td
-                if competitor.HB
+                if competitor.HB.Final
                     td
                         table
                             tr
