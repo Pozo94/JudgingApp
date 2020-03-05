@@ -17,7 +17,9 @@ html
         style.
 
 
-
+            body {
+                min-width: auto;
+            }
 
 
             @media (min-width: 1200px) {
@@ -102,7 +104,7 @@ html
                         li.nav-item
                             a.nav-link(href="/users/logout") Logout
     -var miejsce=1;
-    table.table-sm.table-dark.table-hover.table-responsive-xl.container(id = 'wyniki')
+    table.table-sm.table-dark.table-hover.col-md-12(id = 'wyniki')
         thead
             tr.border-bottom
                 th(scope='col') #
