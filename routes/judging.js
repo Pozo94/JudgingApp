@@ -100,20 +100,20 @@ router.post('/:id', function(req, res){
     if (Sr[0]===''&&Sr[1]===''){
 
         E= (+Sr[2]+ +Sr[3])/2;
-        E3=0;
-        E4=0;
+        E3=10;
+        E4=10;
     }
     if (Sr[0]===''&& Sr[1]>0){
         console.log('ocena',Sr)
         E= +Sr[2];
-        E4=0;
+        E4=10;
     }
     if(Sr[0]===''&& Sr[1]===''&&Sr[2]===''){
         console.log('ocena',Sr)
         E= +Sr[3];
-        E2=0;
-        E3=0;
-        E4=0;
+        E2=10;
+        E3=10;
+        E4=10;
     }
     //E = +((+Sr[0] + +Sr[1])/2);
     /*if(E2===undefined && E3===undefined && E4===undefined ){
@@ -129,7 +129,7 @@ router.post('/:id', function(req, res){
         E= (+Sr[1]+ +Sr[2])/2;
     }*/
 
-    var Final=(+E + +D)
+    var Final=((10 - +E) + +D)
     Final=Round( +Final,3);
     var competitor={};
     if (req.user.apparatus==='VT') {
@@ -143,11 +143,11 @@ router.post('/:id', function(req, res){
                 if(competitorr.VT1.Final>=0)
                 {
                     competitorr.VT2.D=D;
-                    competitorr.VT2.E1=E1;
-                    competitorr.VT2.E2=E2;
-                    competitorr.VT2.E3=E3;
-                    competitorr.VT2.E4=E4;
-                    competitorr.VT2.E=E;
+                    competitorr.VT2.E1=10-E1;
+                    competitorr.VT2.E2=10-E2;
+                    competitorr.VT2.E3=10-E3;
+                    competitorr.VT2.E4=10-E4;
+                    competitorr.VT2.E=10-E;
                     competitorr.VT2.Final= +Final;
                     competitorr.VT = (+competitorr.VT1.Final + +Final)/2;
                     Competitor.createCompetitor(competitorr, function () {
@@ -157,10 +157,10 @@ router.post('/:id', function(req, res){
                 else
                 {
                     competitorr.VT1.D=D;
-                    competitorr.VT1.E1=E1;
-                    competitorr.VT1.E2=E2;
-                    competitorr.VT1.E3=E3;
-                    competitorr.VT1.E4=E4;
+                    competitorr.VT1.E1=10-E1;
+                    competitorr.VT1.E2=10-E2;
+                    competitorr.VT1.E3=10-E3;
+                    competitorr.VT1.E4=10-E4;
                     competitorr.VT1.E=E;
                     competitorr.VT1.Final= +Final;
                     if (competitorr.suma===undefined)
@@ -195,11 +195,11 @@ router.post('/:id', function(req, res){
             } else {
                 console.log(competitorr.FX.E3);
                 competitorr.FX.D=D;
-                competitorr.FX.E1=E1;
-                competitorr.FX.E2=E2;
-                competitorr.FX.E3=E3;
-                competitorr.FX.E4=E4;
-                competitorr.FX.E=E;
+                competitorr.FX.E1=10-E1;
+                competitorr.FX.E2=10-E2;
+                competitorr.FX.E3=10-E3;
+                competitorr.FX.E4=10-E4;
+                competitorr.FX.E=10-E;
                 competitorr.FX.Final= +Final;
                 if (competitorr.suma===undefined)
                 {
@@ -227,11 +227,11 @@ router.post('/:id', function(req, res){
                 return;
             } else {
                 competitorr.PH.D=D;
-                competitorr.PH.E1=E1;
-                competitorr.PH.E2=E2;
-                competitorr.PH.E3=E3;
-                competitorr.PH.E4=E4;
-                competitorr.PH.E=E;
+                competitorr.PH.E1=10-E1;
+                competitorr.PH.E2=10-E2;
+                competitorr.PH.E3=10-E3;
+                competitorr.PH.E4=10-E4;
+                competitorr.PH.E=10-E;
                 competitorr.PH.Final= +Final;
                 if (competitorr.suma===undefined)
                 {
@@ -259,11 +259,11 @@ router.post('/:id', function(req, res){
                 return;
             } else {
                 competitorr.SR.D=D;
-                competitorr.SR.E1=E1;
-                competitorr.SR.E2=E2;
-                competitorr.SR.E3=E3;
-                competitorr.SR.E4=E4;
-                competitorr.SR.E=E;
+                competitorr.SR.E1=10-E1;
+                competitorr.SR.E2=10-E2;
+                competitorr.SR.E3=10-E3;
+                competitorr.SR.E4=10-E4;
+                competitorr.SR.E=10-E;
                 competitorr.SR.Final= +Final;
                 if (competitorr.suma===undefined)
                 {
@@ -292,11 +292,11 @@ router.post('/:id', function(req, res){
                 return;
             } else {
                 competitorr.PB.D=D;
-                competitorr.PB.E1=E1;
-                competitorr.PB.E2=E2;
-                competitorr.PB.E3=E3;
-                competitorr.PB.E4=E4;
-                competitorr.PB.E=E;
+                competitorr.PB.E1=10-E1;
+                competitorr.PB.E2=10-E2;
+                competitorr.PB.E3=10-E3;
+                competitorr.PB.E4=10-E4;
+                competitorr.PB.E=10-E;
                 competitorr.PB.Final= +Final;
                 if (competitorr.suma===undefined)
                 {
@@ -324,11 +324,11 @@ router.post('/:id', function(req, res){
                 return;
             } else {
                 competitorr.HB.D=D;
-                competitorr.HB.E1=E1;
-                competitorr.HB.E2=E2;
-                competitorr.HB.E3=E3;
-                competitorr.HB.E4=E4;
-                competitorr.HB.E=E;
+                competitorr.HB.E1=10-E1;
+                competitorr.HB.E2=10-E2;
+                competitorr.HB.E3=10-E3;
+                competitorr.HB.E4=10-E4;
+                competitorr.HB.E=10-E;
                 competitorr.HB.Final= +Final;
                 if (competitorr.suma===undefined)
                 {

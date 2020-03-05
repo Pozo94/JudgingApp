@@ -27,7 +27,7 @@ router.get('/league/III',function (req,res) {
             console.log(err);
         } else {
             res.render('league', {
-                title:'Liga Klasa III',
+                title:'resulttables',
                 competitors: competitors
             });
         }
@@ -116,7 +116,7 @@ router.get('/league/II_Edition/mistrzowska', function (req, res) {
             console.log(err);
         } else {
 
-            res.render('Klasy/mistrzowska', {
+            res.render('resulttables', {
                 title:'Klasa mistrzowska',
                 competitors: competitors
             });
@@ -130,7 +130,7 @@ router.get('/league/II_Edition/mlodziezowiec', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/mlodziezowiec', {
+            res.render('resulttables', {
                 title:'Klasa mlodziezowiec',
                 competitors: competitors
             });
@@ -144,7 +144,7 @@ router.get('/league/II_Edition/I', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/I', {
+            res.render('resulttables', {
                 title:'Klasa I',
                 competitors: competitors
             });
@@ -158,7 +158,7 @@ router.get('/league/II_Edition/II', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/II', {
+            res.render('resulttables', {
                 title:'Klasa II',
                 competitors: competitors
             });
@@ -172,7 +172,7 @@ router.get('/league/II_Edition/III', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/III', {
+            res.render('resulttables', {
                 title:'Klasa III',
                 competitors: competitors
             });
@@ -186,7 +186,7 @@ router.get('/league/II_Edition/mlodziezowa', function (req, res) {
             console.log(err);
         } else {
 
-            res.render('Klasy/mlodziezowa', {
+            res.render('resulttables', {
                 title:'Klasa mlodziezowa',
                 competitors: competitors
             });
@@ -205,7 +205,7 @@ router.get('/league/I_Edition/mistrzowska', function (req, res) {
             console.log(err);
         } else {
 
-            res.render('Klasy/mistrzowska', {
+            res.render('resulttables', {
                 title:'Klasa mistrzowska',
                 competitors: competitors
             });
@@ -219,7 +219,7 @@ router.get('/league/I_Edition/mlodziezowiec', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/mlodziezowiec', {
+            res.render('resulttables', {
                 title:'Klasa mlodziezowiec',
                 competitors: competitors
             });
@@ -233,7 +233,7 @@ router.get('/league/I_Edition/I', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/I', {
+            res.render('resulttables', {
                 title:'Klasa I',
                 competitors: competitors
             });
@@ -247,7 +247,7 @@ router.get('/league/I_Edition/II', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/II', {
+            res.render('resulttables', {
                 title:'Klasa II',
                 competitors: competitors
             });
@@ -261,7 +261,7 @@ router.get('/league/I_Edition/III', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/III', {
+            res.render('resulttables', {
                 title:'Klasa III',
                 competitors: competitors
             });
@@ -275,7 +275,7 @@ router.get('/league/I_Edition/mlodziezowa', function (req, res) {
             console.log(err);
         } else {
 
-            res.render('Klasy/mlodziezowa', {
+            res.render('resulttables', {
                 title:'Klasa mlodziezowa',
                 competitors: competitors
             });
@@ -293,7 +293,7 @@ router.get('/league/III_Edition/mistrzowska', function (req, res) {
             console.log(err);
         } else {
 
-            res.render('Klasy/mistrzowska', {
+            res.render('resulttables', {
                 title:'Klasa mistrzowska',
                 competitors: competitors
             });
@@ -307,7 +307,7 @@ router.get('/league/III_Edition/mlodziezowiec', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/mlodziezowiec', {
+            res.render('resulttables', {
                 title:'Klasa mlodziezowiec',
                 competitors: competitors
             });
@@ -321,7 +321,7 @@ router.get('/league/III_Edition/I', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/I', {
+            res.render('resulttables', {
                 title:'Klasa I',
                 competitors: competitors
             });
@@ -335,7 +335,7 @@ router.get('/league/III_Edition/II', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/II', {
+            res.render('resulttables', {
                 title:'Klasa II',
                 competitors: competitors
             });
@@ -349,7 +349,7 @@ router.get('/league/III_Edition/III', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/III', {
+            res.render('resulttables', {
                 title:'Klasa III',
                 competitors: competitors
             });
@@ -363,7 +363,7 @@ router.get('/league/III_Edition/mlodziezowa', function (req, res) {
             console.log(err);
         } else {
 
-            res.render('Klasy/mlodziezowa', {
+            res.render('resulttables', {
                 title:'Klasa mlodziezowa',
                 competitors: competitors
             });
@@ -381,7 +381,7 @@ router.get('/league/IV_Edition/mistrzowska', function (req, res) {
             console.log(err);
         } else {
 
-            res.render('Klasy/mistrzowska', {
+            res.render('resulttables', {
                 title:'Klasa mistrzowska',
                 competitors: competitors
             });
@@ -395,7 +395,7 @@ router.get('/league/IV_Edition/mlodziezowiec', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/mlodziezowiec', {
+            res.render('resulttables', {
                 title:'Klasa mlodziezowiec',
                 competitors: competitors
             });
@@ -409,7 +409,7 @@ router.get('/league/IV_Edition/I', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/I', {
+            res.render('resulttables', {
                 title:'Klasa I',
                 competitors: competitors
             });
@@ -423,7 +423,7 @@ router.get('/league/IV_Edition/II', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/II', {
+            res.render('resulttables', {
                 title:'Klasa II',
                 competitors: competitors
             });
@@ -437,7 +437,7 @@ router.get('/league/IV_Edition/III', function (req, res) {
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/III', {
+            res.render('resulttables', {
                 title:'Klasa III',
                 competitors: competitors
             });
@@ -451,7 +451,7 @@ router.get('/league/IV_Edition/mlodziezowa', function (req, res) {
             console.log(err);
         } else {
 
-            res.render('Klasy/mlodziezowa', {
+            res.render('resulttables', {
                 title:'Klasa mlodziezowa',
                 competitors: competitors
             });
