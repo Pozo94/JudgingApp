@@ -30,7 +30,21 @@ block content
                         option Mistrzowska
                     .invalid-feedback
 
-
+            .row
+                .col-md-5.mb-3
+                    label(for='subdivision') Klasa
+                    br
+                    select.custom-select.d-block.w-100(id='subdivision',name='subdivision', required='')
+                        option=competitor.subdivision
+                        option I
+                        option II
+                        option III
+                        option IV
+                        option V
+                        option VI
+                        option VII
+                        option VIII
+                    .invalid-feedback
 
 
         button.btn.btn-lg.btn-primary.btn-block(type='submit', formmethod='post') Zapisz

@@ -1,0 +1,35 @@
+extends layout
+
+block content
+
+    style.
+        p{
+            color: #0f0f0f;
+        }
+    each judge, i in judges
+        ul.list-group
+            if judge.apparatus==='FX'
+                li.list-group-item.list-group-item-info
+
+                    p.text-center=judge.firstname + '  ' +judge.lastname + '   ' +judge.apparatus+ '   '+ judge.role
+            if judge.apparatus === 'PH'
+                li.list-group-item.list-group-item-primary
+
+                    p.text-center=judge.firstname + '  ' + judge.lastname + '   ' + judge.apparatus + '   ' + judge.role
+            if judge.apparatus === 'SR'
+                li.list-group-item.list-group-item-secondary
+
+                    p.text-center=judge.firstname + '  ' + judge.lastname + '   ' + judge.apparatus + '   ' + judge.role
+            if judge.apparatus === 'VT'
+                li.list-group-item.list-group-item-success
+
+                    p.text-center=judge.firstname + '  ' + judge.lastname + '   ' + judge.apparatus + '   ' + judge.role
+            if judge.apparatus === 'PB'
+                li.list-group-item.list-group-item-light
+
+                    p.text-center=judge.firstname + '  ' + judge.lastname + '   ' + judge.apparatus + '   ' + judge.role
+            if judge.apparatus === 'HB'
+                li.list-group-item.list-group-item-danger
+
+                    p.text-center=judge.firstname + '  ' + judge.lastname + '   ' + judge.apparatus + '   ' + judge.role
+

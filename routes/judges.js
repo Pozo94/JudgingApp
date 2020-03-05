@@ -4,6 +4,35 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
 var Judge = require('../models/judge');
+var User = require('../models/user');
+function compare(a, b) {
+    // Use toUpperCase() to ignore character casing
+    const clasA = a.apparatus;
+    const clasB = b.apparatus;
+
+    let comparison = 0;
+    if (clasA > clasB) {
+        comparison = 1;
+    } else if (clasA < clasB) {
+        comparison = -1;
+    }
+    return comparison;
+}
+router.get('/', function (req, res) {
+    User.find({role:{$ne:'Admin'}},function (err,judges) {
+        console.log(judges);
+        judges.sort(compare);
+        res.render('jlist', {
+            title:'List of judges',
+            judges: judges,
+
+        });
+
+    })
+
+
+
+});
 
 // Register
 router.get('/addJudge',ensureAdmin, function (req, res) {
@@ -67,6 +96,8 @@ router.get('/logout', function (req, res) {
 
     res.redirect('/users/login');
 });
+
+
 function ensureAuthenticated(req, res, next){
     if(req.isAuthenticated()){
         return next();

@@ -2,10 +2,10 @@ extends layout
 
 block content
     form.form-signin(method='POST', action='/competitors/addParticipant')
-        h1.h2.mb-5.font-weight-normal Przydziel do zawodów
+        h1.h2.mb-3.font-weight-normal Przydziel do zawodów
         #form-group
             .row
-                .col-md-8.mb-3
+                .col-md-8.mb-1
                     label(for='name') Zawodnik
                     br
                     select#name.custom-select.d-block.w-100(name='name', required='')
@@ -17,7 +17,7 @@ block content
 
         #form-group
             .row
-                .col-md-5.mb-3
+                .col-md-5.mb-1
                     label(for='subdivision') Zastęp
                     br
                     select.custom-select.d-block.w-100(id='subdivision',name='subdivision', required='')
@@ -33,7 +33,7 @@ block content
                     .invalid-feedback
         #form-group
             .row
-                .col-md-5.mb-3
+                .col-md-5.mb-1
                     label(for='competition') Zawody
                     br
                     select.custom-select.d-block.w-100(id='competition',name='competition', required='')

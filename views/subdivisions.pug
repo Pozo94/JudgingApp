@@ -1,0 +1,40 @@
+extends layout
+
+block content
+
+    style.
+        h7{
+            color: #0f0f0f;
+        }
+    each competitor, i in competitors
+        ul.list-group
+            if competitor.clas==="Młodzieżowa"
+                li.list-group-item.list-group-item-secondary
+                    h7=competitor.firstname + ' ' +competitor.lastname + ' Klasa: ' +competitor.clas
+                    span.float-right
+                        a.btn.btn-success(href=competitor._id) Oceń
+            if competitor.clas === "Młodzieżowiec"
+                li.list-group-item.list-group-item-primary
+                    h7=competitor.firstname + ' ' + competitor.lastname + ' Klasa: ' + competitor.clas
+                    span.float-right
+                        a.btn.btn-success(href=competitor._id) Oceń
+            if competitor.clas === "Mistrzowska"
+                li.list-group-item.list-group-item-succes
+                    h7=competitor.firstname + ' ' + competitor.lastname + ' Klasa: ' + competitor.clas
+                    span.float-right
+                        a.btn.btn-success(href=competitor._id) Oceń
+            if competitor.clas === "III"
+                li.list-group-item.list-group-item-danger
+                    h7=competitor.firstname + ' ' + competitor.lastname + ' Klasa: ' + competitor.clas
+                    span.float-right
+                        a.btn.btn-success(href=competitor._id) Oceń
+            if competitor.clas === "II"
+                li.list-group-item.list-group-item-light
+                    h7=competitor.firstname + ' ' + competitor.lastname + ' Klasa: ' + competitor.clas
+                    span.float-right
+                        a.btn.btn-success(href=competitor._id) Oceń
+            if competitor.clas === "I"
+                li.list-group-item.list-group-item-info
+                    h7=competitor.firstname + ' ' + competitor.lastname + ' Klasa: ' + competitor.clas
+                    span.float-right
+                        a.btn.btn-success(href=competitor._id) Oceń

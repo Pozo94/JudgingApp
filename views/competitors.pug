@@ -9,8 +9,9 @@ block content
     each competitor, i in competitors
         ul.list-group
             li.list-group-item
-                p=competitor.firstname + ' ' +competitor.lastname + ' Klasa: ' +competitor.clas
+                p=competitor.firstname + ' ' +competitor.lastname + '  ' +competitor.club
+                    if user
+                        if user.role==='Admin'
 
-                        a.btn.btn-danger.pull-right.delete-competitor(data-id=competitor._id) Usuń
-
-                        a.btn.btn-success.pull-right(href="/competitors/edit/"+competitor._id) Edytuj
+                            a.btn.btn-danger.delete-competitor.float-right(data-id=competitor._id) Usuń
+                            a.btn.btn-success.float-right(href="/competitors/edit/"+competitor._id) Edytuj

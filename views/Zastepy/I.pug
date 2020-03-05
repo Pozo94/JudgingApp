@@ -1,4 +1,4 @@
-extends ../layout
+extends layout
 
 block content
 
@@ -7,7 +7,6 @@ block content
             color: #0f0f0f;
         }
     each competitor, i in competitors
-        if competitor.subdivision === 'I'
             ul.list-group
                 li.list-group-item
                     h7=competitor.firstname + ' ' +competitor.lastname + ' Klasa: ' +competitor.clas

@@ -4,14 +4,22 @@ html
   head
     meta(charset="utf-8")
     title= JudgingApp
-    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/style.css')
-    link(rel="icon" type="image/png" href="/css/logo.png" sizes="16x16")
+    link(rel="icon" type="image/png" href="/css/mlg_logo.svg" sizes="16x16")
     script(defer, src="/js/socket.io.js")
-    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js' integrity='sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut' crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js' integrity='sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k' crossorigin='anonymous')
+
     script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
     script(src='/js/main.js')
     style.
+
+
+
+
+
       @media (min-width: 1200px) {
         .container {
           max-width: 1000px;
@@ -20,56 +28,88 @@ html
 
   body
 
-    nav.navbar.navbar-inverse.navbar-fixed-top.navbar-static-top
+    nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-4.fixed-top
       a.navbar-brand(href='https://www.pzg.pl') PZG
-      .container
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarCollapse.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href='/')
+              | Home
+              span.sr-only (current)
 
-        .navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target="#navbar")
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
 
-        #navbar.collapse.navbar-collapse
-          ul.nav.navbar-nav
-            li
-            li
-              a(href="/") Home
 
-            li
-              a(href="/results") Results
-            if user
-              if user.role!=="Admin"
-                li
-                  a(href="/judging/") Judge
-              if user.role === 'Admin'
-                li
-                  a(href="/competitors/addCompetitor") Add Competitor
-                li
-                  a(href="/competitors/addParticipant") Set Competitor
-                li
-                  a(href="/judges/addJudge") Add Judge
-                li
-                  a(href="/users/addUser") Set Judge
-          ul.nav.navbar-nav.navbar-right
-            if competitors
-                li
-                  a(onclick="tableToExcel('wyniki','Klasa Młodzieżowiec','Klasa Młodzieżowiec')") Pobierz
-            li
-              a(href="/results/league/") Archive
+          if user
+            if user.role==='Admin'
+              li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Sędziowie
+                  .dropdown-menu(aria-labelledby="navbarDropdown4")
+                    a.dropdown-item(href="/judges/addJudge/") Dodaj Sędziego
+                    a.dropdown-item(href="/users/addUser/") Przydziel Sędziego
 
-            if !user
-              li
-                a(href="/users/login") Login
-            else
-              li
-                a(href="/users/logout") Logout
-    .container
-      != messages('message', locals)
-      if errors
-        each error, i in errors
-          div(class="alert alert-danger") #{error.msg}
+              li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Zawodnicy
+                  .dropdown-menu(aria-labelledby="navbarDropdown5")
+                    a.dropdown-item(href="/competitors/addCompetitor/") Dodaj Zawodnika
+                    a.dropdown-item(href="/competitors/addParticipant/") Przydziel Zawodnika
+              li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(id="navbarDropdown8" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Info
+                  .dropdown-menu(aria-labelledby="navbarDropdown8")
+                    a.dropdown-item(href="/judges/") Sędziowie
+                    a.dropdown-item(href="/competitors/") Zawodnicy
+            if user.role==='Arbiter'
+              li.nav-item.disabled
+                a.nav-link(href="/protocols/") Protokoły
 
-      block content
+          if !user || user.role !== 'Admin'
+            li.nav-item.disabled
+              a.nav-link(href='/judges/') Sędziowie
+            li.nav-item.disabled
+              a.nav-link(href='/competitors/') Zawodnicy
+
+        ul.navbar-nav.mr-1
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Aktualne Wyniki
+              .dropdown-menu(aria-labelledby="navbarDropdown2")
+                a.dropdown-item(href="/results/mistrzowska/") Klasa Mistrzowska
+                a.dropdown-item(href="/results/mlodziezowiec/") Klasa Młodzieżowiec
+                a.dropdown-item(href="/results/I/") Klasa I
+                a.dropdown-item(href="/results/II/") Klasa II
+                a.dropdown-item(href="/results/III/") Klasa III
+                a.dropdown-item(href="/results/mlodziezowa/") Klasa Młodzieżowa
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Klasyfikacja ligowa
+              .dropdown-menu(aria-labelledby="navbarDropdown3")
+                a.dropdown-item(href="/results/league/mistrzowska") Klasa Mistrzowska
+                a.dropdown-item(href="/results/league/mlodziezowiec/") Klasa Młodzieżowiec
+                a.dropdown-item(href="/results/league/I/") Klasa I
+                a.dropdown-item(href="/results/league/II/") Klasa II
+                a.dropdown-item(href="/results/league/III/") Klasa III
+                a.dropdown-item(href="/results/league/mlodziezowa/") Klasa Młodzieżowa
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Archiwum
+              .dropdown-menu(aria-labelledby="navbarDropdown1")
+                a.dropdown-item(href="/results/league/I_Edition") I Edycja
+                a.dropdown-item(href="/results/league/II_Edition") II Edycja
+                a.dropdown-item(href="/results/league/III_Edition") III Edycja
+                a.dropdown-item(href="/results/league/IV_Edition") IV Edycja
+          if !user
+            li.nav-item
+              a.nav-link(href="/users/login") Login
+          else
+            li.nav-item
+              a.nav-link(href="/users/logout") Logout
+  .container
+    != messages('message', locals)
+    if errors
+      each error, i in errors
+        div(class="alert alert-danger") #{error.msg}
+    block content
+
+
+
+
+
 

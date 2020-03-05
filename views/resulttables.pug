@@ -1,0 +1,131 @@
+extends layout
+
+block content
+    -var miejsce = 1;
+    style.
+        h7 {
+            color: #0f0f0f;
+        }
+
+
+    table.table-sm.table-dark.col-md-12.table-hover(id = 'wyniki')
+        thead
+            tr.border-bottom
+                th(scope='col') #
+                th(scope='col' style="text-align: center") Imie
+                th(scope='col' style="text-align: center") Nazwisko
+                th(scope='col' style="text-align: center") Klub
+                th(scope='col' style="text-align: center") Rocznik
+                th
+                th(scope='col' ) Wolne
+                th(scope='col' ) Koń
+                th(scope='col' ) Kółka
+                th(scope='col' ) Skok
+                th(scope='col' ) Poręcze
+                th(scope='col' ) Drązek
+                th(scope='col' ) Suma
+        each competitor, i in competitors
+
+            tr(style="text-align: center")
+                td= miejsce++ + '. '
+                td=competitor.firstname
+                td=competitor.lastname
+                td=competitor.club
+                td=competitor.year
+                td
+                if competitor.FX
+                    td
+                        table
+                            tr
+                                td='D:' + competitor.FX.D.toFixed(2)
+                                td(rowspan="2" style='text-vertical-align')= ' F:' + competitor.FX.Final.toFixed(2)
+                            tr
+                                td=' E:' + competitor.FX.E.toFixed(2)
+
+
+                else
+                    td
+                if competitor.PH
+                    td
+                        table
+                            tr
+                                td='D:' + competitor.PH.D.toFixed(2)
+                                td(rowspan="2" style='text-vertical-align')= ' F:' + competitor.PH.Final.toFixed(2)
+                            tr
+                                td=' E:' + competitor.PH.E.toFixed(2)
+                else
+                    td
+                if competitor.SR
+                    td
+                        table
+                            tr
+                                td='D:' + competitor.SR.D.toFixed(2)
+                                td(rowspan="2" style='text-vertical-align')= ' F:' + competitor.SR.Final.toFixed(2)
+                            tr
+                                td=' E:' + competitor.SR.E.toFixed(2)
+                else
+                    td
+                if competitor.VT1
+                    td
+                        table
+                            tr
+                                td='D:' + competitor.VT1.D.toFixed(2)
+                                td(rowspan="2" style='text-vertical-align')= ' F:' + competitor.VT1.Final.toFixed(2)
+                            tr
+                                td=' E:' + competitor.VT1.E.toFixed(2)
+                else
+                    td
+                if competitor.PB
+                    td
+                        table
+                            tr
+                                td='D:' + competitor.PB.D.toFixed(2)
+                                td(rowspan="2" style='text-vertical-align')= ' F:' + competitor.PB.Final.toFixed(2)
+                            tr
+                                td=' E:' + competitor.PB.E.toFixed(2)
+                else
+                    td
+                if competitor.HB
+                    td
+                        table
+                            tr
+                                td='D:' + competitor.HB.D.toFixed(2)
+                                td(rowspan="2" style='text-vertical-align')= ' F:' + competitor.HB.Final.toFixed(2)
+                            tr
+                                td=' E:' + competitor.HB.E.toFixed(2)
+                else
+                    td
+                if competitor.suma
+                    td=competitor.suma.toFixed(2)
+                else
+                    td
+
+
+
+
+
+
+
+
+    script.
+        var tableToExcel = (function () {
+            var uri = 'data:application/vnd.ms-excel;base64,'
+                ,
+                template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><meta charset="utf-8"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+                , base64 = function (s) {
+                    return window.btoa(unescape(encodeURIComponent(s)))
+                }
+                , format = function (s, c) {
+                    return s.replace(/{(\w+)}/g, function (m, p) {
+                        return c[p];
+                    })
+                }
+            return function (table, name, filename) {
+                if (!table.nodeType) table = document.getElementById(table)
+                var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+                var link = document.createElement('a');
+                link.download = filename;
+                link.href = uri + base64(format(template, ctx));
+                link.click();
+            }
+        })()

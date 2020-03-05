@@ -27,13 +27,13 @@ function compare(a, b) {
     return comparison;
 }
 
-
+var method={clas:-1};
 /* GET home page. */
 router.get('/',ensureAuthenticated, function (req, res) {
     res.render('judging');
 
 });
-router.get('/:subdivision/:id',ensureAuthenticated, function(req, res){
+router.get('/:id',ensureAuthenticated, function(req, res){
         Current_Edition.findById(req.params.id, function(err,competitor) {
             if (req.user.apparatus === 'VT') {
                 if (competitor.VT1.Final>=0 && competitor.VT2.Final>=0) {
@@ -81,7 +81,7 @@ router.get('/:subdivision/:id',ensureAuthenticated, function(req, res){
 
         });
 });
-router.post('/:subdivision/:id', function(req, res){
+router.post('/:id', function(req, res){
     function compareNumbers(a, b) {
         return a - b
     }
@@ -94,7 +94,27 @@ router.post('/:subdivision/:id', function(req, res){
     Sr=new Array(E1,E2,E3,E4);
     Sr.sort(compareNumbers);
     var E;
+
     E= (+Sr[1]+ +Sr[2])/2;
+    console.log(Sr[0]);
+    if (Sr[0]===''&&Sr[1]===''){
+
+        E= (+Sr[2]+ +Sr[3])/2;
+        E3=0;
+        E4=0;
+    }
+    if (Sr[0]===''&& Sr[1]>0){
+        console.log('ocena',Sr)
+        E= +Sr[2];
+        E4=0;
+    }
+    if(Sr[0]===''&& Sr[1]===''&&Sr[2]===''){
+        console.log('ocena',Sr)
+        E= +Sr[3];
+        E2=0;
+        E3=0;
+        E4=0;
+    }
     //E = +((+Sr[0] + +Sr[1])/2);
     /*if(E2===undefined && E3===undefined && E4===undefined ){
         E= +E1;
@@ -173,6 +193,7 @@ router.post('/:subdivision/:id', function(req, res){
                 console.log(err);
                 return;
             } else {
+                console.log(competitorr.FX.E3);
                 competitorr.FX.D=D;
                 competitorr.FX.E1=E1;
                 competitorr.FX.E2=E2;
@@ -326,15 +347,15 @@ router.post('/:subdivision/:id', function(req, res){
 
         });
     }
-    res.redirect('/judging/');
+    res.redirect('/protocols/');
 });
 router.get('/I',ensureAuthenticated, function (req, res) {
-    Current_Edition.find({}, function(err, competitors){
+    Current_Edition.find({subdivision:"I"}, function(err, competitors){
         if(err){
             console.log(err);
         } else {
-            //competitors.sort(compare);
-            res.render('Zastepy/I', {
+            competitors.sort(compare);
+            res.render('subdivisions', {
                 title:'Zastęp I',
                 competitors: competitors
             });
@@ -344,11 +365,12 @@ router.get('/I',ensureAuthenticated, function (req, res) {
 
 });
 router.get('/II',ensureAuthenticated, function (req, res) {
-    Current_Edition.find({}, function(err, competitors){
+    Current_Edition.find({subdivision:"II"}, function(err, competitors){
         if(err){
             console.log(err);
         } else {
-            res.render('Zastepy/II', {
+            competitors.sort(compare);
+            res.render('subdivisions', {
                 title:'Zastęp II',
                 competitors: competitors
             });
@@ -357,11 +379,12 @@ router.get('/II',ensureAuthenticated, function (req, res) {
 
 });
 router.get('/III',ensureAuthenticated, function (req, res) {
-    Current_Edition.find({}, function(err, competitors){
+    Current_Edition.find({subdivision:"III"}, function(err, competitors){
         if(err){
             console.log(err);
         } else {
-            res.render('Zastepy/III', {
+            competitors.sort(compare);
+            res.render('subdivisions', {
                 title:'Zastęp III',
                 competitors: competitors
             });
@@ -370,11 +393,12 @@ router.get('/III',ensureAuthenticated, function (req, res) {
 
 });
 router.get('/IV',ensureAuthenticated, function (req, res) {
-    Current_Edition.find({}, function(err, competitors){
+    Current_Edition.find({subdivision:"IV"}, function(err, competitors){
         if(err){
             console.log(err);
         } else {
-            res.render('Zastepy/IV', {
+            competitors.sort(compare);
+            res.render('subdivisions', {
                 title:'Zastęp IV',
                 competitors: competitors
             });
@@ -384,11 +408,12 @@ router.get('/IV',ensureAuthenticated, function (req, res) {
 });
 
 router.get('/V',ensureAuthenticated, function (req, res) {
-    Current_Edition.find({}, function(err, competitors){
+    Current_Edition.find({subdivision:"V"}, function(err, competitors){
         if(err){
             console.log(err);
         } else {
-            res.render('Zastepy/V', {
+            competitors.sort(compare);
+            res.render('subdivisions', {
                 title:'Zastęp V',
                 competitors: competitors
             });
@@ -397,11 +422,12 @@ router.get('/V',ensureAuthenticated, function (req, res) {
 
 });
 router.get('/VI',ensureAuthenticated, function (req, res) {
-    Current_Edition.find({}, function(err, competitors){
+    Current_Edition.find({subdivision:"VI"}, function(err, competitors){
         if(err){
             console.log(err);
         } else {
-            res.render('Zastepy/VI', {
+            competitors.sort(compare);
+            res.render('subdivisions', {
                 title:'Zastęp VI',
                 competitors: competitors
             });
@@ -410,11 +436,12 @@ router.get('/VI',ensureAuthenticated, function (req, res) {
 
 });
 router.get('/VII',ensureAuthenticated, function (req, res) {
-    Current_Edition.find({}, function(err, competitors){
+    Current_Edition.find({subdivision:"VII"}, function(err, competitors){
         if(err){
             console.log(err);
         } else {
-            res.render('Zastepy/VII', {
+            competitors.sort(compare);
+            res.render('subdivisions', {
                 title:'Zastęp VII',
                 competitors: competitors
             });
@@ -423,11 +450,12 @@ router.get('/VII',ensureAuthenticated, function (req, res) {
 
 });
 router.get('/VIII',ensureAuthenticated, function (req, res) {
-    Current_Edition.find({}, function(err, competitors){
+    Current_Edition.find({subdivision:"VIII"}, function(err, competitors){
         if(err){
             console.log(err);
         } else {
-            res.render('Zastepy/VIII', {
+            competitors.sort(compare);
+            res.render('subdivisions', {
                 title:'Zastęp VIII',
                 competitors: competitors
             });

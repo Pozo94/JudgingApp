@@ -1,163 +1,218 @@
-doctype html
-html
-    head
-        title= JudgingApp
-        link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
-        link(rel='stylesheet', href='/css/style.css')
-        link(rel='shortcut icon',type='image/png',href='/css/logo.png')
-        script(defer, src="http://localhost:3000/socket.io/socket.io.js")
-        script(defer, src="/js/socket.io.js")
-        script(src='/bower_components/jquery/dist/jquery.js')
-        script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
-        script(src='/js/main.js')
-        meta(charset="utf-8")
-    body
+extends layout
 
-        nav.navbar.navbar-inverse.navbar-fixed-top
-            a.navbar-brand(href='https://www.pzg.pl') PZG
-            .container
+block content
 
-                .navbar-header
-                    button.navbar-toggle(type='button', data-toggle='collapse', data-target="#navbar")
-                        span.sr-only Toggle navigation
-                        span.icon-bar
-                        span.icon-bar
-                        span.icon-bar
+    -var miejsce = 1;
+    style.
+        h7 {
+            color: #0f0f0f;
+        }
 
-                #navbar.collapse.navbar-collapse
-                    ul.nav.navbar-nav
-                        li
-                        li
-                            a(href="/") Home
-
-                        li
-                            a(href="/results") Results
-
-                        if user
-                            li
-                                a(href="/judging/") Judge
-                            if user.role === 'Admin'
-                                li
-                                    a(href="/competitors/addCompetitor") Add Competitor
-                                li
-                                    a(href="/users/addJudge") Add Judge
-
-                    ul.nav.navbar-nav.navbar-right
-                        li
-                            a(onclick="tableToExcel('wyniki','Klasa I','Klasa I')" download='Klasa I') Pobierz
-                        if !user
-                            li
-                                a(href="/users/login") Login
-                        else
-                            li
-                                a(href="/users/logout") Logout
-
-
-
-        -var miejsce = 1;
-        style.
-            h7{
-                color: #0f0f0f;
-            }
-        table.table.table-condensed(id='wyniki')
-            thead
-                tr
-                    th(scope='col') #
-                    th(scope='col') Imie
-                    th(scope='col') Nazwisko
-                    th(scope='col') Klub
-                    th(scope='col') D
-                    th(scope='col') E1
-                    th(scope='col') E2
-                    th(scope='col') E3
-                    th(scope='col') E4
-                    th(scope='col') E
-                    th(scope='col') Ocena Końcowa
-            each competitor, i in competitors
-                    tr
-                        td= miejsce++ + '. '
-                        td=competitor.firstname
-                        td=competitor.lastname
-                        td=competitor.club
-                        if user.apparatus==='FX'
-                            td=competitor.FX.D.toFixed(2)
-                            td=competitor.FX.E1.toFixed(2)
-                            td=competitor.FX.E2.toFixed(2)
-                            td=competitor.FX.E3.toFixed(2)
-                            td=competitor.FX.E4.toFixed(2)
-                            td=competitor.FX.E.toFixed(2)
-                            td=competitor.FX.Final.toFixed(2)
+    table.table-sm.table-dark.col-md-12.table-hover.row-cols-md-6(id='wyniki')
+        caption=title
+        thead
+            tr
+                th(scope='col') #
+                th(scope='col') Imie
+                th(scope='col') Nazwisko
+                th(scope='col') Klub
+                th(scope='col') D
+                th(scope='col') E1
+                th(scope='col') E2
+                th(scope='col') E3
+                th(scope='col') E4
+                th(scope='col') E
+                th(scope='col') Ocena Końcowa
+        each competitor, i in competitors
+            tr
+                td= miejsce++ + '. '
+                td=competitor.firstname
+                td=competitor.lastname
+                td=competitor.club
+                if user.apparatus === 'FX'
+                  if competitor.FX.Final
+                    td=competitor.FX.D.toFixed(2)
+                    td=competitor.FX.E1.toFixed(2)
+                    td=competitor.FX.E2.toFixed(2)
+                    td=competitor.FX.E3.toFixed(2)
+                    td=competitor.FX.E4.toFixed(2)
+                    td=competitor.FX.E.toFixed(2)
+                    td=competitor.FX.Final.toFixed(2)
+                    td
+                        if user.role === 'Arbiter'
+                            a.btn.btn-info.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                            if !competitor.FX.Final
+                                a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
+                  if  user
+                      if !competitor.FX.Final
                             td
-                                a.btn.btn-success.pull-right(href="/competitors/remove/"+competitor._id) Edytuj
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                                a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
 
 
 
-                        if user.apparatus==='PH'
-                            td=competitor.FX.D.toFixed(2)
-                            td=competitor.FX.E1.toFixed(2)
-                            td=competitor.FX.E2.toFixed(2)
-                            td=competitor.FX.E3.toFixed(2)
-                            td=competitor.FX.E4.toFixed(2)
-                            td=competitor.FX.E.toFixed(2)
-                            td=competitor.FX.Final.toFixed(2)
+                if user.apparatus === 'PH'
+                  if competitor.PH.Final
+                        td=competitor.PH.D.toFixed(2)
+                        td=competitor.PH.E1.toFixed(2)
+                        td=competitor.PH.E2.toFixed(2)
+                        td=competitor.PH.E3.toFixed(2)
+                        td=competitor.PH.E4.toFixed(2)
+                        td=competitor.PH.E.toFixed(2)
+                        td=competitor.PH.Final.toFixed(2)
+                        td
+                            if user.role === 'Arbiter'
+                                a.btn.btn-info.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                                if !competitor.PH.Final
+                                    a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
+                  if  user
+                        if !competitor.PH.Final
                             td
-                                a.btn.btn-success.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
-                        if user.apparatus==='SR'
-                            td=competitor.FX.D.toFixed(2)
-                            td=competitor.FX.E1.toFixed(2)
-                            td=competitor.FX.E2.toFixed(2)
-                            td=competitor.FX.E3.toFixed(2)
-                            td=competitor.FX.E4.toFixed(2)
-                            td=competitor.FX.E.toFixed(2)
-                            td=competitor.FX.Final.toFixed(2)
                             td
-                                a.btn.btn-success.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
-                        if user.apparatus==='VT'
-                            td=competitor.VT1.D.toFixed(2)
-                            td=competitor.VT1.E1.toFixed(2)
-                            td=competitor.VT1.E2.toFixed(2)
-                            td=competitor.VT1.E3.toFixed(2)
-                            td=competitor.VT1.E4.toFixed(2)
-                            td=competitor.VT1.E.toFixed(2)
-                            td=competitor.VT1.Final.toFixed(2)
                             td
-                                a.btn.btn-success.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                            td
+                            td
+                            td
+                            td
+                            td
+                                a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
+                if user.apparatus === 'SR'
+                  if competitor.SR.Final
+                    td=competitor.SR.D.toFixed(2)
+                    td=competitor.SR.E1.toFixed(2)
+                    td=competitor.SR.E2.toFixed(2)
+                    td=competitor.SR.E3.toFixed(2)
+                    td=competitor.SR.E4.toFixed(2)
+                    td=competitor.SR.E.toFixed(2)
+                    td=competitor.SR.Final.toFixed(2)
+                    td
+                        if user.role === 'Arbiter'
+                            a.btn.btn-info.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                            if !competitor.SR.Final
+                                a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
+                  if  user
+                        if !competitor.SR.Final
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                                a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
+                if user.apparatus === 'VT'
+                    if competitor.VT1.Final
+                        td=competitor.VT1.D.toFixed(2)
+                        td=competitor.VT1.E1.toFixed(2)
+                        td=competitor.VT1.E2.toFixed(2)
+                        td=competitor.VT1.E3.toFixed(2)
+                        td=competitor.VT1.E4.toFixed(2)
+                        td=competitor.VT1.E.toFixed(2)
+                        td=competitor.VT1.Final.toFixed(2)
+                        td
+                            if user.role === 'Arbiter'
+                                a.btn.btn-info.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                                if !competitor.VT1.Final
+                                    a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
+                    if  user
+                            if !competitor.VT1.Final
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                    a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
+                    if competitor.VT1.Final
+                        tr
+                            td
+                            td=competitor.firstname
+                            td=competitor.lastname
+                            td=competitor.club
                             if competitor.VT2.Final
-                                tr
-                                    td
-                                    td=competitor.firstname
-                                    td=competitor.lastname
-                                    td=competitor.club
-                                    td=competitor.VT2.D.toFixed(2)
-                                    td=competitor.VT2.E1.toFixed(2)
-                                    td=competitor.VT2.E2.toFixed(2)
-                                    td=competitor.VT2.E3.toFixed(2)
-                                    td=competitor.VT2.E4.toFixed(2)
-                                    td=competitor.VT2.E.toFixed(2)
-                                    td=competitor.VT2.Final.toFixed(2)
-                                    td
-                                        a.btn.btn-success.pull-right(href="/competitors/removeVT2/" + competitor._id) Edytuj
+                                td=competitor.VT2.D.toFixed(2)
+                                td=competitor.VT2.E1.toFixed(2)
+                                td=competitor.VT2.E2.toFixed(2)
+                                td=competitor.VT2.E3.toFixed(2)
+                                td=competitor.VT2.E4.toFixed(2)
+                                td=competitor.VT2.E.toFixed(2)
+                                td=competitor.VT2.Final.toFixed(2)
+                                td
+                                    if user.role === 'Arbiter'
+                                        a.btn.btn-info.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                                        if !competitor.VT2.Final
+                                            a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
+                            if  user
+                                    if !competitor.VT2.Final
+                                        td
+                                        td
+                                        td
+                                        td
+                                        td
+                                        td
+                                        td
+                                        td
+                                            a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
 
-                        if user.apparatus==='PB'
-                            td=competitor.PB.D.toFixed(2)
-                            td=competitor.PB.E1.toFixed(2)
-                            td=competitor.PB.E2.toFixed(2)
-                            td=competitor.PB.E3.toFixed(2)
-                            td=competitor.PB.E4.toFixed(2)
-                            td=competitor.PB.E.toFixed(2)
-                            td=competitor.PB.Final.toFixed(2)
+                if user.apparatus === 'PB'
+                    if competitor.PB.Final
+                        td=competitor.PB.D.toFixed(2)
+                        td=competitor.PB.E1.toFixed(2)
+                        td=competitor.PB.E2.toFixed(2)
+                        td=competitor.PB.E3.toFixed(2)
+                        td=competitor.PB.E4.toFixed(2)
+                        td=competitor.PB.E.toFixed(2)
+                        td=competitor.PB.Final.toFixed(2)
+                        td
+                            if user.role === 'Arbiter'
+                                a.btn.btn-info.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                                if !competitor.PB.Final
+                                    a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
+                    if  user
+                            if !competitor.PB.Final
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                    a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
+                if user.apparatus === 'HB'
+                    if competitor.HB.Final
+                        td=competitor.HB.D.toFixed(2)
+                        td=competitor.HB.E1.toFixed(2)
+                        td=competitor.HB.E2.toFixed(2)
+                        td=competitor.HB.E3.toFixed(2)
+                        td=competitor.HB.E4.toFixed(2)
+                        td=competitor.HB.E.toFixed(2)
+                        td=competitor.HB.Final.toFixed(2)
+                    td
+                        if user.role === 'Arbiter'
+                            a.btn.btn-info.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                            if !competitor.HB.Final
+                                a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
+                    if  user
+                        if !competitor.HB.Final
                             td
-                                a.btn.btn-success.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
-                        if user.apparatus==='HB'
-                            td=competitor.HB.D.toFixed(2)
-                            td=competitor.HB.E1.toFixed(2)
-                            td=competitor.HB.E2.toFixed(2)
-                            td=competitor.HB.E3.toFixed(2)
-                            td=competitor.HB.E4.toFixed(2)
-                            td=competitor.HB.E.toFixed(2)
-                            td=competitor.HB.Final.toFixed(2)
                             td
-                                a.btn.btn-success.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                                a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
 
 
 

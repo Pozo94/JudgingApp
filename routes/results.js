@@ -639,7 +639,7 @@ router.get('/mistrzowska', function (req, res) {
             console.log(err);
         } else {
 
-            res.render('Klasy/mistrzowska', {
+            res.render('resulttables', {
                 title:'Klasa mistrzowska',
                 competitors: competitors
             });
@@ -649,11 +649,11 @@ router.get('/mistrzowska', function (req, res) {
 });
 
 router.get('/mlodziezowiec', function (req, res) {
-    Current_Edition.db.collection('i_editions').find().sort(method).toArray( function(err, competitors){
+    Current_Edition.db.collection('i_editions').find({clas:"Młodzieżowiec"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/mlodziezowiec', {
+            res.render('resulttables', {
                 title:'Klasa mlodziezowiec',
                 competitors: competitors
             });
@@ -663,11 +663,11 @@ router.get('/mlodziezowiec', function (req, res) {
 });
 
 router.get('/I', function (req, res) {
-    Current_Edition.db.collection('i_editions').find().sort(method).toArray(function(err, competitors){
+    Current_Edition.db.collection('i_editions').find({clas:"I"}).sort(method).toArray(function(err, competitors){
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/I', {
+            res.render('resulttables', {
                 title:'Klasa I',
                 competitors: competitors
             });
@@ -677,11 +677,11 @@ router.get('/I', function (req, res) {
 });
 
 router.get('/II', function (req, res) {
-    Current_Edition.db.collection('i_editions').find().sort(method).toArray( function(err, competitors){
+    Current_Edition.db.collection('i_editions').find({clas:"II"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/II', {
+            res.render('resulttables', {
                 title:'Klasa II',
                 competitors: competitors
             });
@@ -691,11 +691,11 @@ router.get('/II', function (req, res) {
 });
 
 router.get('/III', function (req, res) {
-    Current_Edition.db.collection('i_editions').find().sort(method).toArray( function(err, competitors){
+    Current_Edition.db.collection('i_editions').find({clas:"III"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
-            res.render('Klasy/III', {
+            res.render('resulttables', {
                 title:'Klasa III',
                 competitors: competitors
             });
@@ -704,12 +704,12 @@ router.get('/III', function (req, res) {
 
 });
 router.get('/mlodziezowa', function (req, res) {
-    Current_Edition.db.collection('i_editions').find().sort(method).toArray( function(err, competitors){
+    Current_Edition.db.collection('i_editions').find({clas:"Młodzieżowa"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
 
-            res.render('Klasy/mlodziezowa', {
+            res.render('resulttables', {
                 title:'Klasa mlodziezowa',
                 competitors: competitors
             });

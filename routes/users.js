@@ -56,7 +56,7 @@ router.get('/addUser',ensureAdmin, function (req, res) {
             console.log(err);
         } else {
             judges.sort(compare);
-            console.log(judges);
+            //console.log(judges);
             res.render('addUser', {
                 title:'AddUser',
                 judges: judges,
@@ -83,6 +83,8 @@ router.post('/addUser', function (req, res) {
             user: judge.id,
             role: req.body.role,
             apparatus: req.body.apparatus,
+            firstname:judge.firstname,
+            lastname:judge.lastname
 
 
         })
@@ -92,7 +94,8 @@ router.post('/addUser', function (req, res) {
 
 
 
-        User.find({role:newUser.role,apparatus:newUser.apparatus},function (err,user) {
+        User.findOne({role: newUser.role, apparatus: newUser.apparatus},function (err,user) {
+            console.log(user);
             if(user)
             {
                 req.flash('danger', 'Judge has been already asigned for this role!');
@@ -102,12 +105,12 @@ router.post('/addUser', function (req, res) {
                 Judge.update(query,judge,function (err) {
                     if (err) {
                         console.log(err);
-                        return
+
                     }
                 });
                 User.createUser(newUser, function (err, user){
                     if (err) throw err;
-                    console.log(user);
+
                     req.flash('success', 'Judge set!');
                     res.redirect('/users/addUser/');
                 });

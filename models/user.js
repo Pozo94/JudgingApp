@@ -7,6 +7,12 @@ var UserSchema = mongoose.Schema({
 		type: String,
 		index:true
 	},
+	firstname:{
+		type:String
+	},
+	lastname:{
+		type:String
+	},
     role:{
         type:String
     },

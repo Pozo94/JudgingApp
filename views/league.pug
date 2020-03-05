@@ -2,22 +2,23 @@ extends layout
 
 block content
     -var miejsce = 1;
-    table.table.table-condensed(id='wyniki')
-        thead
-            tr
-                th(scope='col') #
-                th(scope='col') Imie
-                th(scope='col') Nazwisko
-                th(scope='col') Klub
-                th(scope='col') Punkty
-        each competitor, i in competitors
+    .container
+        table.table-dark.col-md-12.table-hover.text-center.border(id = 'wyniki')
+            thead
+                tr.border-bottom
+                    th(scope='col') #
+                    th(scope='col') Imie
+                    th(scope='col') Nazwisko
+                    th(scope='col') Klub
+                    th(scope='col') Punkty
+            each competitor, i in competitors
 
-                tr
-                    td= miejsce++ + '. '
-                    td=competitor.firstname
-                    td=competitor.lastname
-                    td=competitor.club
-                    td=competitor.score
+                    tr
+                        td= miejsce++ + '. '
+                        td=competitor.firstname
+                        td=competitor.lastname
+                        td=competitor.club
+                        td=competitor.score
 
 
     script.
