@@ -17,6 +17,11 @@ block content
                 input.form-control(type='number', step='0.1',name='E2' , id='E2', placeholder='Ocena E2', required=''  )
                 input.form-control(type='number', step='0.1',name='E3' , id='E3', placeholder='Ocena E3', required='' )
                 input.form-control(type='number', step='0.1',name='E4' , id='E4', placeholder='Ocena E4' , required='')
+                br
+                input.form-control(type='number', step='0.1',name='E' , id='E', placeholder='Ocena E' , required='', disabled)
+                input.form-control(type='number', step='0.1',name='Final' , id='Final', placeholder='Ocena Final' , required='', disabled)
+                button.btn.btn-lg.btn-info.btn-block(type='button',onclick='judge()') Oceń
+
                 button.btn.btn-lg.btn-success.btn-block(type='submit', formmethod='post') Zapisz
 
     else
@@ -24,7 +29,36 @@ block content
 
             input.form-control(type='number', id='E', step='0.1', min='0', max='10', name='Ocena '+role, placeholder='Ocena E', value='',  required='')
             input.btn.btn-lg.btn-primary.btn-block( id='przycisk', value='Wyślij')
+    script.
+        var element = function (id) {
+            return document.getElementById(id);
 
+        }
+        function judge() {
+            var e;
+            var table={};
+            table[0]=element('E1').value;
+            table[1]=element('E2').value;
+            table[2]=element('E3').value;
+            table[3]=element('E4').value;
+            var n=4
+            for (j=0;j<n;j++) {
+                for (i = 0; i < n; i++) {
+                    if (parseFloat(table[i]) > parseFloat(table[i + 1])) {
+                        e = table[i];
+                        table[i] = table[i + 1];
+                        table[i + 1] = e;
+
+                    }
+
+                }}
+                console.log(table);
+                e = (parseFloat(table[1]) + parseFloat(table[2])) / 2
+                element('E').value = 10-e.toFixed(2);
+                element('Final').value = parseFloat(element('D').value)+parseFloat(element('E').value);
+
+
+            };
     script.
 
         $(function(){
