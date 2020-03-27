@@ -632,9 +632,6 @@ router.get('/league/sum',function (req,res) {
 router.get('/mistrzowska', function (req, res) {
 
     Current_Edition.db.collection('i_editions').find({clas:"Mistrzowska"}).sort(method).toArray( function (err,competitors) {
-
-
-
         if(err){
             console.log(err);
         } else {

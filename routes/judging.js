@@ -115,20 +115,6 @@ router.post('/:id', function(req, res){
         E3=10;
         E4=10;
     }
-    //E = +((+Sr[0] + +Sr[1])/2);
-    /*if(E2===undefined && E3===undefined && E4===undefined ){
-        E= +E1;
-
-    }
-    if(E3===undefined && E4===undefined)
-    {
-        E= ((+E1 + +E2)/2);
-    }
-    if(E1 && E2 &&E3 && E4 )
-    {
-        E= (+Sr[1]+ +Sr[2])/2;
-    }*/
-
     var Final=((10 - +E) + +D)
     Final=Round( +Final,3);
     var competitor={};
@@ -161,7 +147,7 @@ router.post('/:id', function(req, res){
                     competitorr.VT1.E2=10-E2;
                     competitorr.VT1.E3=10-E3;
                     competitorr.VT1.E4=10-E4;
-                    competitorr.VT1.E=E;
+                    competitorr.VT1.E=10-E;
                     competitorr.VT1.Final= +Final;
                     if (competitorr.suma===undefined)
                     {

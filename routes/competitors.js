@@ -481,7 +481,7 @@ router.get('/removeVT2/:id',function(req,res){
                 else{
                     req.flash('success', 'Competitor updated!');
 
-                    res.redirect('/judging/'+participant.subdivision+'/'+participant.id);
+                    res.redirect('/judging/'+participant.id);
 
                 }
             })
@@ -493,7 +493,7 @@ router.get('/remove/:id',function (req,res) {
     var app = req.user.apparatus;
     let query = {_id: req.params.id};
 
-    I_Edition.findById(req.params.id, function (err, participant) {
+    Current_Edition.findById(req.params.id, function (err, participant) {
 
         if (app === 'VT') {
             participant.suma=+participant.suma - +participant.VT1.Final;
@@ -521,7 +521,7 @@ router.get('/remove/:id',function (req,res) {
         }
 
 
-        I_Edition.update(query, participant, function (err) {
+        Current_Edition.update(query, participant, function (err) {
             if (err) {
                 console.log(err);
                 return

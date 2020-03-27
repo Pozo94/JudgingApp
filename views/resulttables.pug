@@ -106,8 +106,8 @@ html
                     else
                         li.nav-item
                             a.nav-link(href="/users/logout") Logout
-    -var miejsce=1;
     input(id="title", hidden='true', value=title)
+    -var miejsce=1;
     table.table-sm.table-dark.table-hover.container(id = 'wyniki')
         thead
             tr.border-bottom
@@ -133,7 +133,7 @@ html
                 td=competitor.club
                 td=competitor.year
                 td
-                if competitor.FX
+                if competitor.FX&&competitor.FX.Final
                     td
                         table
                             tr
@@ -145,7 +145,7 @@ html
 
                 else
                     td
-                if competitor.PH
+                if competitor.PH&&competitor.PH.Final
                     td
                         table
                             tr
@@ -155,7 +155,7 @@ html
                                 td=' E:' + competitor.PH.E.toFixed(2)
                 else
                     td
-                if competitor.SR
+                if competitor.SR&&competitor.SR.Final
                     td
                         table
                             tr
@@ -165,7 +165,7 @@ html
                                 td=' E:' + competitor.SR.E.toFixed(2)
                 else
                     td
-                if competitor.VT1
+                if competitor.VT1&&competitor.VT1.Final
                     td
                         table
                             tr
@@ -175,7 +175,7 @@ html
                                 td=' E:' + competitor.VT1.E.toFixed(2)
                 else
                     td
-                if competitor.PB
+                if competitor.PB&&competitor.PB.Final
                     td
                         table
                             tr
@@ -185,7 +185,7 @@ html
                                 td=' E:' + competitor.PB.E.toFixed(2)
                 else
                     td
-                if competitor.HB
+                if competitor.HB&&competitor.HB.Final
                     td
                         table
                             tr
@@ -211,7 +211,7 @@ html
         var tableToExcel = (function () {
             var uri = 'data:application/vnd.ms-excel;base64,'
                 ,
-                template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><meta charset="utf-8"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+                template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><meta charset="utf-8"><head></head><body><table>{table}</table></body></html>'
                 , base64 = function (s) {
                     return window.btoa(unescape(encodeURIComponent(s)))
                 }

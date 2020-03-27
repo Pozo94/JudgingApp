@@ -95,9 +95,7 @@ block content
 
             });}
             socket.on('note',function(data){
-                //var i=0;
-                // console.log(data[0].apparatus);
-                // console.log(element('Apparatus').value);
+
                 if(data[0].apparatus===element('Apparatus').value){
                     if(element('Role').value==='Arbiter')
                         element(data[0].role).value=data[0].note;
