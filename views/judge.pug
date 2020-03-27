@@ -42,6 +42,11 @@ block content
             table[2]=element('E3').value;
             table[3]=element('E4').value;
             var n=4
+            for(x=0;x<4;x++){
+                if (table[x]===""){
+                    table[x]=0;
+                }
+            }
             for (j=0;j<n;j++) {
                 for (i = 0; i < n; i++) {
                     if (parseFloat(table[i]) > parseFloat(table[i + 1])) {
@@ -54,6 +59,16 @@ block content
                 }}
                 console.log(table);
                 e = (parseFloat(table[1]) + parseFloat(table[2])) / 2
+                if (table[0]===0)
+                {e=parseFloat(table[2])}
+                if (table[0] === 0 && table[1]===0) {
+                    e = (parseFloat(table[3]) + parseFloat(table[2])) / 2
+                }
+                if (table[0] === 0 && table[1] === 0&& table[2]===0) {
+                    e = parseFloat(table[3])
+                }
+
+
                 element('E').value = 10-e.toFixed(2);
                 element('Final').value = parseFloat(element('D').value)+parseFloat(element('E').value);
 
