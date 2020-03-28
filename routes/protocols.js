@@ -760,7 +760,7 @@ router.get('/mistrzowska',ensureAuthenticated, function(req, res){
 
 
 function ensureAuthenticated(req, res, next){
-    if(req.isAuthenticated()){
+    if(req.isAuthenticated() &&  req.user.role!=='Admin'){
         return next();
     } else {
         //req.flash('error_msg','You are not logged in');

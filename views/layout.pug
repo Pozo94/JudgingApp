@@ -59,7 +59,7 @@ html
                   .dropdown-menu(aria-labelledby="navbarDropdown8")
                     a.dropdown-item(href="/judges/") Sędziowie
                     a.dropdown-item(href="/competitors/") Zawodnicy
-            if user
+            if user&&user.role!=="Admin"
               li.nav-item.disabled
                 a.nav-link(href="/protocols/") Protokoły
 

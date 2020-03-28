@@ -81,7 +81,8 @@ block content
                             td
                             td
                             td
-                                a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
+                                if user.role!=="Admin"
+                                    a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
                 if user.apparatus === 'SR'
                   if competitor.SR.Final
                     td=competitor.SR.D.toFixed(2)
