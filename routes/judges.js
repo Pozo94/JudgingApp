@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-
+const bcrypt = require('bcryptjs');
 var Judge = require('../models/judge');
 var User = require('../models/user');
 function compare(a, b) {
@@ -45,6 +45,7 @@ router.get('/addJudge',ensureAdmin, function (req, res) {
 router.post('/addJudge', function (req, res) {
     var login = req.body.login123;
     var password = req.body.password;
+    var password2= req.body.password2;
     var firstname = req.body.firstname;
     var lastname = req.body.lastname;
 
@@ -61,28 +62,36 @@ router.post('/addJudge', function (req, res) {
     else {
         //checking for username is already taken
         Judge.findOne({username: login}).then(user => {
+            bcrypt.compare(password, password2, function(err, isMatch){
+                if(isMatch){
+                    if (user) {
+                        req.flash('danger', 'Username already taken!');
+                        res.redirect('addJudge');
+                    } else {
 
-            if (user) {
-                req.flash('danger', 'Username already taken!');
-                res.redirect('addJudge');
-            } else {
+                        var newUser = new Judge({
+                            username: login,
+                            password: password,
+                            firstname: firstname,
+                            lastname: lastname
 
-                var newUser = new Judge({
-                    username: login,
-                    password: password,
-                    firstname: firstname,
-                    lastname: lastname
+                        });
 
-                });
+                        Judge.createUser(newUser, function (err, user) {
+                            if (err) throw err;
+                            console.log(user);
 
-                Judge.createUser(newUser, function (err, user) {
-                    if (err) throw err;
-                    console.log(user);
+                        });
+                        req.flash('success', 'Judge created!');
+                        res.redirect('/judges/addJudge');
+                    }
+                }
+                else{
+                    req.flash('danger', 'Passwords doesnt match!');
+                    res.redirect('/judges/addJudge');
+                }
+            });
 
-                });
-                req.flash('success', 'Judge created!');
-                res.redirect('/judges/addJudge');
-            }
         })
 
     }
