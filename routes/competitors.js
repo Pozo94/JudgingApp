@@ -578,7 +578,7 @@ router.post('/edit/:id', function(req, res) {
 
 
 });
-router.get('/removeVT2/:id',ensureAdmin,function(req,res){
+router.get('/removeVT2/:id',ensureAuthenticated,function(req,res){
     I_Edition.findById(req.params.id,function (err,participant) {
 
             let query={_id:req.params.id};
@@ -602,7 +602,7 @@ router.get('/removeVT2/:id',ensureAdmin,function(req,res){
     })
 });
 
-router.get('/remove/:id',ensureAdmin,function (req,res) {
+router.get('/remove/:id',ensureAuthenticated,function (req,res) {
     var app = req.user.apparatus;
     let query = {_id: req.params.id};
 
