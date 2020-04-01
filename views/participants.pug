@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+    style.
+        p{
+            color: #0f0f0f;
+        }
+    each competitor, i in competitors
+        ul.list-group
+            li.list-group-item
+                p=competitor.firstname + ' ' +competitor.lastname + '  ' +competitor.club
+                    if user
+                        if user.role==='Admin'
+
+                            a.btn.btn-danger.delete-participant.float-right(data-id=competitor._id) Usuń
+                            a.btn.btn-success.float-right(href="/competitors/edit/"+competitor._id) Edytuj

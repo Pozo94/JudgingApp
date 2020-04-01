@@ -8,7 +8,7 @@ html
     link(rel='stylesheet', href='/css/style.css')
     link(rel="icon" type="image/png" href="/css/mlg_logo.svg" sizes="16x16")
     script(defer, src="/js/socket.io.js")
-    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+    script(src='https://code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js' integrity='sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut' crossorigin='anonymous')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js' integrity='sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k' crossorigin='anonymous')
 
@@ -58,7 +58,8 @@ html
                 a.nav-link.dropdown-toggle(id="navbarDropdown8" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Info
                   .dropdown-menu(aria-labelledby="navbarDropdown8")
                     a.dropdown-item(href="/judges/") Sędziowie
-                    a.dropdown-item(href="/competitors/") Zawodnicy
+                    a.dropdown-item(href="/competitors/") Wszyscy Zawodnicy
+                    a.dropdown-item(href="/competitors/participants/") Uczestnicy
             if user&&user.role!=="Admin"
               li.nav-item.disabled
                 a.nav-link(href="/protocols/") Protokoły
@@ -67,7 +68,7 @@ html
             li.nav-item.disabled
               a.nav-link(href='/judges/') Sędziowie
             li.nav-item.disabled
-              a.nav-link(href='/competitors/') Zawodnicy
+              a.nav-link(href='/competitors/participants/') Uczestnicy
 
         ul.navbar-nav.mr-1
           li.nav-item.dropdown

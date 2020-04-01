@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var validator = require('validator');
 var Competitor =require('../models/competitor');
 var League= require('../models/league');
 var Current_Edition=require('../models/I_Edition')
@@ -140,6 +141,110 @@ router.get('/', function(req, res){
 
 });
 
+router.get('/participants', function(req, res){
+
+
+    res.render('class');
+
+
+});
+
+router.get('/participants/mistrzowska', function(req, res){
+
+    Current_Edition.find({clas:"Mistrzowska"}, function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            competitors.sort(compare);
+            res.render('participants', {
+                title:'Competitors',
+                competitors: competitors,
+
+            });
+
+        }
+    });
+});
+router.get('/participants/mlodziezowiec', function(req, res){
+
+    Current_Edition.find({clas:'Młodzieżowiec'}, function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            competitors.sort(compare);
+            res.render('participants', {
+                title:'Competitors',
+                competitors: competitors,
+
+            });
+
+        }
+    });
+});
+router.get('/participants/I', function(req, res){
+
+    Current_Edition.find({clas:'I'}, function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            competitors.sort(compare);
+            res.render('participants', {
+                title:'Competitors',
+                competitors: competitors,
+
+            });
+
+        }
+    });
+});
+router.get('/participants/II', function(req, res){
+
+    Current_Edition.find({clas:'II'}, function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            competitors.sort(compare);
+            res.render('participants', {
+                title:'Competitors',
+                competitors: competitors,
+
+            });
+
+        }
+    });
+});
+router.get('/participants/III', function(req, res){
+
+    Current_Edition.find({clas:'III'}, function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            competitors.sort(compare);
+            res.render('participants', {
+                title:'Competitors',
+                competitors: competitors,
+
+            });
+
+        }
+    });
+});
+router.get('/participants/mlodziezowa', function(req, res){
+
+    Current_Edition.find({clas:'Młodzieżowa'}, function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+            competitors.sort(compare);
+            res.render('participants', {
+                title:'Competitors',
+                competitors: competitors,
+
+            });
+
+        }
+    });
+});
 /* Add competitor */
 router.get('/addCompetitor',ensureAdmin,function (req,res) {
     res.render('addCompetitor');
@@ -405,26 +510,34 @@ router.get('/edit/:id',ensureAdmin,function (req,res) {
 
 
 router.post('/addCompetitor', function(req, res) {
+
     var firstname = req.body.firstname1;
     var lastname = req.body.lastname1;
     var club = req.body.club1;
     var year = req.body.year1;
     var clas = req.body.clas1;
     var subdivision= req.body.subdivision1;
-    var newCompetitor = new Competitor({
-        firstname: firstname,
-        lastname: lastname,
-        year: year,
-        clas: clas,
-        club: club
-    });
-    Competitor.createCompetitor(newCompetitor, function () {
+    if(!validator.isAlpha(firstname,['pl-PL'])||!validator.isAlpha(lastname,['pl-PL'])||!validator.isNumeric(year)){
+        req.flash('danger', 'Wrong data!');
+        res.redirect('/competitors/addCompetitor');
+    }else {
+        var newCompetitor = new Competitor({
+            firstname: firstname,
+            lastname: lastname,
+            year: year,
+            clas: clas,
+            club: club
+        });
+        Competitor.createCompetitor(newCompetitor, function () {
 
 
-    });
-    req.flash('success', 'Competitor added!');
-    res.location('/');
-    res.redirect('/competitors/addCompetitor');
+        });
+        req.flash('success', 'Competitor added!');
+        res.location('/');
+        res.redirect('/competitors/addCompetitor');
+    }
+
+
 });
 
 router.post('/edit/:id', function(req, res) {
@@ -546,6 +659,23 @@ router.delete('/:id',ensureAdmin, function(req, res) {
         }
         else{
             req.flash('danger', 'Competitor deleted!');
+            res.render('index');
+
+
+        }
+    })
+    ;
+
+});
+router.delete('/participants/:id',ensureAdmin, function(req, res) {
+    let query = {_id: req.params.id};
+    Current_Edition.deleteOne(query,function (err) {
+        if(err){
+            console.log(err);
+            return
+        }
+        else{
+            req.flash('danger', 'Participant deleted!');
             res.render('index');
 
 

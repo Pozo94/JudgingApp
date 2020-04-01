@@ -5,6 +5,8 @@ var LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcryptjs');
 var Judge = require('../models/judge');
 var User = require('../models/user');
+var validator = require('validator');
+
 function compare(a, b) {
     // Use toUpperCase() to ignore character casing
     const clasA = a.apparatus;
@@ -54,19 +56,26 @@ router.post('/addJudge', function (req, res) {
 
     var errors;
 
-    if (errors) {
-        res.render('addJudge', {
-            errors: errors
-        });
+    if (errors ||!validator.isAlpha(firstname,['pl-PL'])||!validator.isAlpha(lastname,['pl-PL'])  ) {
+        if(validator.isAlpha(firstname,['pl-PL'])&&validator.isAlpha(lastname,['pl-PL'])){
+            res.redirect('/judges/addJudge', {
+                errors: errors
+            });
+        }else{
+            req.flash('danger', 'Wrong data!');
+            res.redirect('/judges/addJudge');
+        }
+
     }
     else {
         //checking for username is already taken
         Judge.findOne({username: login}).then(user => {
-            bcrypt.compare(password, password2, function(err, isMatch){
-                if(isMatch){
+
+                if(password===password2){
+
                     if (user) {
                         req.flash('danger', 'Username already taken!');
-                        res.redirect('addJudge');
+                        res.redirect('/judges/addJudge');
                     } else {
 
                         var newUser = new Judge({
@@ -87,12 +96,13 @@ router.post('/addJudge', function (req, res) {
                     }
                 }
                 else{
+
                     req.flash('danger', 'Passwords doesnt match!');
                     res.redirect('/judges/addJudge');
                 }
             });
 
-        })
+
 
     }
 
