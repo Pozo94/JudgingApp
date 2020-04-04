@@ -102,22 +102,26 @@ router.post('/:id', function(req, res){
         E= (+Sr[2]+ +Sr[3])/2;
         E3=10;
         E4=10;
+        console.log("ten jest ok")
     }
     if (Sr[0]===''&& Sr[1]>0){
-        console.log('ocena',Sr)
+
         E= +Sr[2];
         E4=10;
+        console.log("ten nie 1")
     }
     if(Sr[0]===''&& Sr[1]===''&&Sr[2]===''){
-        console.log('ocena',Sr)
+
         E= +Sr[3];
         E2=10;
         E3=10;
         E4=10;
+        console.log("ten nie 2")
     }
     var Final=((10 - +E) + +D)
     Final=Round( +Final,3);
     var competitor={};
+    console.log(E);
     if (req.user.apparatus==='VT') {
 
         Current_Edition.findById(req.params.id, function (err, competitorr) {
@@ -319,6 +323,7 @@ router.post('/:id', function(req, res){
                 if (competitorr.suma===undefined)
                 {
                     competitorr.suma= +Final;
+                    console.log(competitorr.HB)
                 }
                 else
                 {

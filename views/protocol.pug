@@ -198,11 +198,11 @@ block content
                         td=competitor.HB.E4.toFixed(2)
                         td=competitor.HB.E.toFixed(2)
                         td=competitor.HB.Final.toFixed(2)
-                    td
-                        if user.role === 'Arbiter'
-                            a.btn.btn-info.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
-                            if !competitor.HB.Final
-                                a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
+                        td
+                            if user.role === 'Arbiter'
+                                a.btn.btn-info.pull-right(href="/competitors/remove/" + competitor._id) Edytuj
+                                if !competitor.HB.Final
+                                    a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
                     if  user
                         if !competitor.HB.Final
                             td

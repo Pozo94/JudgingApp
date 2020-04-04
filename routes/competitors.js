@@ -592,7 +592,7 @@ router.get('/removeVT2/:id',ensureAuthenticated,function(req,res){
                     return
                 }
                 else{
-                    req.flash('success', 'Competitor updated!');
+                    req.flash('success', 'Jugde again!');
 
                     res.redirect('/judging/'+participant.id);
 
