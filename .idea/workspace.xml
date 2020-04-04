@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="&quot;1st update&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/competitors.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/competitors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/judging.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/judging.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/judge.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/judge.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/protocol.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/protocol.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,10 +21,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="competitors.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="competitors.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/competitors.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10098">
+            <state relative-caret-position="17">
               <caret line="594" column="53" selection-start-line="594" selection-start-column="53" selection-end-line="594" selection-end-column="53" />
             </state>
           </provider>
@@ -73,17 +71,17 @@
       <file leaf-file-name="judge.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/judge.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="357">
+              <caret line="21" column="143" selection-start-line="21" selection-start-column="143" selection-end-line="21" selection-end-column="143" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="judging.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="judging.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/judging.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
+            <state relative-caret-position="247">
+              <caret line="113" selection-start-line="113" selection-end-line="113" />
             </state>
           </provider>
         </entry>
@@ -214,8 +212,8 @@
         <option value="$PROJECT_DIR$/routes/judges.js" />
         <option value="$PROJECT_DIR$/routes/competitors.js" />
         <option value="$PROJECT_DIR$/views/protocol.pug" />
-        <option value="$PROJECT_DIR$/views/judge.pug" />
         <option value="$PROJECT_DIR$/routes/judging.js" />
+        <option value="$PROJECT_DIR$/views/judge.pug" />
       </list>
     </option>
   </component>
@@ -485,12 +483,12 @@
       <workItem from="1585673414305" duration="1574000" />
       <workItem from="1585741502165" duration="7143000" />
       <workItem from="1585945860104" duration="640000" />
-      <workItem from="1586022412256" duration="3097000" />
+      <workItem from="1586022412256" duration="5443000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="656025000" />
+    <option name="totallyTimeSpent" value="658371000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -502,7 +500,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4957806" visible="true" weight="0.13681428" />
@@ -820,13 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -841,24 +832,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/competitors.js">
+    <entry file="file://$PROJECT_DIR$/routes/judges.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10098">
-          <caret line="594" column="53" selection-start-line="594" selection-start-column="53" selection-end-line="594" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/protocol.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="199" column="57" lean-forward="true" selection-start-line="199" selection-start-column="57" selection-end-line="199" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/judge.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="400">
+          <caret line="65" column="45" lean-forward="true" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -878,17 +855,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/judges.js">
+    <entry file="file://$PROJECT_DIR$/routes/judging.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="65" column="45" lean-forward="true" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
+        <state relative-caret-position="247">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/judging.js">
+    <entry file="file://$PROJECT_DIR$/views/protocol.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
+        <state relative-caret-position="253">
+          <caret line="199" column="57" lean-forward="true" selection-start-line="199" selection-start-column="57" selection-end-line="199" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/judge.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="143" selection-start-line="21" selection-start-column="143" selection-end-line="21" selection-end-column="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/competitors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="594" column="53" selection-start-line="594" selection-start-column="53" selection-end-line="594" selection-end-column="53" />
         </state>
       </provider>
     </entry>

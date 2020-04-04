@@ -105,7 +105,7 @@ router.post('/:id', function(req, res){
         console.log("ten jest ok")
     }
     if (Sr[0]===''&& Sr[1]>0){
-
+        console.log('ocena',Sr)
         E= +Sr[2];
         E4=10;
         console.log("ten nie 1")
