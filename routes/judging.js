@@ -111,7 +111,7 @@ router.post('/:id', function(req, res){
         console.log("ten nie 1")
     }
     if(Sr[0]===''&& Sr[1]===''&&Sr[2]===''){
-
+        console.log('ocena',Sr)
         E= +Sr[3];
         E2=10;
         E3=10;

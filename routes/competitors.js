@@ -642,7 +642,10 @@ router.get('/remove/:id',ensureAuthenticated,function (req,res) {
             else {
                 req.flash('success', 'Competitor updated!');
 
-                res.redirect('/judging/' + participant.id);
+                res.redirect('/judging/' + participant.id,{
+                    competitor:participant
+                    }
+                    );
 
             }
         })
