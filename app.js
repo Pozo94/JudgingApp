@@ -14,7 +14,7 @@ var user= require('./models/user');
 var judge= require('./models/judge');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://Pozo:Meliana1@cluster0-zrsck.mongodb.net/Zawody?retryWrites=true&w=majority',{useNewUrlParser: true,
+mongoose.connect('mongodb+srv://Pozo:Meliana1@cluster0.zrsck.mongodb.net/Zawody?retryWrites=true&w=majority',{useNewUrlParser: true,
     useUnifiedTopology: true,
     serverSelectionTimeoutMS: 5000
 }).catch(err => console.log(err.reason));

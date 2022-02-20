@@ -24,9 +24,7 @@ var io = require('socket.io').listen(server);
 io.sockets.on('connection',function (socket) {
   console.log('connected');
     socket.on('send note', function(data){
-      // var apparatus=data.apparatus;
-      // var role= data.role;
-      // var note = data.note;
+
       console.log(data);
       io.sockets.emit('note',[data])
     });
