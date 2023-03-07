@@ -634,17 +634,14 @@ router.get('/remove/:id',ensureAuthenticated,function (req,res) {
         }
 
 
-        Current_Edition.update(query, participant, function (err) {
+        Current_Edition.updateOne(query, participant, function (err) {
             if (err) {
                 console.log(err);
                 return
             }
             else {
-                req.flash('success', 'Competitor updated!');
-
-                res.redirect('/judging/' + participant.id,{
-                    competitor:participant
-                    }
+                req.flash('success', 'Jugde again!');
+                res.redirect('/judging/' + participant.id
                     );
 
             }
