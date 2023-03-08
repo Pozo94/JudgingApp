@@ -3,7 +3,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 var passport = require('passport');
 var session = require('express-session');
 var bodyParser = require('body-parser');
@@ -16,7 +15,7 @@ var mongo = require('mongodb');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://Pozo:Meliana1@cluster0.zrsck.mongodb.net/Zawody?retryWrites=true&w=majority',{useNewUrlParser: true,
     useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 5000
+    serverSelectionTimeoutMS: 50000
 }).catch(err => console.log(err.reason));
 //mongoose.connect('mongodb://localhost:27017',{useNewUrlParser: true});
 var db = mongoose.connection;
