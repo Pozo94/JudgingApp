@@ -7,7 +7,18 @@ block content
         h7 {
             color: #0f0f0f;
         }
-
+    if user.apparatus==='FX'
+        h2.justify-content-center Ćwiczenia Wolne
+    else if user.apparatus==='PH'
+        h2.justify-content-center Koń Z Łękami
+    else if user.apparatus === 'SR'
+        h2.justify-content-center Kółka
+    else if user.apparatus === 'VT'
+        h2.justify-content-center Skok
+    else if user.apparatus === 'PB'
+        h2.justify-content-center Poręcze
+    else if user.apparatus === 'HB'
+        h2.justify-content-center Drążek
     table.table-sm.table-dark.col-md-12.table-hover.row-cols-md-6(id='wyniki')
         caption=title
         thead
