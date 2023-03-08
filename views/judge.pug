@@ -69,8 +69,9 @@ block content
                 }
 
 
-                element('E').value = 10-e.toFixed(2);
-                element('Final').value = parseFloat(element('D').value)+parseFloat(element('E').value);
+                element('E').value = 10-(Math.round(e.toFixed(2)*100)/100);
+                element('Final').value = Math.round((parseFloat(element('D').value)+parseFloat(element('E').value))*100)/100;
+
 
 
             };

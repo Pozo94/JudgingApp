@@ -22,12 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="&quot;1st update&quot;">
-      <change afterPath="$PROJECT_DIR$/views/division.pug" afterDir="false" />
+    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="Protocols refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/protocols.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/protocols.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/judging.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/judging.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/judge.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/judge.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +275,7 @@
       <workItem from="1633946990657" duration="167000" />
       <workItem from="1645392465094" duration="1864000" />
       <workItem from="1678137401640" duration="19024000" />
-      <workItem from="1678306617167" duration="2220000" />
+      <workItem from="1678306617167" duration="3704000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;1st update&quot;">
       <created>1678192801787</created>
@@ -308,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678288317000</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Protocols refactor">
+      <created>1678308904765</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678308904765</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -336,6 +340,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;1st update&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;1st update&quot;" />
+    <MESSAGE value="Protocols refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Protocols refactor" />
   </component>
 </project>
