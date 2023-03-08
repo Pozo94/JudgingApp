@@ -8,6 +8,8 @@ var ParticipantSchema = mongoose.Schema({
     },
     subdivision:{
         type: String
+    },year:{
+        type: Number
     },
 
     FX:{

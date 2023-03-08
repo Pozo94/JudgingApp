@@ -266,6 +266,31 @@ router.get('/addParticipant',ensureAdmin,function (req,res) {
     });
 
 });
+router.get('/addall', function (req,res){
+    var Participant;
+
+    Competitor.find().then(participants=>{
+        participants.forEach(competitor=>{
+            Participant=new I_Edition({
+
+                competitor:competitor.id,
+                subdivision:competitor.subdivision,
+                firstname:competitor.firstname,
+                lastname:competitor.lastname,
+                clas:competitor.clas,
+                club:competitor.club,
+                year:competitor.year,
+            })
+            I_Edition.addParticipant(Participant,function(err, participant){
+                if(err) throw err
+                console.log(participant);
+            })
+
+
+
+        })
+    })
+});
 router.post('/addParticipant', function (req, res) {
     var name = req.body.name;
     var array =name.split(' ');
@@ -305,7 +330,7 @@ router.post('/addParticipant', function (req, res) {
                         lastname:lastname,
                         clas:competitor.clas,
                         club:competitor.club,
-                        year:competitor.year
+                        year:competitor.year,
                     })
                     I_Edition.addParticipant(Participant,function(err, participant){
                         if(err) throw err

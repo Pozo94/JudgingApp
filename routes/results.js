@@ -6,7 +6,8 @@ var I_Edition = require('../models/I_Edition');
 var II_Edition = require('../models/II_Edition');
 var III_Edition = require('../models/III_Edition');
 var IV_Edition = require('../models/IV_Edition');
-var League=require('../models/league')
+var League=require('../models/league');
+var current="i_editions";
 var method={suma:-1};
 
 router.get('/', function (req, res) {
@@ -631,7 +632,7 @@ router.get('/league/sum',function (req,res) {
 
 router.get('/mistrzowska', function (req, res) {
 
-    Current_Edition.db.collection('i_editions').find({clas:"Mistrzowska"}).sort(method).toArray( function (err,competitors) {
+    Current_Edition.db.collection(current).find({clas:"Mistrzowska"}).sort(method).toArray( function (err,competitors) {
         if(err){
             console.log(err);
         } else {
@@ -646,7 +647,7 @@ router.get('/mistrzowska', function (req, res) {
 });
 
 router.get('/mlodziezowiec', function (req, res) {
-    Current_Edition.db.collection('i_editions').find({clas:"Młodzieżowiec"}).sort(method).toArray( function(err, competitors){
+    Current_Edition.db.collection(current).find({clas:"Młodzieżowiec"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -660,7 +661,7 @@ router.get('/mlodziezowiec', function (req, res) {
 });
 
 router.get('/I', function (req, res) {
-    Current_Edition.db.collection('i_editions').find({clas:"I"}).sort(method).toArray(function(err, competitors){
+    Current_Edition.db.collection(current).find({clas:"I"}).sort(method).toArray(function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -674,7 +675,7 @@ router.get('/I', function (req, res) {
 });
 
 router.get('/II', function (req, res) {
-    Current_Edition.db.collection('i_editions').find({clas:"II"}).sort(method).toArray( function(err, competitors){
+    Current_Edition.db.collection(current).find({clas:"II"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -688,7 +689,7 @@ router.get('/II', function (req, res) {
 });
 
 router.get('/III', function (req, res) {
-    Current_Edition.db.collection('i_editions').find({clas:"III"}).sort(method).toArray( function(err, competitors){
+    Current_Edition.db.collection(current).find({clas:"III"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
@@ -701,13 +702,97 @@ router.get('/III', function (req, res) {
 
 });
 router.get('/mlodziezowa', function (req, res) {
-    Current_Edition.db.collection('i_editions').find({clas:"Młodzieżowa"}).sort(method).toArray( function(err, competitors){
+    Current_Edition.db.collection(current).find({clas:"Młodzieżowa"}).sort(method).toArray( function(err, competitors){
         if(err){
             console.log(err);
         } else {
 
             res.render('resulttables', {
                 title:'Klasa mlodziezowa',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/mlodziezowa/2012', function (req, res) {
+    Current_Edition.db.collection(current).find({clas:"Młodzieżowa",year:2012}).sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('resulttables', {
+                title:'Klasa mlodziezowa 2012',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/mlodziezowa/2013', function (req, res) {
+    Current_Edition.db.collection(current).find({clas:"Młodzieżowa",year:2013}).sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('resulttables', {
+                title:'Klasa mlodziezowa 2013',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/mlodziezowa/2014-', function (req, res) {
+    Current_Edition.db.collection(current).find({clas:"Młodzieżowa",year:{$gte: 2014}}).sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('resulttables', {
+                title:'Klasa mlodziezowa 2014 i mlodsi',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/i_krok', function (req, res) {
+    Current_Edition.db.collection(current).find({clas:"I_Krok"}).sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('resulttables', {
+                title:'Klasa I krok gimnastyczny',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/i_krok/2014', function (req, res) {
+    Current_Edition.db.collection(current).find({clas:"I_Krok",year:2014}).sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('resulttables', {
+                title:'Klasa I krok gimnastyczny 2014',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/i_krok/2015-', function (req, res) {
+    Current_Edition.db.collection(current).find({clas:"I_Krok",year:{$gte:2015}}).sort(method).toArray( function(err, competitors){
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('resulttables', {
+                title:'Klasa I krok gimnastyczny 2015 i mlodsi',
                 competitors: competitors
             });
         }

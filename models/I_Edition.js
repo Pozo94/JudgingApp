@@ -228,6 +228,9 @@ var ParticipantSchema = mongoose.Schema({
     club:{
         type: String
     },
+    year:{
+        type: Number
+    },
     suma:{
         type: Number,
         required:false

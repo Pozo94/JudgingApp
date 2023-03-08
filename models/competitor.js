@@ -24,6 +24,10 @@ var CompetitorSchema=mongoose.Schema({
         type:String,
         required:true
     },
+    subdivision:{
+        type:String,
+        default: false
+    },
     status:{
         type:Boolean,
         default:false

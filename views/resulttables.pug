@@ -68,20 +68,26 @@ html
                     if !user || user.role !== 'Admin'
                         li.nav-item.disabled
                             a.nav-link(href='/judges/') Sędziowie
-                        li.nav-item.disabled
+                        //li.nav-item.disabled
                             a.nav-link(href='/competitors/') Zawodnicy
 
-                ul.navbar-nav.mr-1
-                    li.nav-item.dropdown
+                ul.navbar-nav.mr-2
+                    li.nav-item.dropleft
                         a.nav-link.dropdown-toggle(id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Aktualne Wyniki
                             .dropdown-menu(aria-labelledby="navbarDropdown2")
-                                a.dropdown-item(href="/results/mistrzowska/") Klasa Mistrzowska
+                                //a.dropdown-item(href="/results/mistrzowska/") Klasa Mistrzowska
                                 a.dropdown-item(href="/results/mlodziezowiec/") Klasa Młodzieżowiec
                                 a.dropdown-item(href="/results/I/") Klasa I
                                 a.dropdown-item(href="/results/II/") Klasa II
                                 a.dropdown-item(href="/results/III/") Klasa III
                                 a.dropdown-item(href="/results/mlodziezowa/") Klasa Młodzieżowa
-                    li.nav-item.dropdown
+                                a.dropdown-item(href="/results/mlodziezowa/2012") Klasa Młodzieżowa 2012
+                                a.dropdown-item(href="/results/mlodziezowa/2013") Klasa Młodzieżowa 2013
+                                a.dropdown-item(href="/results/mlodziezowa/2014-") Klasa Młodzieżowa 2014 i młodsi
+                                a.dropdown-item(href="/results/i_krok/") Klasa I Krok Gimnastyczny
+                                a.dropdown-item(href="/results/i_krok/2014") Klasa I Krok Gimnastyczny 2014
+                                a.dropdown-item(href="/results/i_krok/2015-") Klasa I Krok Gimnastyczny 2015 i młodsi
+                    //li.nav-item.dropdown
                         a.nav-link.dropdown-toggle(id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Klasyfikacja ligowa
                             .dropdown-menu(aria-labelledby="navbarDropdown3")
                                 a.dropdown-item(href="/results/league/mistrzowska") Klasa Mistrzowska
@@ -90,7 +96,7 @@ html
                                 a.dropdown-item(href="/results/league/II/") Klasa II
                                 a.dropdown-item(href="/results/league/III/") Klasa III
                                 a.dropdown-item(href="/results/league/mlodziezowa/") Klasa Młodzieżowa
-                    li.nav-item.dropdown
+                    //li.nav-item.dropdown
                         a.nav-link.dropdown-toggle(id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false") Archiwum
                             .dropdown-menu(aria-labelledby="navbarDropdown1")
                                 a.dropdown-item(href="/results/league/I_Edition/") I Edycja
@@ -108,7 +114,7 @@ html
                             a.nav-link(href="/users/logout") Logout
     input(id="title", hidden='true', value=title)
     -var miejsce=1;
-    table.table-sm.table-dark.table-hover.container(id = 'wyniki')
+    table.table-sm.table-dark.table-striped.container(id = 'wyniki')
         thead
             tr.border-bottom
                 th(scope='col') #
