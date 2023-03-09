@@ -22,7 +22,6 @@ function compare(a, b) {
 }
 router.get('/', function (req, res) {
     User.find({role:{$ne:'Admin'}},function (err,judges) {
-        console.log(judges);
         judges.sort(compare);
         res.render('jlist', {
             title:'List of judges',

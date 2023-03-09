@@ -31,7 +31,7 @@ html
     body
 
         nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-4.fixed-top
-            a.navbar-brand(href='https://www.pzg.pl') PZG
+            //a.navbar-brand(href='https://www.pzg.pl') PZG
             button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
                 span.navbar-toggler-icon
             #navbarCollapse.collapse.navbar-collapse
@@ -65,7 +65,7 @@ html
                             li.nav-item.disabled
                                 a.nav-link(href="/protocols/") Protokoły
 
-                    if !user || user.role !== 'Admin'
+                    //if !user || user.role !== 'Admin'
                         li.nav-item.disabled
                             a.nav-link(href='/judges/') Sędziowie
                         //li.nav-item.disabled
@@ -75,8 +75,8 @@ html
                     li.nav-item.dropleft
                         a.nav-link.dropdown-toggle(id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Aktualne Wyniki
                             .dropdown-menu(aria-labelledby="navbarDropdown2")
-                                //a.dropdown-item(href="/results/mistrzowska/") Klasa Mistrzowska
-                                a.dropdown-item(href="/results/mlodziezowiec/") Klasa Młodzieżowiec
+                                a.dropdown-item(href="/results/mistrzowska/") Klasa Mistrzowska
+                                //a.dropdown-item(href="/results/mlodziezowiec/") Klasa Młodzieżowiec
                                 a.dropdown-item(href="/results/I/") Klasa I
                                 a.dropdown-item(href="/results/II/") Klasa II
                                 a.dropdown-item(href="/results/III/") Klasa III
