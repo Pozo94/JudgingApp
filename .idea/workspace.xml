@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="subdivision names fixed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="pzg deleted" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -276,6 +274,7 @@
       <workItem from="1678137401640" duration="19024000" />
       <workItem from="1678306617167" duration="6751000" />
       <workItem from="1678368753713" duration="3207000" />
+      <workItem from="1678485132668" duration="244000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;1st update&quot;">
       <created>1678192801787</created>
@@ -333,7 +332,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678395626659</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="name fix">
+      <created>1678485250288</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678485250288</updated>
+    </task>
+    <task id="LOCAL-00010" summary="pzg deleted">
+      <created>1678485352401</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678485352401</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -365,6 +378,8 @@
     <MESSAGE value="decimal number bug fixed" />
     <MESSAGE value="apparatus title added" />
     <MESSAGE value="subdivision names fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="subdivision names fixed" />
+    <MESSAGE value="name fix" />
+    <MESSAGE value="pzg deleted" />
+    <option name="LAST_COMMIT_MESSAGE" value="pzg deleted" />
   </component>
 </project>
