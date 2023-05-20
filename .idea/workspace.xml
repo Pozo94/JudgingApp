@@ -22,7 +22,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="url fix" />
+    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="url fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/III_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/III_Edition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/II_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/II_Edition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/IV_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/IV_Edition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/I_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/I_Edition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/competitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/competitor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/competitors.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/competitors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/judging.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/judging.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/protocols.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/protocols.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/results.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/results.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/judge.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/judge.pug" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +68,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jacek/Documents/INVO/[lvl 1]Sekcja_4/Starter-code&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -275,7 +288,10 @@
       <workItem from="1678306617167" duration="6751000" />
       <workItem from="1678368753713" duration="3207000" />
       <workItem from="1678485132668" duration="244000" />
-      <workItem from="1678486493615" duration="306000" />
+      <workItem from="1678486493615" duration="704000" />
+      <workItem from="1678532896690" duration="19016000" />
+      <workItem from="1679576399768" duration="825000" />
+      <workItem from="1684575530379" duration="6679000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;1st update&quot;">
       <created>1678192801787</created>
@@ -354,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678486583862</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="url fix">
+      <created>1678486921390</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678486921390</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">

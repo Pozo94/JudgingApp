@@ -3,7 +3,7 @@ var router = express.Router();
 var validator = require('validator');
 var Competitor =require('../models/competitor');
 var League= require('../models/league');
-var Current_Edition=require('../models/I_Edition')
+var Current_Edition=require('../models/II_Edition')
 var I_Edition=require('../models/I_Edition');
 var II_Edition=require('../models/II_Edition');
 var III_Edition=require('../models/III_Edition');
@@ -271,17 +271,18 @@ router.get('/addall', function (req,res){
 
     Competitor.find().then(participants=>{
         participants.forEach(competitor=>{
-            Participant=new I_Edition({
+            Participant=new II_Edition({
 
                 competitor:competitor.id,
                 subdivision:competitor.subdivision,
+                order:competitor.order,
                 firstname:competitor.firstname,
                 lastname:competitor.lastname,
                 clas:competitor.clas,
                 club:competitor.club,
                 year:competitor.year,
             })
-            I_Edition.addParticipant(Participant,function(err, participant){
+            II_Edition.addParticipant(Participant,function(err, participant){
                 if(err) throw err
                 console.log(participant);
             })

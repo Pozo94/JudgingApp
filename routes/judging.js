@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Competitor =require('../models/competitor');
-var Current_Edition = require('../models/I_Edition');
+var Current_Edition = require('../models/II_Edition');
 var I_Edition = require('../models/I_Edition');
 var II_Edition = require('../models/II_Edition');
 var III_Edition = require('../models/III_Edition');
@@ -12,7 +12,41 @@ function Round(n, k)
     n = Math.round(Math.round(n*factor)/10);
     return n/(factor/10);
 }
+function ComputeSum(competitor){
+    let FX,PH,SR,VT,PB,HB;
+    if(competitor.FX.Final===undefined){
+        FX=0;
+    }else {
+        FX= +competitor.FX.Final;
+    }
+    if(competitor.PH.Final===undefined){
+        PH=0;
+    }else {
+        PH= +competitor.PH.Final;
+    }
+    if(competitor.SR.Final===undefined){
+        SR=0;
+    }else {
+        SR= +competitor.SR.Final;
+    }
+    if(competitor.VT1.Final===undefined){
+        VT=0;
+    }else {
+        VT= +competitor.VT1.Final;
+    }
+    if(competitor.PB.Final===undefined){
+        PB=0;
+    }else {
+        PB= +competitor.PB.Final;
+    }
+    if(competitor.HB.Final===undefined){
+        HB=0;
+    }else {
+        HB= +competitor.HB.Final;
+    }
+    return FX+PH+SR+VT+PB+HB;
 
+}
 function compare(a, b) {
     // Use toUpperCase() to ignore character casing
     const clasA = a.clas.toUpperCase();
@@ -33,12 +67,13 @@ router.get('/',ensureAuthenticated, function (req, res) {
     res.render('judging');
 
 });
+
 router.get('/:id',ensureAuthenticated, function(req, res){
         Current_Edition.findById(req.params.id, function(err,competitor) {
             if (req.user.apparatus === 'VT') {
                 if (competitor.VT1.Final>=0 && competitor.VT2.Final>=0) {
                     req.flash('danger', 'Competitor alredy judged!');
-                    res.redirect('/judging/');
+                    res.redirect('/protocols/');
                 }
                 else
                     res.render('judge',{competitor:competitor});
@@ -46,46 +81,46 @@ router.get('/:id',ensureAuthenticated, function(req, res){
             if(req.user.apparatus==='FX')
                 if(competitor.FX.Final>=0) {
                     req.flash('danger', 'Competitor alredy judged!');
-                    res.redirect('/judging/');
+                    res.redirect('/protocols/');
                 }
                 else
                     res.render('judge',{competitor:competitor});
             if(req.user.apparatus==='PH')
                 if(competitor.PH.Final>=0) {
                     req.flash('danger', 'Competitor alredy judged!');
-                    res.redirect('/judging/');
+                    res.redirect('/protocols/');
                 }
                 else
                     res.render('judge',{competitor:competitor});
             if(req.user.apparatus==='SR')
                 if(competitor.SR.Final>=0) {
                     req.flash('danger', 'Competitor alredy judged!');
-                    res.redirect('/judging/');
+                    res.redirect('/protocols/');
                 }
                 else
                     res.render('judge',{competitor:competitor});
             if(req.user.apparatus==='PB')
                 if(competitor.PB.Final>=0) {
                     req.flash('danger', 'Competitor alredy judged!');
-                    res.redirect('/judging/');
+                    res.redirect('/protocols/');
                 }
                 else
                     res.render('judge',{competitor:competitor});
             if(req.user.apparatus==='HB')
                 if(competitor.HB.Final>=0) {
                     req.flash('danger', 'Competitor alredy judged!');
-                    res.redirect('/judging/');
+                    res.redirect('/protocols/');
                 }
                 else
                     res.render('judge',{competitor:competitor});
 
         });
 });
-router.post('/:id', function(req, res){
+router.post('/:id',  async function(req, res){
     function compareNumbers(a, b) {
         return a - b
     }
-
+    var sub;
     var D=req.body.D;
     var E1=req.body.E1;
     var E2=req.body.E2;
@@ -122,9 +157,10 @@ router.post('/:id', function(req, res){
     Final=Round( +Final,3);
     var competitor={};
     console.log(E);
-    if (req.user.apparatus==='VT') {
 
-        Current_Edition.findById(req.params.id, function (err, competitorr) {
+    if(req.user.apparatus==='VT') {
+
+        await Current_Edition.findById(req.params.id, async function (err, competitorr) {
 
             if (err) {
                 console.log(err);
@@ -140,6 +176,8 @@ router.post('/:id', function(req, res){
                     competitorr.VT2.E=10-E;
                     competitorr.VT2.Final= +Final;
                     competitorr.VT = (+competitorr.VT1.Final + +Final)/2;
+                    sub= await competitorr.subdivision;
+
                     Competitor.createCompetitor(competitorr, function () {
 
                     });
@@ -153,14 +191,9 @@ router.post('/:id', function(req, res){
                     competitorr.VT1.E4=10-E4;
                     competitorr.VT1.E=10-E;
                     competitorr.VT1.Final= +Final;
-                    if (competitorr.suma===undefined)
-                    {
-                        competitorr.suma= +Final;
-                    }
-                    else
-                    {
-                        competitorr.suma = +competitorr.suma+ +Final;
-                    }
+                    sub= await competitorr.subdivision;
+
+                    competitorr.suma=ComputeSum(competitorr);
 
                     console.log(competitorr);
                     Competitor.createCompetitor(competitorr, function () {
@@ -178,7 +211,7 @@ router.post('/:id', function(req, res){
     if (req.user.apparatus==='FX')
     {
         competitor.FX= +Final;
-        Current_Edition.findById(req.params.id, function(err,competitorr) {
+        await Current_Edition.findById(req.params.id, async function(err,competitorr) {
             if(err){
                 console.log(err);
                 return;
@@ -191,14 +224,8 @@ router.post('/:id', function(req, res){
                 competitorr.FX.E4=10-E4;
                 competitorr.FX.E=10-E;
                 competitorr.FX.Final= +Final;
-                if (competitorr.suma===undefined)
-                {
-                    competitorr.suma= +Final;
-                }
-                else
-                {
-                    competitorr.suma = +competitorr.suma+ +Final;
-                }
+                competitorr.suma=ComputeSum(competitorr);
+                sub=await competitorr.subdivision;
                 Competitor.createCompetitor(competitorr,function () {
 
                 });
@@ -211,7 +238,7 @@ router.post('/:id', function(req, res){
     if (req.user.apparatus==='PH')
     {
         competitor.PH= +Final;
-        Current_Edition.findById(req.params.id, function(err,competitorr) {
+        await Current_Edition.findById(req.params.id, function(err,competitorr) {
             if(err){
                 console.log(err);
                 return;
@@ -223,17 +250,9 @@ router.post('/:id', function(req, res){
                 competitorr.PH.E4=10-E4;
                 competitorr.PH.E=10-E;
                 competitorr.PH.Final= +Final;
-                if (competitorr.suma===undefined)
-                {
-                    competitorr.suma= +Final;
-                }
-                else
-                {
-                    competitorr.suma = +competitorr.suma+ +Final;
-                }
-                Competitor.createCompetitor(competitorr,function () {
+                sub=competitorr.subdivision;
+                competitorr.suma=ComputeSum(competitorr);
 
-                });
                 req.flash('success', 'Competitor Updated');
                 //res.redirect('/');
             }
@@ -243,7 +262,7 @@ router.post('/:id', function(req, res){
     if (req.user.apparatus==='SR')
     {
         competitor.SR= +Final;
-        Current_Edition.findById(req.params.id, function(err,competitorr) {
+        await Current_Edition.findById(req.params.id,  function(err,competitorr) {
             if(err){
                 console.log(err);
                 return;
@@ -255,14 +274,9 @@ router.post('/:id', function(req, res){
                 competitorr.SR.E4=10-E4;
                 competitorr.SR.E=10-E;
                 competitorr.SR.Final= +Final;
-                if (competitorr.suma===undefined)
-                {
-                    competitorr.suma= +Final;
-                }
-                else
-                {
-                    competitorr.suma = +competitorr.suma+ +Final;
-                }
+                competitorr.suma=ComputeSum(competitorr);
+                sub=  competitorr.subdivision;
+                console.log(sub);
                 Competitor.createCompetitor(competitorr,function () {
 
                 });
@@ -276,7 +290,7 @@ router.post('/:id', function(req, res){
     if (req.user.apparatus==='PB')
     {
         competitor.PB= +Final;
-        Current_Edition.findById(req.params.id, function(err,competitorr) {
+        await Current_Edition.findById(req.params.id, function(err,competitorr) {
             if(err){
                 console.log(err);
                 return;
@@ -288,14 +302,10 @@ router.post('/:id', function(req, res){
                 competitorr.PB.E4=10-E4;
                 competitorr.PB.E=10-E;
                 competitorr.PB.Final= +Final;
-                if (competitorr.suma===undefined)
-                {
-                    competitorr.suma= +Final;
-                }
-                else
-                {
-                    competitorr.suma = +competitorr.suma+ +Final;
-                }
+                sub=competitorr.subdivision;
+
+                competitorr.suma=ComputeSum(competitorr);
+
                 Competitor.createCompetitor(competitorr,function () {
 
                 });
@@ -308,7 +318,7 @@ router.post('/:id', function(req, res){
     if (req.user.apparatus==='HB')
     {
         competitor.HB= +Final;
-        Current_Edition.findById(req.params.id, function(err,competitorr) {
+        await Current_Edition.findById(req.params.id, function(err,competitorr) {
             if(err){
                 console.log(err);
                 return;
@@ -320,15 +330,10 @@ router.post('/:id', function(req, res){
                 competitorr.HB.E4=10-E4;
                 competitorr.HB.E=10-E;
                 competitorr.HB.Final= +Final;
-                if (competitorr.suma===undefined)
-                {
-                    competitorr.suma= +Final;
-                    console.log(competitorr.HB)
-                }
-                else
-                {
-                    competitorr.suma = +competitorr.suma+ +Final;
-                }
+                sub=competitorr.subdivision;
+
+                competitorr.suma=ComputeSum(competitorr);
+
                 Competitor.createCompetitor(competitorr,function () {
 
                 });
@@ -338,7 +343,22 @@ router.post('/:id', function(req, res){
 
         });
     }
-    res.redirect('/protocols/');
+    //res.redirect('back')
+    if(sub==='VII')
+    res.redirect('/protocols/div2/I');
+    else if(sub==='VIII')
+        res.redirect('/protocols/div2/II');
+    else if (sub==='IX')
+        res.redirect('/protocols/div2/III');
+    else if(sub==='X')
+        res.redirect('/protocols/div2/IV');
+    else if(sub==='XI')
+        res.redirect('/protocols/div2/V');
+    else if(sub==='XII')
+        res.redirect('/protocols/div2/VI');
+    else
+        res.redirect('/protocols/div1/'+sub)
+
 });
 router.get('/I',ensureAuthenticated, function (req, res) {
     Current_Edition.find({subdivision:"I"}, function(err, competitors){

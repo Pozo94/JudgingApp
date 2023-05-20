@@ -28,6 +28,10 @@ var CompetitorSchema=mongoose.Schema({
         type:String,
         default: false
     },
+    order:{
+      type:Number,
+      default:false
+    },
     status:{
         type:Boolean,
         default:false

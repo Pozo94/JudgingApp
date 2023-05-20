@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Current_Edition=require('../models/I_Edition');
+var Current_Edition=require('../models/II_Edition');
 // var II_Edition=require('../models/II_Edition');
 // var III_Edition=require('../models/III_Edition');
 // var IV_Edition=require('../models/IV_Edition');
@@ -15,7 +15,7 @@ router.get('/div2',ensureAuthenticated, function(req, res) {
     res.render('judging');
 });
 router.get('/div1/I',ensureAuthenticated, function(req, res){
-    Current_Edition.find({subdivision:'I'},function (err, competitors) {
+    Current_Edition.find({subdivision:'I'}).sort('order').exec(function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -31,7 +31,7 @@ router.get('/div1/I',ensureAuthenticated, function(req, res){
 
 });
 router.get('/div1/II',ensureAuthenticated, function(req, res){
-    Current_Edition.find({subdivision:'II'},function (err, competitors) {
+    Current_Edition.find({subdivision:'II'}).sort('order').exec(function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -47,7 +47,7 @@ router.get('/div1/II',ensureAuthenticated, function(req, res){
 
 });
 router.get('/div1/III',ensureAuthenticated, function(req, res){
-    Current_Edition.find({subdivision:'III'},function (err, competitors) {
+    Current_Edition.find({subdivision:'III'}).sort('order').exec(function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -63,7 +63,7 @@ router.get('/div1/III',ensureAuthenticated, function(req, res){
 
 });
 router.get('/div1/IV',ensureAuthenticated, function(req, res){
-    Current_Edition.find({subdivision:'IV'},function (err, competitors) {
+    Current_Edition.find({subdivision:'IV'}).sort('order').exec(function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -79,7 +79,7 @@ router.get('/div1/IV',ensureAuthenticated, function(req, res){
 
 });
 router.get('/div1/V',ensureAuthenticated, function(req, res){
-    Current_Edition.find({subdivision:'V'},function (err, competitors) {
+    Current_Edition.find({subdivision:'V'}).sort('order').exec(function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -95,7 +95,7 @@ router.get('/div1/V',ensureAuthenticated, function(req, res){
 
 });
 router.get('/div1/VI',ensureAuthenticated, function(req, res){
-    Current_Edition.find({subdivision:'VI'},function (err, competitors) {
+    Current_Edition.find({subdivision:'VI'}).sort('order').exec(function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -111,7 +111,7 @@ router.get('/div1/VI',ensureAuthenticated, function(req, res){
 
 });
 router.get('/div2/I',ensureAuthenticated, function(req, res){
-    Current_Edition.find({subdivision:'VII'},function (err, competitors) {
+    Current_Edition.find({subdivision:'VII'}).sort('order').exec(function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -127,7 +127,7 @@ router.get('/div2/I',ensureAuthenticated, function(req, res){
 
 });
 router.get('/div2/II',ensureAuthenticated, function(req, res){
-    Current_Edition.find({subdivision:'VIII'},function (err, competitors) {
+    Current_Edition.find({subdivision:'VIII'}).sort('order').exec(function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -143,7 +143,7 @@ router.get('/div2/II',ensureAuthenticated, function(req, res){
 });
 
 router.get('/div2/III',ensureAuthenticated, function(req, res){
-    Current_Edition.find({subdivision:'IX'},function (err, competitors) {
+    Current_Edition.find({subdivision:'IX'}).sort('order').exec(function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -158,7 +158,7 @@ router.get('/div2/III',ensureAuthenticated, function(req, res){
 
 });
 router.get('/div2/IV',ensureAuthenticated, function(req, res){
-    Current_Edition.find({subdivision:'X'},function (err, competitors) {
+    Current_Edition.find({subdivision:'X'}).sort('order').exec(function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -173,7 +173,7 @@ router.get('/div2/IV',ensureAuthenticated, function(req, res){
 
 });
 router.get('/div2/V',ensureAuthenticated, function(req, res){
-    Current_Edition.find({subdivision:'XI'},function (err, competitors) {
+    Current_Edition.find({subdivision:'XI'}).sort('order').exec(function (err, competitors) {
         if(err){
             console.log(err);
         } else {
@@ -188,7 +188,7 @@ router.get('/div2/V',ensureAuthenticated, function(req, res){
 
 });
 router.get('/div2/VI',ensureAuthenticated, function(req, res){
-    Current_Edition.find({subdivision:'XII'},function (err, competitors) {
+    Current_Edition.find({subdivision:'XII'}).sort('order').exec(function (err, competitors) {
         if(err){
             console.log(err);
         } else {

@@ -7,7 +7,13 @@ var ParticipantSchema = mongoose.Schema({
     },
     subdivision:{
         type: String
-    },
+    }
+    ,
+    order:{
+        type:Number
+    }
+
+    ,
 
     FX:{
         E1:{
