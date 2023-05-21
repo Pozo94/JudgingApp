@@ -252,7 +252,9 @@ router.post('/:id',  async function(req, res){
                 competitorr.PH.Final= +Final;
                 sub=competitorr.subdivision;
                 competitorr.suma=ComputeSum(competitorr);
+                Competitor.createCompetitor(competitorr,function () {
 
+                });
                 req.flash('success', 'Competitor Updated');
                 //res.redirect('/');
             }

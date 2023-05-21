@@ -22,7 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="II_edition preparations" />
+    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="Main page update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/II_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/II_Edition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/judging.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/judging.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -279,7 +283,7 @@
       <workItem from="1678486493615" duration="704000" />
       <workItem from="1678532896690" duration="19016000" />
       <workItem from="1679576399768" duration="825000" />
-      <workItem from="1684575530379" duration="7321000" />
+      <workItem from="1684575530379" duration="9122000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;1st update&quot;">
       <created>1678192801787</created>
@@ -372,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684583943520</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Main page update">
+      <created>1684650482365</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1684650482365</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -408,6 +419,7 @@
     <MESSAGE value="pzg deleted" />
     <MESSAGE value="url fix" />
     <MESSAGE value="II_edition preparations" />
-    <option name="LAST_COMMIT_MESSAGE" value="II_edition preparations" />
+    <MESSAGE value="Main page update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main page update" />
   </component>
 </project>

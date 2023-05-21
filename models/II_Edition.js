@@ -11,9 +11,8 @@ var ParticipantSchema = mongoose.Schema({
     },
     order:{
         type:Number
-    }
-
-    ,year:{
+    },
+    year:{
         type: Number
     },
 
