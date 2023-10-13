@@ -204,7 +204,7 @@ router.get('/league/II_Edition/mlodziezowa', function (req, res) {
 
 });
 router.get('/league/II_Edition/i_krok', function (req, res) {
-    II_Edition.db.collection('ii_editions').find({clas: "I_krok"}).sort(method).toArray(function (err, competitors) {
+    II_Edition.db.collection('ii_editions').find({clas: "I_Krok"}).sort(method).toArray(function (err, competitors) {
         if (err) {
             console.log(err);
         } else {
@@ -305,7 +305,7 @@ router.get('/league/I_Edition/mlodziezowa', function (req, res) {
 
 });
 router.get('/league/I_Edition/i_krok', function (req, res) {
-    II_Edition.db.collection('i_editions').find({clas: "I_krok"}).sort(method).toArray(function (err, competitors) {
+    II_Edition.db.collection('i_editions').find({clas: "I_Krok"}).sort(method).toArray(function (err, competitors) {
         if (err) {
             console.log(err);
         } else {
