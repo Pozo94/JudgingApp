@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var Competitor =require('../models/competitor');
-var Current_Edition = require('../models/II_Edition');
 var I_Edition = require('../models/I_Edition');
 var II_Edition = require('../models/II_Edition');
 var III_Edition = require('../models/III_Edition');
 var IV_Edition = require('../models/IV_Edition');
+var Current_Edition = require('../models/III_Edition');
+
 function Round(n, k)
 {
     var factor = Math.pow(10, k+1);

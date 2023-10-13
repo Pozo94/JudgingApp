@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Current_Edition=require('../models/II_Edition');
+var Current_Edition=require('../models/III_Edition');
 // var II_Edition=require('../models/II_Edition');
 // var III_Edition=require('../models/III_Edition');
 // var IV_Edition=require('../models/IV_Edition');
@@ -194,6 +194,98 @@ router.get('/div2/VI',ensureAuthenticated, function(req, res){
         } else {
             res.render('protocol', {
                 title:'Rzut II zastęp VI',
+                competitors: competitors,
+
+            });
+
+        }
+    });
+
+});
+router.get('/div3/I',ensureAuthenticated, function(req, res){
+    Current_Edition.find({subdivision:'XIII'}).sort('order').exec(function (err, competitors) {
+        if(err){
+            console.log(err);
+        } else {
+
+            res.render('protocol', {
+                title:'Rzut III zastęp I',
+                competitors: competitors,
+
+            });
+
+        }
+    });
+
+});
+router.get('/div3/II',ensureAuthenticated, function(req, res){
+    Current_Edition.find({subdivision:'XIV'}).sort('order').exec(function (err, competitors) {
+        if(err){
+            console.log(err);
+        } else {
+            res.render('protocol', {
+                title:'Rzut III zastęp II',
+                competitors: competitors,
+
+            });
+
+        }
+    });
+
+});
+
+router.get('/div3/III',ensureAuthenticated, function(req, res){
+    Current_Edition.find({subdivision:'XV'}).sort('order').exec(function (err, competitors) {
+        if(err){
+            console.log(err);
+        } else {
+            res.render('protocol', {
+                title:'Rzut III zastęp III',
+                competitors: competitors,
+
+            });
+
+        }
+    });
+
+});
+router.get('/div3/IV',ensureAuthenticated, function(req, res){
+    Current_Edition.find({subdivision:'XVI'}).sort('order').exec(function (err, competitors) {
+        if(err){
+            console.log(err);
+        } else {
+            res.render('protocol', {
+                title:'Rzut III zastęp IV',
+                competitors: competitors,
+
+            });
+
+        }
+    });
+
+});
+router.get('/div3/V',ensureAuthenticated, function(req, res){
+    Current_Edition.find({subdivision:'XVII'}).sort('order').exec(function (err, competitors) {
+        if(err){
+            console.log(err);
+        } else {
+            res.render('protocol', {
+                title:'Rzut III zastęp V',
+                competitors: competitors,
+
+            });
+
+        }
+    });
+
+});
+router.get('/div3/VI',ensureAuthenticated, function(req, res){
+    Current_Edition.find({subdivision:'XVIII'}).sort('order').exec(function (err, competitors) {
+        if(err){
+            console.log(err);
+        } else {
+            res.render('protocol', {
+                title:'Rzut III zastęp VI',
                 competitors: competitors,
 
             });

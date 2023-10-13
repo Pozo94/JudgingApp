@@ -22,10 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="Main page update">
+    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="ph mark fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/II_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/II_Edition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/competitors.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/competitors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/judging.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/judging.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/protocols.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/protocols.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/results.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/results.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/division.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/division.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/resulttables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/resulttables.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +289,12 @@
       <workItem from="1678486493615" duration="704000" />
       <workItem from="1678532896690" duration="19016000" />
       <workItem from="1679576399768" duration="825000" />
-      <workItem from="1684575530379" duration="9122000" />
+      <workItem from="1684575530379" duration="10985000" />
+      <workItem from="1685314569004" duration="598000" />
+      <workItem from="1686511863706" duration="1190000" />
+      <workItem from="1687389590782" duration="598000" />
+      <workItem from="1696491345125" duration="3104000" />
+      <workItem from="1697224501852" duration="6059000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;1st update&quot;">
       <created>1678192801787</created>
@@ -383,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684650482365</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="ph mark fix">
+      <created>1684659892958</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1684659892958</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -420,6 +438,7 @@
     <MESSAGE value="url fix" />
     <MESSAGE value="II_edition preparations" />
     <MESSAGE value="Main page update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main page update" />
+    <MESSAGE value="ph mark fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="ph mark fix" />
   </component>
 </project>

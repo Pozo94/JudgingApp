@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var Competitor = require('../models/competitor');
-var Current_Edition = require('../models/II_Edition');
+var Current_Edition = require('../models/III_Edition');
 var I_Edition = require('../models/I_Edition');
 var II_Edition = require('../models/II_Edition');
 var III_Edition = require('../models/III_Edition');
 var IV_Edition = require('../models/IV_Edition');
 var League = require('../models/league');
-var current = "ii_editions";
+var current = "iii_editions";
 var method = {suma: -1};
 
 router.get('/', function (req, res) {
@@ -36,7 +36,16 @@ router.get('/league/III', function (req, res) {
     });
 
 });
+router.get('/removeduplicates', function (req, res) {
+    I_Edition.deleteMany({suma:undefined}).then(function(){
+        console.log("Data deleted"); // Success
+    }).catch(function(error){
+        console.log(error); // Failure
+    });
 
+
+
+});
 router.get('/league/II', function (req, res) {
     League.db.collection('leagues').find({clas: 'II'}).sort(method).toArray(function (err, competitors) {
         if (err) {
@@ -830,7 +839,7 @@ router.get('/mlodziezowa', function (req, res) {
 router.get('/mlodziezowa/2012', function (req, res) {
     Current_Edition.db.collection(current).find({
         clas: "Młodzieżowa",
-        year: 2012
+        year: "2012"
     }).sort(method).toArray(function (err, competitors) {
         if (err) {
             console.log(err);
@@ -847,7 +856,7 @@ router.get('/mlodziezowa/2012', function (req, res) {
 router.get('/mlodziezowa/2013', function (req, res) {
     Current_Edition.db.collection(current).find({
         clas: "Młodzieżowa",
-        year: 2013
+        year: "2013"
     }).sort(method).toArray(function (err, competitors) {
         if (err) {
             console.log(err);
@@ -864,7 +873,7 @@ router.get('/mlodziezowa/2013', function (req, res) {
 router.get('/mlodziezowa/2014-', function (req, res) {
     Current_Edition.db.collection(current).find({
         clas: "Młodzieżowa",
-        year: {$gte: 2014}
+        year: {$gte: "2014"}
     }).sort(method).toArray(function (err, competitors) {
         if (err) {
             console.log(err);
@@ -895,7 +904,7 @@ router.get('/i_krok', function (req, res) {
 router.get('/i_krok/2014', function (req, res) {
     Current_Edition.db.collection(current).find({
         clas: "I_Krok",
-        year: 2014
+        year: "2014"
     }).sort(method).toArray(function (err, competitors) {
         if (err) {
             console.log(err);
@@ -912,7 +921,7 @@ router.get('/i_krok/2014', function (req, res) {
 router.get('/i_krok/2015-', function (req, res) {
     Current_Edition.db.collection(current).find({
         clas: "I_Krok",
-        year: {$gte: 2015}
+        year: {$gte: "2015"}
     }).sort(method).toArray(function (err, competitors) {
         if (err) {
             console.log(err);
