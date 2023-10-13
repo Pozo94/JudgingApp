@@ -203,7 +203,20 @@ router.get('/league/II_Edition/mlodziezowa', function (req, res) {
     });
 
 });
+router.get('/league/II_Edition/i_krok', function (req, res) {
+    II_Edition.db.collection('ii_editions').find({clas: "I_krok"}).sort(method).toArray(function (err, competitors) {
+        if (err) {
+            console.log(err);
+        } else {
 
+            res.render('resulttables', {
+                title: 'Klasa I krok gimnastyczny',
+                competitors: competitors
+            });
+        }
+    });
+
+});
 router.get('/league/I_Edition/mistrzowska', function (req, res) {
 
     I_Edition.db.collection('i_editions').find({clas: "Mistrzowska"}).sort(method).toArray(function (err, competitors) {
@@ -285,6 +298,20 @@ router.get('/league/I_Edition/mlodziezowa', function (req, res) {
 
             res.render('resulttables', {
                 title: 'Klasa mlodziezowa',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/league/I_Edition/i_krok', function (req, res) {
+    II_Edition.db.collection('i_editions').find({clas: "I_krok"}).sort(method).toArray(function (err, competitors) {
+        if (err) {
+            console.log(err);
+        } else {
+
+            res.render('resulttables', {
+                title: 'Klasa I krok gimnastyczny',
                 competitors: competitors
             });
         }
