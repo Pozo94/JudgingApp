@@ -22,8 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="url fix">
-      <change beforePath="$PROJECT_DIR$/routes/results.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/results.js" afterDir="false" />
+    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="Capital letter bug fix">
+      <change beforePath="$PROJECT_DIR$/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +286,7 @@
       <workItem from="1686511863706" duration="1190000" />
       <workItem from="1687389590782" duration="598000" />
       <workItem from="1696491345125" duration="3104000" />
-      <workItem from="1697224501852" duration="6624000" />
+      <workItem from="1697224501852" duration="7489000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;1st update&quot;">
       <created>1678192801787</created>
@@ -414,7 +414,21 @@
       <option name="project" value="LOCAL" />
       <updated>1697233274918</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="adding new result routs">
+      <created>1697233504110</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1697233504110</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Capital letter bug fix">
+      <created>1697233711739</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1697233711739</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -453,6 +467,8 @@
     <MESSAGE value="ph mark fix" />
     <MESSAGE value="New edition prep" />
     <MESSAGE value="url fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="url fix" />
+    <MESSAGE value="adding new result routs" />
+    <MESSAGE value="Capital letter bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Capital letter bug fix" />
   </component>
 </project>
