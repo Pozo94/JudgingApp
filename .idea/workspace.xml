@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="Capital letter bug fix">
-      <change beforePath="$PROJECT_DIR$/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.pug" afterDir="false" />
-    </list>
+    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="Capital letter bug fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -286,7 +284,7 @@
       <workItem from="1686511863706" duration="1190000" />
       <workItem from="1687389590782" duration="598000" />
       <workItem from="1696491345125" duration="3104000" />
-      <workItem from="1697224501852" duration="7489000" />
+      <workItem from="1697224501852" duration="8094000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;1st update&quot;">
       <created>1678192801787</created>
@@ -428,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697233711739</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Capital letter bug fix">
+      <created>1697235459601</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1697235459601</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
