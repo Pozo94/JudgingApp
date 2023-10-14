@@ -347,7 +347,19 @@ router.post('/:id',  async function(req, res){
         });
     }
     //res.redirect('back')
-    if(sub==='VII')
+    if(sub==='XIII')
+        res.redirect('/protocols/div3/I');
+    else if(sub==='XIV')
+        res.redirect('/protocols/div3/II');
+    else if (sub==='XV')
+        res.redirect('/protocols/div3/III');
+    else if(sub==='XVI')
+        res.redirect('/protocols/div3/IV');
+    else if(sub==='XVII')
+        res.redirect('/protocols/div3/V');
+    else if(sub==='XVIII')
+        res.redirect('/protocols/div3/VI');
+    else if(sub==='VII')
     res.redirect('/protocols/div2/I');
     else if(sub==='VIII')
         res.redirect('/protocols/div2/II');
