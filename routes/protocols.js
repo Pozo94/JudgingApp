@@ -14,6 +14,9 @@ router.get('/div1',ensureAuthenticated, function(req, res) {
 router.get('/div2',ensureAuthenticated, function(req, res) {
     res.render('judging');
 });
+router.get('/div3',ensureAuthenticated, function(req, res) {
+    res.render('judging');
+});
 router.get('/div1/I',ensureAuthenticated, function(req, res){
     Current_Edition.find({subdivision:'I'}).sort('order').exec(function (err, competitors) {
         if(err){
