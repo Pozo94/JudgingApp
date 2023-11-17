@@ -5,7 +5,7 @@ var I_Edition = require('../models/I_Edition');
 var II_Edition = require('../models/II_Edition');
 var III_Edition = require('../models/III_Edition');
 var IV_Edition = require('../models/IV_Edition');
-var Current_Edition = require('../models/III_Edition');
+var Current_Edition = require('../models/IV_Edition');
 
 function Round(n, k)
 {
@@ -45,7 +45,7 @@ function ComputeSum(competitor){
     }else {
         HB= +competitor.HB.Final;
     }
-    return FX+PH+SR+VT+PB+HB;
+    return Round(FX+PH+SR+VT+PB+HB,3);
 
 }
 function compare(a, b) {

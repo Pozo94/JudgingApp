@@ -27,19 +27,21 @@ block content
                 th(scope='col') Imie
                 th(scope='col') Nazwisko
                 th(scope='col') Klub
+                th(scope='col') Klasa
                 th(scope='col') D
                 th(scope='col') E1
                 th(scope='col') E2
                 th(scope='col') E3
                 th(scope='col') E4
                 th(scope='col') E
-                th(scope='col') Ocena Końcowa
+                th(scope='col') F
         each competitor, i in competitors
             tr
                 td= miejsce++ + '. '
                 td=competitor.firstname
                 td=competitor.lastname
                 td=competitor.club
+                td=competitor.clas
                 if user.apparatus === 'FX'
                   if competitor.FX.Final
                     td=competitor.FX.D.toFixed(2)
