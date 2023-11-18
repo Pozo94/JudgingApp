@@ -149,6 +149,7 @@ html
     input(id="title", hidden='true', value=title)
     -var miejsce=0;
     -var suma=0;
+    -var p=1;
     table.table-sm.table-dark.table-striped.container(id = 'wyniki')
         thead
             tr.border-bottom
@@ -171,7 +172,12 @@ html
                 if competitor.suma !== suma || competitor.suma===undefined
                     -suma = competitor.suma
                     -miejsce = miejsce + 1
+                    -p=0;
+                else
+                    -p=1;
                 td= miejsce + '. '
+                if p===1
+                    -miejsce=miejsce+1
                 td=competitor.firstname
                 td=competitor.lastname
                 td=competitor.club

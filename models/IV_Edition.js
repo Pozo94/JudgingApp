@@ -18,7 +18,7 @@ var ParticipantSchema = mongoose.Schema({
         type: String
     },
     year:{
-        type: Number
+        type: String
     },
 
     FX:{
