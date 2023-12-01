@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Current_Edition=require('../models/IV_Edition');
+var Current_Edition=require('../models/OMK');
 // var II_Edition=require('../models/II_Edition');
 // var III_Edition=require('../models/III_Edition');
 // var IV_Edition=require('../models/IV_Edition');
@@ -22,7 +22,6 @@ router.get('/div1/I',ensureAuthenticated, function(req, res){
         if(err){
             console.log(err);
         } else {
-
             res.render('protocol', {
                 title:'Rzut I zastęp I',
                 competitors: competitors,

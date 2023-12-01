@@ -22,10 +22,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="Preparation for IV edition">
+    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="exequo numbers fixed">
+      <change afterPath="$PROJECT_DIR$/models/OMK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/omk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/omk.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/omk_results.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/IV_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/IV_Edition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/resulttables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/resulttables.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/III_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/III_Edition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/II_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/II_Edition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/I_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/I_Edition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/competitors.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/competitors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/judging.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/judging.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/protocols.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/protocols.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/results.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/results.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/judge.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/judge.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/protocol.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/protocol.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jade File" />
         <option value="JavaScript File" />
         <option value="Pug File" />
       </list>
@@ -291,7 +306,8 @@
       <workItem from="1697224501852" duration="8094000" />
       <workItem from="1697280332759" duration="2699000" />
       <workItem from="1698060637120" duration="1957000" />
-      <workItem from="1700222757274" duration="7233000" />
+      <workItem from="1700222757274" duration="12912000" />
+      <workItem from="1701349000341" duration="30202000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;1st update&quot;">
       <created>1678192801787</created>
@@ -468,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700233112662</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="exequo numbers fixed">
+      <created>1700304127771</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1700304127771</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
@@ -512,6 +535,7 @@
     <MESSAGE value="adding new division" />
     <MESSAGE value="Fix third division back redirect" />
     <MESSAGE value="Preparation for IV edition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Preparation for IV edition" />
+    <MESSAGE value="exequo numbers fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="exequo numbers fixed" />
   </component>
 </project>

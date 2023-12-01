@@ -16,10 +16,9 @@ var ParticipantSchema = mongoose.Schema({
     ,
     club:{
         type: String
-    }
-    ,
+    },
     year:{
-        type: Number
+        type: String
     },
 
     FX:{
@@ -239,7 +238,6 @@ var ParticipantSchema = mongoose.Schema({
     }
 
 });
-
 var III_Edition=module.exports = mongoose.model('III_Edition',ParticipantSchema);
 module.exports.addParticipant = function(newUser, callback){
 

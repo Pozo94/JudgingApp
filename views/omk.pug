@@ -1,0 +1,178 @@
+extends layout
+
+block content
+
+    -var miejsce = 1;
+    style.
+        h7 {
+            color: #0f0f0f;
+        }
+    if apparatus === 'FX'
+        h2.justify-content-center Ćwiczenia Wolne
+    else if apparatus === 'PH'
+        h2.justify-content-center Koń Z Łękami
+    else if apparatus === 'SR'
+        h2.justify-content-center Kółka
+    else if apparatus === 'VT'
+        h2.justify-content-center Skok
+    else if apparatus === 'PB'
+        h2.justify-content-center Poręcze
+    else if apparatus === 'HB'
+        h2.justify-content-center Drążek
+    table.table-sm.table-dark.col-md-12.table-hover.row-cols-md-6(id='wyniki')
+        caption=title
+        thead
+            tr
+                th(scope='col') #
+                th(scope='col') Imie
+                th(scope='col') Nazwisko
+                th(scope='col') Klub
+                th(scope='col') D
+                th(scope='col') E1
+                th(scope='col') E2
+                th(scope='col') E3
+                th(scope='col') E4
+                th(scope='col') Neutral
+                th(scope='col') E
+                th(scope='col') F
+        each competitor, i in competitors
+                if apparatus === 'FX'
+                    if competitor.FX && competitor.FX.Final
+                         tr
+                            td= miejsce++ + '. '
+                            td=competitor.firstname
+                            td=competitor.lastname
+                            td=competitor.club
+
+                            td=competitor.FX.D.toFixed(2)
+                            td=competitor.FX.E1.toFixed(2)
+                            td=competitor.FX.E2.toFixed(2)
+                            td=competitor.FX.E3.toFixed(2)
+                            td=competitor.FX.E4.toFixed(2)
+                            td=competitor.FX.Neutral.toFixed(2)
+                            td=competitor.FX.E.toFixed(2)
+                            td=competitor.FX.Final.toFixed(2)
+                            td
+
+                if apparatus === 'PH'
+                    if competitor.PH && competitor.PH.Final
+                        tr
+                            td= miejsce++ + '. '
+                            td=competitor.firstname
+                            td=competitor.lastname
+                            td=competitor.club
+
+                            td=competitor.PH.D.toFixed(2)
+                            td=competitor.PH.E1.toFixed(2)
+                            td=competitor.PH.E2.toFixed(2)
+                            td=competitor.PH.E3.toFixed(2)
+                            td=competitor.PH.E4.toFixed(2)
+                            td=competitor.PH.Neutral.toFixed(2)
+                            td=competitor.PH.E.toFixed(2)
+                            td=competitor.PH.Final.toFixed(2)
+                            td
+                if apparatus === 'SR'
+                    if competitor.SR && competitor.SR.Final
+                        tr
+                            td= miejsce++ + '. '
+                            td=competitor.firstname
+                            td=competitor.lastname
+                            td=competitor.club
+
+                            td=competitor.SR.D.toFixed(2)
+                            td=competitor.SR.E1.toFixed(2)
+                            td=competitor.SR.E2.toFixed(2)
+                            td=competitor.SR.E3.toFixed(2)
+                            td=competitor.SR.E4.toFixed(2)
+                            td=competitor.SR.Neutral.toFixed(2)
+                            td=competitor.SR.E.toFixed(2)
+                            td=competitor.SR.Final.toFixed(2)
+                            td
+                if apparatus === 'VT'
+                    if competitor.VT1 && competitor.VT1.Final
+                        tr
+                            td= miejsce++ + '. '
+                            td=competitor.firstname
+                            td=competitor.lastname
+                            td=competitor.club
+
+                            td=competitor.VT1.D.toFixed(2)
+                            td=competitor.VT1.E1.toFixed(2)
+                            td=competitor.VT1.E2.toFixed(2)
+                            td=competitor.VT1.E3.toFixed(2)
+                            td=competitor.VT1.E4.toFixed(2)
+                            td=competitor.VT1.Neutral.toFixed(2)
+                            td=competitor.VT1.E.toFixed(2)
+                            td=competitor.VT1.Final.toFixed(2)
+                            td
+
+
+                        if competitor.VT2 && competitor.VT2.Final
+                            tr
+                                td
+                                td=competitor.firstname
+                                td=competitor.lastname
+                                td=competitor.club
+                                td=competitor.VT2.D.toFixed(2)
+                                td=competitor.VT2.E1.toFixed(2)
+                                td=competitor.VT2.E2.toFixed(2)
+                                td=competitor.VT2.E3.toFixed(2)
+                                td=competitor.VT2.E4.toFixed(2)
+                                td=competitor.VT2.Neutral.toFixed(2)
+                                td=competitor.VT2.E.toFixed(2)
+                                td=competitor.VT2.Final.toFixed(2)
+                                td
+
+
+                    if competitor.VT
+                        tr
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td=competitor.VT.toFixed(2)
+                            td
+                if apparatus === 'PB'
+                    if competitor.PB && competitor.PB.Final
+                        tr
+                            td= miejsce++ + '. '
+                            td=competitor.firstname
+                            td=competitor.lastname
+                            td=competitor.club
+
+                            td=competitor.PB.D.toFixed(2)
+                            td=competitor.PB.E1.toFixed(2)
+                            td=competitor.PB.E2.toFixed(2)
+                            td=competitor.PB.E3.toFixed(2)
+                            td=competitor.PB.E4.toFixed(2)
+                            td=competitor.PB.Neutral.toFixed(2)
+                            td=competitor.PB.E.toFixed(2)
+                            td=competitor.PB.Final.toFixed(2)
+                            td
+
+                if apparatus === 'HB'
+                    if competitor.HB && competitor.HB.Final
+                        tr
+                            td= miejsce++ + '. '
+                            td=competitor.firstname
+                            td=competitor.lastname
+                            td=competitor.club
+
+                            td=competitor.HB.D.toFixed(2)
+                            td=competitor.HB.E1.toFixed(2)
+                            td=competitor.HB.E2.toFixed(2)
+                            td=competitor.HB.E3.toFixed(2)
+                            td=competitor.HB.E4.toFixed(2)
+                            td=competitor.HB.Neutral.toFixed(2)
+                            td=competitor.HB.E.toFixed(2)
+                            td=competitor.HB.Final.toFixed(2)
+                            td
+
+

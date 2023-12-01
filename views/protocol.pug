@@ -33,6 +33,7 @@ block content
                 th(scope='col') E2
                 th(scope='col') E3
                 th(scope='col') E4
+                th(scope='col') Neutral
                 th(scope='col') E
                 th(scope='col') F
         each competitor, i in competitors
@@ -49,6 +50,7 @@ block content
                     td=competitor.FX.E2.toFixed(2)
                     td=competitor.FX.E3.toFixed(2)
                     td=competitor.FX.E4.toFixed(2)
+                    td=competitor.FX.Neutral.toFixed(2)
                     td=competitor.FX.E.toFixed(2)
                     td=competitor.FX.Final.toFixed(2)
                     td
@@ -58,6 +60,7 @@ block content
                                 a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
                   if  user
                       if !competitor.FX.Final
+                            td
                             td
                             td
                             td
@@ -77,6 +80,7 @@ block content
                         td=competitor.PH.E2.toFixed(2)
                         td=competitor.PH.E3.toFixed(2)
                         td=competitor.PH.E4.toFixed(2)
+                        td=competitor.PH.Neutral.toFixed(2)
                         td=competitor.PH.E.toFixed(2)
                         td=competitor.PH.Final.toFixed(2)
                         td
@@ -94,6 +98,7 @@ block content
                             td
                             td
                             td
+                            td
                                 if user.role!=="Admin"
                                     a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
                 if user.apparatus === 'SR'
@@ -103,6 +108,7 @@ block content
                     td=competitor.SR.E2.toFixed(2)
                     td=competitor.SR.E3.toFixed(2)
                     td=competitor.SR.E4.toFixed(2)
+                    td=competitor.SR.Neutral.toFixed(2)
                     td=competitor.SR.E.toFixed(2)
                     td=competitor.SR.Final.toFixed(2)
                     td
@@ -120,6 +126,7 @@ block content
                             td
                             td
                             td
+                            td
                                 a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
                 if user.apparatus === 'VT'
                     if competitor.VT1.Final
@@ -128,6 +135,7 @@ block content
                         td=competitor.VT1.E2.toFixed(2)
                         td=competitor.VT1.E3.toFixed(2)
                         td=competitor.VT1.E4.toFixed(2)
+                        td=competitor.VT1.Neutral.toFixed(2)
                         td=competitor.VT1.E.toFixed(2)
                         td=competitor.VT1.Final.toFixed(2)
                         td
@@ -145,6 +153,7 @@ block content
                                 td
                                 td
                                 td
+                                td
                                     a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
                     if competitor.VT1.Final
                         tr
@@ -152,12 +161,14 @@ block content
                             td=competitor.firstname
                             td=competitor.lastname
                             td=competitor.club
+                            td=competitor.clas
                             if competitor.VT2.Final
                                 td=competitor.VT2.D.toFixed(2)
                                 td=competitor.VT2.E1.toFixed(2)
                                 td=competitor.VT2.E2.toFixed(2)
                                 td=competitor.VT2.E3.toFixed(2)
                                 td=competitor.VT2.E4.toFixed(2)
+                                td=competitor.VT2.Neutral.toFixed(2)
                                 td=competitor.VT2.E.toFixed(2)
                                 td=competitor.VT2.Final.toFixed(2)
                                 td
@@ -175,6 +186,7 @@ block content
                                         td
                                         td
                                         td
+                                        td
                                             a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
 
                 if user.apparatus === 'PB'
@@ -184,6 +196,7 @@ block content
                         td=competitor.PB.E2.toFixed(2)
                         td=competitor.PB.E3.toFixed(2)
                         td=competitor.PB.E4.toFixed(2)
+                        td=competitor.PB.Neutral.toFixed(2)
                         td=competitor.PB.E.toFixed(2)
                         td=competitor.PB.Final.toFixed(2)
                         td
@@ -201,6 +214,7 @@ block content
                                 td
                                 td
                                 td
+                                td
                                     a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
                 if user.apparatus === 'HB'
                     if competitor.HB.Final
@@ -209,6 +223,7 @@ block content
                         td=competitor.HB.E2.toFixed(2)
                         td=competitor.HB.E3.toFixed(2)
                         td=competitor.HB.E4.toFixed(2)
+                        td=competitor.HB.Neutral.toFixed(2)
                         td=competitor.HB.E.toFixed(2)
                         td=competitor.HB.Final.toFixed(2)
                         td
@@ -218,6 +233,7 @@ block content
                                     a.btn.btn-success.pull-right(href="/judging/" + competitor._id) Oceń
                     if  user
                         if !competitor.HB.Final
+                            td
                             td
                             td
                             td

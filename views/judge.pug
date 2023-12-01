@@ -17,6 +17,8 @@ block content
                 input.form-control(type='number', step='0.1',name='E2' , id='E2', placeholder='Ocena E2', required='false'  )
                 input.form-control(type='number', step='0.1',name='E3' , id='E3', placeholder='Ocena E3', readonly="true"   )
                 input.form-control(type='number', step='0.1',name='E4' , id='E4', placeholder='Ocena E4', readonly="true"  )
+                label.form-control(for="Neutral") Dodatkowe Potrącenia:
+                input.form-control(type='number', step='0.1',name='Neutral' , id='Neutral', value=0 , required='')
                 br
                 input.form-control(type='number', step='0.1',name='E' , id='E', placeholder='Ocena E' , required='', readonly='true')
                 input.form-control(type='number', step='0.1',name='Final' , id='Final', placeholder='Ocena Final' , required='', readonly='true')
@@ -69,7 +71,7 @@ block content
                 }
 
 
-                element('E').value = 10-(Math.round(e.toFixed(2)*100)/100);
+                element('E').value = 10-(Math.round(e.toFixed(2)*100)/100)-element('Neutral').value;
                 element('Final').value = Math.round((parseFloat(element('D').value)+parseFloat(element('E').value))*100)/100;
 
 

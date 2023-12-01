@@ -1,6 +1,4 @@
 var mongoose = require('mongoose');
-
-// User Schema
 var ParticipantSchema = mongoose.Schema({
     competitor:{
         type: String
@@ -12,8 +10,13 @@ var ParticipantSchema = mongoose.Schema({
     order:{
         type:Number
     }
-
     ,
+    club:{
+        type: String
+    },
+    year:{
+        type: String
+    },
 
     FX:{
         E1:{
@@ -116,9 +119,7 @@ var ParticipantSchema = mongoose.Schema({
             type:Number
 
         },
-        E:{
-            type:Number
-        },
+        E:Number,
         D:{
 
             type:Number
@@ -146,9 +147,7 @@ var ParticipantSchema = mongoose.Schema({
             type:Number
 
         },
-        E:{
-            type:Number
-        },
+        E:Number,
         D:{
 
             type:Number
@@ -161,7 +160,7 @@ var ParticipantSchema = mongoose.Schema({
     },
     VT:{
 
-        type:Number,
+        Final:Number,
         required:false
 
     },
@@ -229,12 +228,6 @@ var ParticipantSchema = mongoose.Schema({
     },
     clas:{
         type: String
-    },
-    club:{
-        type: String
-    },
-    year:{
-        type: Number
     },
     suma:{
         type: Number,

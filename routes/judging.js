@@ -5,7 +5,7 @@ var I_Edition = require('../models/I_Edition');
 var II_Edition = require('../models/II_Edition');
 var III_Edition = require('../models/III_Edition');
 var IV_Edition = require('../models/IV_Edition');
-var Current_Edition = require('../models/IV_Edition');
+var Current_Edition = require('../models/OMK');
 
 function Round(n, k)
 {
@@ -127,37 +127,33 @@ router.post('/:id',  async function(req, res){
     var E2=req.body.E2;
     var E3=req.body.E3;
     var E4=req.body.E4;
+    var N=req.body.Neutral;
     Sr=new Array(E1,E2,E3,E4);
     Sr.sort(compareNumbers);
     var E;
 
     E= (+Sr[1]+ +Sr[2])/2;
-    console.log(Sr[0]);
     if (Sr[0]===''&&Sr[1]===''){
 
         E= (+Sr[2]+ +Sr[3])/2;
         E3=10;
         E4=10;
-        console.log("ten jest ok")
     }
     if (Sr[0]===''&& Sr[1]>0){
-        console.log('ocena',Sr)
         E= +Sr[2];
         E4=10;
-        console.log("ten nie 1")
+
     }
     if(Sr[0]===''&& Sr[1]===''&&Sr[2]===''){
-        console.log('ocena',Sr)
         E= +Sr[3];
         E2=10;
         E3=10;
         E4=10;
-        console.log("ten nie 2")
+
     }
-    var Final=((10 - +E) + +D)
+    var Final=((10 - +E - +N) + +D)
     Final=Round( +Final,3);
     var competitor={};
-    console.log(E);
 
     if(req.user.apparatus==='VT') {
 
@@ -174,10 +170,12 @@ router.post('/:id',  async function(req, res){
                     competitorr.VT2.E2=10-E2;
                     competitorr.VT2.E3=10-E3;
                     competitorr.VT2.E4=10-E4;
-                    competitorr.VT2.E=10-E;
+                    competitorr.VT2.Neutral=N;
+                    competitorr.VT2.E=10-E-N;
                     competitorr.VT2.Final= +Final;
+                    console.log("To jest ok" +competitorr)
                     competitorr.VT = (+competitorr.VT1.Final + +Final)/2;
-                    sub= await competitorr.subdivision;
+                    sub=  competitorr.subdivision;
 
                     Competitor.createCompetitor(competitorr, function () {
 
@@ -190,20 +188,20 @@ router.post('/:id',  async function(req, res){
                     competitorr.VT1.E2=10-E2;
                     competitorr.VT1.E3=10-E3;
                     competitorr.VT1.E4=10-E4;
-                    competitorr.VT1.E=10-E;
+                    competitorr.VT1.Neutral=N;
+                    competitorr.VT1.E=10-E-N;
                     competitorr.VT1.Final= +Final;
-                    sub= await competitorr.subdivision;
+                    sub=  competitorr.subdivision;
 
                     competitorr.suma=ComputeSum(competitorr);
 
-                    console.log(competitorr);
                     Competitor.createCompetitor(competitorr, function () {
 
                     });
                 }
 
 
-                //req.flash('success', 'Competitor Updated');
+                req.flash('success', 'Competitor Updated');
                 //res.redirect('/');
             }
 
@@ -223,7 +221,8 @@ router.post('/:id',  async function(req, res){
                 competitorr.FX.E2=10-E2;
                 competitorr.FX.E3=10-E3;
                 competitorr.FX.E4=10-E4;
-                competitorr.FX.E=10-E;
+                competitorr.FX.Neutral=N;
+                competitorr.FX.E=10-E-N;
                 competitorr.FX.Final= +Final;
                 competitorr.suma=ComputeSum(competitorr);
                 sub=await competitorr.subdivision;
@@ -239,7 +238,7 @@ router.post('/:id',  async function(req, res){
     if (req.user.apparatus==='PH')
     {
         competitor.PH= +Final;
-        await Current_Edition.findById(req.params.id, function(err,competitorr) {
+        await Current_Edition.findById(req.params.id, async function(err,competitorr) {
             if(err){
                 console.log(err);
                 return;
@@ -249,9 +248,10 @@ router.post('/:id',  async function(req, res){
                 competitorr.PH.E2=10-E2;
                 competitorr.PH.E3=10-E3;
                 competitorr.PH.E4=10-E4;
-                competitorr.PH.E=10-E;
+                competitorr.PH.Neutral=N;
+                competitorr.PH.E=10-E-N;
                 competitorr.PH.Final= +Final;
-                sub=competitorr.subdivision;
+                sub= await competitorr.subdivision;
                 competitorr.suma=ComputeSum(competitorr);
                 Competitor.createCompetitor(competitorr,function () {
 
@@ -265,7 +265,7 @@ router.post('/:id',  async function(req, res){
     if (req.user.apparatus==='SR')
     {
         competitor.SR= +Final;
-        await Current_Edition.findById(req.params.id,  function(err,competitorr) {
+        await Current_Edition.findById(req.params.id,  async function(err,competitorr) {
             if(err){
                 console.log(err);
                 return;
@@ -275,11 +275,11 @@ router.post('/:id',  async function(req, res){
                 competitorr.SR.E2=10-E2;
                 competitorr.SR.E3=10-E3;
                 competitorr.SR.E4=10-E4;
-                competitorr.SR.E=10-E;
+                competitorr.SR.Neutral=N;
+                competitorr.SR.E=10-E-N;
                 competitorr.SR.Final= +Final;
                 competitorr.suma=ComputeSum(competitorr);
-                sub=  competitorr.subdivision;
-                console.log(sub);
+                sub= await  competitorr.subdivision;
                 Competitor.createCompetitor(competitorr,function () {
 
                 });
@@ -293,7 +293,7 @@ router.post('/:id',  async function(req, res){
     if (req.user.apparatus==='PB')
     {
         competitor.PB= +Final;
-        await Current_Edition.findById(req.params.id, function(err,competitorr) {
+        await Current_Edition.findById(req.params.id, async function(err,competitorr) {
             if(err){
                 console.log(err);
                 return;
@@ -303,9 +303,10 @@ router.post('/:id',  async function(req, res){
                 competitorr.PB.E2=10-E2;
                 competitorr.PB.E3=10-E3;
                 competitorr.PB.E4=10-E4;
-                competitorr.PB.E=10-E;
+                competitorr.PB.Neutral=N;
+                competitorr.PB.E=10-E-N;
                 competitorr.PB.Final= +Final;
-                sub=competitorr.subdivision;
+                sub=await competitorr.subdivision;
 
                 competitorr.suma=ComputeSum(competitorr);
 
@@ -321,7 +322,7 @@ router.post('/:id',  async function(req, res){
     if (req.user.apparatus==='HB')
     {
         competitor.HB= +Final;
-        await Current_Edition.findById(req.params.id, function(err,competitorr) {
+        await Current_Edition.findById(req.params.id, async function(err,competitorr) {
             if(err){
                 console.log(err);
                 return;
@@ -331,9 +332,10 @@ router.post('/:id',  async function(req, res){
                 competitorr.HB.E2=10-E2;
                 competitorr.HB.E3=10-E3;
                 competitorr.HB.E4=10-E4;
-                competitorr.HB.E=10-E;
+                competitorr.HB.Neutral=N;
+                competitorr.HB.E=10-E-N;
                 competitorr.HB.Final= +Final;
-                sub=competitorr.subdivision;
+                sub=await competitorr.subdivision;
 
                 competitorr.suma=ComputeSum(competitorr);
 
@@ -346,8 +348,17 @@ router.post('/:id',  async function(req, res){
 
         });
     }
+    if(sub==="I"){
+        res.redirect('/protocols/div1/I');
+    }
+    else if(sub==="II"){
+        res.redirect('/protocols/div1/II');
+    }
+    else if(sub==="III"){
+        res.redirect('/protocols/div1/III');
+    }
     //res.redirect('back')
-    if(sub==='XIII')
+    /*if(sub==='XIII')
         res.redirect('/protocols/div3/I');
     else if(sub==='XIV')
         res.redirect('/protocols/div3/II');
@@ -372,7 +383,7 @@ router.post('/:id',  async function(req, res){
     else if(sub==='XII')
         res.redirect('/protocols/div2/VI');
     else
-        res.redirect('/protocols/div1/'+sub)
+        res.redirect('/protocols/div1/'+sub)*/
 
 });
 router.get('/I',ensureAuthenticated, function (req, res) {

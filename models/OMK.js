@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-var bcrypt = require('bcryptjs');
 
 var ParticipantSchema = mongoose.Schema({
     competitor:{
@@ -21,6 +20,7 @@ var ParticipantSchema = mongoose.Schema({
     },
 
     FX:{
+
         E1:{
             type:Number
 
@@ -39,6 +39,11 @@ var ParticipantSchema = mongoose.Schema({
         },
         E:Number,
         D:{
+
+            type:Number
+
+        },
+        Neutral:{
 
             type:Number
 
@@ -49,6 +54,7 @@ var ParticipantSchema = mongoose.Schema({
 
     },
     PH:{
+
         E1:{
             type:Number
 
@@ -67,6 +73,11 @@ var ParticipantSchema = mongoose.Schema({
         },
         E:Number,
         D:{
+
+            type:Number
+
+        },
+        Neutral:{
 
             type:Number
 
@@ -77,6 +88,7 @@ var ParticipantSchema = mongoose.Schema({
 
     },
     SR:{
+
         E1:{
             type:Number
 
@@ -95,6 +107,11 @@ var ParticipantSchema = mongoose.Schema({
         },
         E:Number,
         D:{
+
+            type:Number
+
+        },
+        Neutral:{
 
             type:Number
 
@@ -105,6 +122,7 @@ var ParticipantSchema = mongoose.Schema({
 
     },
     VT1:{
+
         E1:{
             type:Number
 
@@ -123,6 +141,11 @@ var ParticipantSchema = mongoose.Schema({
         },
         E:Number,
         D:{
+
+            type:Number
+
+        },
+        Neutral:{
 
             type:Number
 
@@ -133,6 +156,7 @@ var ParticipantSchema = mongoose.Schema({
 
     },
     VT2:{
+
         E1:{
             type:Number
 
@@ -151,6 +175,11 @@ var ParticipantSchema = mongoose.Schema({
         },
         E:Number,
         D:{
+
+            type:Number
+
+        },
+        Neutral:{
 
             type:Number
 
@@ -162,7 +191,7 @@ var ParticipantSchema = mongoose.Schema({
     },
     VT:{
 
-        Final:Number,
+        type:Number,
         required:false
 
     },
@@ -185,6 +214,11 @@ var ParticipantSchema = mongoose.Schema({
         },
         E:Number,
         D:{
+
+            type:Number
+
+        },
+        Neutral:{
 
             type:Number
 
@@ -217,6 +251,11 @@ var ParticipantSchema = mongoose.Schema({
             type:Number
 
         },
+        Neutral:{
+
+            type:Number
+
+        },
 
         Final:Number,
         required:false
@@ -238,11 +277,10 @@ var ParticipantSchema = mongoose.Schema({
 
 });
 
-var II_Edition=module.exports = mongoose.model('II_Edition',ParticipantSchema);
+var OMK=module.exports = mongoose.model('OMK',ParticipantSchema);
 module.exports.addParticipant = function(newUser, callback){
 
     newUser.save(callback);
 
 
-
-}
+};

@@ -3,7 +3,7 @@ var router = express.Router();
 var validator = require('validator');
 var Competitor =require('../models/competitor');
 var League= require('../models/league');
-var Current_Edition=require('../models/IV_Edition')
+var Current_Edition=require('../models/OMK')
 var I_Edition=require('../models/I_Edition');
 var II_Edition=require('../models/II_Edition');
 var III_Edition=require('../models/III_Edition');
@@ -605,14 +605,13 @@ router.post('/edit/:id', function(req, res) {
 
 });
 router.get('/removeVT2/:id',ensureAuthenticated,function(req,res){
-    I_Edition.findById(req.params.id,function (err,participant) {
+    Current_Edition.findById(req.params.id,function (err,participant) {
 
             let query={_id:req.params.id};
             participant.VT2.Final=undefined;
+            participant.VT=undefined;
 
-
-
-            I_Edition.update(query,participant,function (err) {
+            Current_Edition.update(query,participant,function (err) {
                 if(err){
                     console.log(err);
                     return
