@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var Current_Edition=require('../models/OMK');
-// var II_Edition=require('../models/II_Edition');
-// var III_Edition=require('../models/III_Edition');
-// var IV_Edition=require('../models/IV_Edition');
+var Current_Edition=require('../models/I_Edition');
+var II_Edition=require('../models/II_Edition');
+var III_Edition=require('../models/III_Edition');
+var IV_Edition=require('../models/IV_Edition');
 
 router.get('/',ensureAuthenticated, function(req, res) {
     res.render('division');
@@ -296,7 +296,21 @@ router.get('/div3/VI',ensureAuthenticated, function(req, res){
     });
 
 });
+router.get('/div3/VII',ensureAuthenticated, function(req, res){
+    Current_Edition.find({subdivision:'XIX'}).sort('order').exec(function (err, competitors) {
+        if(err){
+            console.log(err);
+        } else {
+            res.render('protocol', {
+                title:'Rzut III zastęp VII',
+                competitors: competitors,
 
+            });
+
+        }
+    });
+
+});
 
 
 function ensureAuthenticated(req, res, next){

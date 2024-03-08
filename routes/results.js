@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var Competitor = require('../models/competitor');
-var Current_Edition = require('../models/OMK');
+var Current_Edition = require('../models/I_Edition');
 var I_Edition = require('../models/I_Edition');
 var II_Edition = require('../models/II_Edition');
 var III_Edition = require('../models/III_Edition');
 var IV_Edition = require('../models/IV_Edition');
 var League = require('../models/league');
-var current = "iv_editions";
+var current = "i_editions";
 var method = {suma: -1};
 
 router.get('/', function (req, res) {
@@ -863,7 +863,7 @@ router.get('/mlodziezowa', function (req, res) {
     });
 
 });
-router.get('/mlodziezowa/2012', function (req, res) {
+/*router.get('/mlodziezowa/2013', function (req, res) {
     Current_Edition.db.collection(current).find({
         clas: "Młodzieżowa",
         year: "2012"
@@ -873,13 +873,13 @@ router.get('/mlodziezowa/2012', function (req, res) {
         } else {
 
             res.render('resulttables', {
-                title: 'Klasa mlodziezowa 2012',
+                title: 'Klasa mlodziezowa 2013',
                 competitors: competitors
             });
         }
     });
 
-});
+});*/
 router.get('/mlodziezowa/2013', function (req, res) {
     Current_Edition.db.collection(current).find({
         clas: "Młodzieżowa",
@@ -928,10 +928,10 @@ router.get('/i_krok', function (req, res) {
     });
 
 });
-router.get('/i_krok/2014', function (req, res) {
+router.get('/i_krok/2015', function (req, res) {
     Current_Edition.db.collection(current).find({
         clas: "I_Krok",
-        year: "2014"
+        year: "2015"
     }).sort(method).toArray(function (err, competitors) {
         if (err) {
             console.log(err);
@@ -945,10 +945,10 @@ router.get('/i_krok/2014', function (req, res) {
     });
 
 });
-router.get('/i_krok/2015-', function (req, res) {
+router.get('/i_krok/2016-', function (req, res) {
     Current_Edition.db.collection(current).find({
         clas: "I_Krok",
-        year: {$gte: "2015"}
+        year: {$gte: "2016"}
     }).sort(method).toArray(function (err, competitors) {
         if (err) {
             console.log(err);

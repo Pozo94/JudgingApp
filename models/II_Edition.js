@@ -43,6 +43,11 @@ var ParticipantSchema = mongoose.Schema({
             type:Number
 
         },
+        Neutral:{
+
+            type:Number
+
+        },
 
         Final:Number,
         required:false
@@ -67,6 +72,11 @@ var ParticipantSchema = mongoose.Schema({
         },
         E:Number,
         D:{
+
+            type:Number
+
+        },
+        Neutral:{
 
             type:Number
 
@@ -99,6 +109,11 @@ var ParticipantSchema = mongoose.Schema({
             type:Number
 
         },
+        Neutral:{
+
+            type:Number
+
+        },
 
         Final:Number,
         required:false
@@ -127,6 +142,11 @@ var ParticipantSchema = mongoose.Schema({
             type:Number
 
         },
+        Neutral:{
+
+            type:Number
+
+        },
 
         Final:Number,
         required:false
@@ -151,6 +171,11 @@ var ParticipantSchema = mongoose.Schema({
         },
         E:Number,
         D:{
+
+            type:Number
+
+        },
+        Neutral:{
 
             type:Number
 
@@ -189,6 +214,11 @@ var ParticipantSchema = mongoose.Schema({
             type:Number
 
         },
+        Neutral:{
+
+            type:Number
+
+        },
 
         Final:Number,
         required:false
@@ -213,6 +243,11 @@ var ParticipantSchema = mongoose.Schema({
         },
         E:Number,
         D:{
+
+            type:Number
+
+        },
+        Neutral:{
 
             type:Number
 

@@ -19,6 +19,7 @@ block content
         h2.justify-content-center Poręcze
     else if apparatus === 'HB'
         h2.justify-content-center Drążek
+    input(id="title", hidden='true', value=title)
     table.table-sm.table-dark.col-md-12.table-hover.row-cols-md-6(id='wyniki')
         caption=title
         thead
@@ -174,5 +175,28 @@ block content
                             td=competitor.HB.E.toFixed(2)
                             td=competitor.HB.Final.toFixed(2)
                             td
+    button.nav-link(onclick="tableToExcel(wyniki)") Pobierz
 
-
+    script.
+        var tableToExcel = (function () {
+            var uri = 'data:application/vnd.ms-excel;base64,'
+                ,
+                template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><meta charset="utf-8"><head></head><body><table>{table}</table></body></html>'
+                , base64 = function (s) {
+                    return window.btoa(unescape(encodeURIComponent(s)))
+                }
+                , format = function (s, c) {
+                    return s.replace(/{(\w+)}/g, function (m, p) {
+                        return c[p];
+                    })
+                }
+            return function (table) {
+                var x = document.getElementById("title").value;
+                if (!table.nodeType) table = document.getElementById(table)
+                var ctx = {worksheet: x || 'Worksheet', table: table.innerHTML}
+                var link = document.createElement('a');
+                link.download = x;
+                link.href = uri + base64(format(template, ctx));
+                link.click();
+            }
+        })()

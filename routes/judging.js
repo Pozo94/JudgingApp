@@ -5,7 +5,7 @@ var I_Edition = require('../models/I_Edition');
 var II_Edition = require('../models/II_Edition');
 var III_Edition = require('../models/III_Edition');
 var IV_Edition = require('../models/IV_Edition');
-var Current_Edition = require('../models/OMK');
+var Current_Edition = require('../models/I_Edition');
 
 function Round(n, k)
 {
@@ -357,8 +357,17 @@ router.post('/:id',  async function(req, res){
     else if(sub==="III"){
         res.redirect('/protocols/div1/III');
     }
+    else if(sub==="IV"){
+        res.redirect('/protocols/div1/III');
+    }
+    else if(sub==="V"){
+        res.redirect('/protocols/div1/III');
+    }
+    else if(sub==="VI"){
+        res.redirect('/protocols/div1/III');
+    }
     //res.redirect('back')
-    /*if(sub==='XIII')
+    else if(sub==='XIII')
         res.redirect('/protocols/div3/I');
     else if(sub==='XIV')
         res.redirect('/protocols/div3/II');
@@ -370,6 +379,8 @@ router.post('/:id',  async function(req, res){
         res.redirect('/protocols/div3/V');
     else if(sub==='XVIII')
         res.redirect('/protocols/div3/VI');
+    else if(sub==='XIX')
+        res.redirect('/protocols/div3/VII');
     else if(sub==='VII')
     res.redirect('/protocols/div2/I');
     else if(sub==='VIII')
@@ -382,8 +393,7 @@ router.post('/:id',  async function(req, res){
         res.redirect('/protocols/div2/V');
     else if(sub==='XII')
         res.redirect('/protocols/div2/VI');
-    else
-        res.redirect('/protocols/div1/'+sub)*/
+
 
 });
 router.get('/I',ensureAuthenticated, function (req, res) {
