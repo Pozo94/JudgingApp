@@ -358,13 +358,13 @@ router.post('/:id',  async function(req, res){
         res.redirect('/protocols/div1/III');
     }
     else if(sub==="IV"){
-        res.redirect('/protocols/div1/III');
+        res.redirect('/protocols/div1/IV');
     }
     else if(sub==="V"){
-        res.redirect('/protocols/div1/III');
+        res.redirect('/protocols/div1/V');
     }
     else if(sub==="VI"){
-        res.redirect('/protocols/div1/III');
+        res.redirect('/protocols/div1/VI');
     }
     //res.redirect('back')
     else if(sub==='XIII')
