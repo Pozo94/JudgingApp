@@ -7,7 +7,7 @@ var II_Edition = require('../models/II_Edition');
 var III_Edition = require('../models/III_Edition');
 var IV_Edition = require('../models/IV_Edition');
 var League = require('../models/league');
-var current = "i_editions";
+var current = "ii_editions";
 var method = {suma: -1};
 
 router.get('/', function (req, res) {
