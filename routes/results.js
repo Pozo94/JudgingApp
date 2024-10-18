@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var Competitor = require('../models/competitor');
-var Current_Edition = require('../models/II_Edition');
+var Current_Edition = require('../models/III_Edition');
 var I_Edition = require('../models/I_Edition');
 var II_Edition = require('../models/II_Edition');
 var III_Edition = require('../models/III_Edition');
 var IV_Edition = require('../models/IV_Edition');
 var League = require('../models/league');
-var current = "ii_editions";
+var current = "iii_editions";
 var method = {suma: -1};
 
 router.get('/', function (req, res) {
