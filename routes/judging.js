@@ -174,7 +174,7 @@ router.post('/:id',  async function(req, res){
                     competitorr.VT2.E=10-E-N;
                     competitorr.VT2.Final= +Final;
                     console.log("To jest ok" +competitorr)
-                    competitorr.VT = (+competitorr.VT1.Final + +Final)/2;
+                    competitorr.VT.Final = +(+competitorr.VT1.Final + +competitorr.VT2.Final)/2;
                     sub=  competitorr.subdivision;
 
                     Competitor.createCompetitor(competitorr, function () {
