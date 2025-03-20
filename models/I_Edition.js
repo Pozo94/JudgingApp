@@ -8,7 +8,7 @@ var ParticipantSchema = mongoose.Schema({
     }
     ,
     order:{
-        type:Number
+        type:String
     }
     ,
     club:{
