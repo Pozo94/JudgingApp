@@ -883,7 +883,7 @@ router.get('/mlodziezowa', function (req, res) {
 router.get('/mlodziezowa/2014', function (req, res) {
     Current_Edition.db.collection(current).find({
         clas: "Młodzieżowa",
-        year: "2014"
+        year: {$lte: "2014"}
     }).sort(method).toArray(function (err, competitors) {
         if (err) {
             console.log(err);
