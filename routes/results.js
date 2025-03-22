@@ -880,34 +880,51 @@ router.get('/mlodziezowa', function (req, res) {
     });
 
 });*/
-router.get('/mlodziezowa/2013', function (req, res) {
+router.get('/mlodziezowa/2014', function (req, res) {
     Current_Edition.db.collection(current).find({
         clas: "Młodzieżowa",
-        year: "2013"
+        year: "2014"
     }).sort(method).toArray(function (err, competitors) {
         if (err) {
             console.log(err);
         } else {
 
             res.render('resulttables', {
-                title: 'Klasa mlodziezowa 2013',
+                title: 'Klasa mlodziezowa 2014',
                 competitors: competitors
             });
         }
     });
 
 });
-router.get('/mlodziezowa/2014-', function (req, res) {
+router.get('/mlodziezowa/2015', function (req, res) {
     Current_Edition.db.collection(current).find({
         clas: "Młodzieżowa",
-        year: {$gte: "2014"}
+        year: "2015"
     }).sort(method).toArray(function (err, competitors) {
         if (err) {
             console.log(err);
         } else {
 
             res.render('resulttables', {
-                title: 'Klasa mlodziezowa 2014 i mlodsi',
+                title: 'Klasa mlodziezowa 2015',
+                competitors: competitors
+            });
+        }
+    });
+
+});
+router.get('/mlodziezowa/2016-', function (req, res) {
+    Current_Edition.db.collection(current).find({
+        clas: "Młodzieżowa",
+        year: {$gte: "2016"}
+    }).sort(method).toArray(function (err, competitors) {
+        if (err) {
+            console.log(err);
+        } else {
+
+            res.render('resulttables', {
+                title: 'Klasa mlodziezowa 2016 i mlodsi',
                 competitors: competitors
             });
         }
@@ -938,30 +955,46 @@ router.get('/i_krok/2015', function (req, res) {
         } else {
 
             res.render('resulttables', {
-                title: 'Klasa I krok gimnastyczny 2014',
+                title: 'Klasa I krok gimnastyczny 2015',
                 competitors: competitors
             });
         }
     });
 
 });
-router.get('/i_krok/2016-', function (req, res) {
+router.get('/i_krok/2016', function (req, res) {
     Current_Edition.db.collection(current).find({
         clas: "I_Krok",
-        year: {$gte: "2016"}
+        year: "2016"
     }).sort(method).toArray(function (err, competitors) {
         if (err) {
             console.log(err);
         } else {
 
             res.render('resulttables', {
-                title: 'Klasa I krok gimnastyczny 2015 i mlodsi',
+                title: 'Klasa I krok gimnastyczny 2016',
                 competitors: competitors
             });
         }
     });
 
 });
+router.get('/i_krok/2017-', function (req, res) {
+    Current_Edition.db.collection(current).find({
+        clas: "I_Krok",
+        year: {$gte: "2017"}
+    }).sort(method).toArray(function (err, competitors) {
+        if (err) {
+            console.log(err);
+        } else {
 
+            res.render('resulttables', {
+                title: 'Klasa I krok gimnastyczny 2017 i mlodsi',
+                competitors: competitors
+            });
+        }
+    });
+
+});
 
 module.exports = router;

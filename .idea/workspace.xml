@@ -22,18 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="Preparations to IV edition">
+    <list default="true" id="e81c77be-4eab-4267-9778-a5bdd7400c3e" name="Default" comment="Preparations to I Edition2025">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/III_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/III_Edition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/II_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/II_Edition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/IV_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/IV_Edition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/I_Edition.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/I_Edition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/competitors.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/competitors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/judging.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/judging.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/protocols.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/protocols.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/results.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/results.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/results.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/results.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/resulttables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/resulttables.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,7 +305,8 @@
       <workItem from="1729249092270" duration="4419000" />
       <workItem from="1729321017652" duration="5718000" />
       <workItem from="1732303053999" duration="1420000" />
-      <workItem from="1742500971005" duration="1757000" />
+      <workItem from="1742500971005" duration="2692000" />
+      <workItem from="1742622879118" duration="1385000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;1st update&quot;">
       <created>1678192801787</created>
@@ -594,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732309568234</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Preparations to I Edition2025">
+      <created>1742505482868</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1742505482868</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView">
@@ -621,7 +622,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="apparatus title added" />
     <MESSAGE value="subdivision names fixed" />
     <MESSAGE value="name fix" />
     <MESSAGE value="pzg deleted" />
@@ -646,6 +646,7 @@
     <MESSAGE value="Preparations to III edition" />
     <MESSAGE value="Preparations to III edition - fix" />
     <MESSAGE value="Preparations to IV edition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Preparations to IV edition" />
+    <MESSAGE value="Preparations to I Edition2025" />
+    <option name="LAST_COMMIT_MESSAGE" value="Preparations to I Edition2025" />
   </component>
 </project>
